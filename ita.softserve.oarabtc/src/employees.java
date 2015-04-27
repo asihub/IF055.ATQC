@@ -1,30 +1,32 @@
 /**
  * Created by Olia on 26.04.2015.
  */
-//TODO Java code convention!!!
-public abstract class employees {
+//TODO Java code convention!!! - FIXED
+public abstract class Employees {
 
     private int id;
     private String name;
     private String surname;
 
-   public int getId () {
+   public int getId() {
        return id;
    }
-   public String getName () {
+   public String getName() {
        return name;
    }
-   public String getSurname () {
+   public String getSurname() {
        return surname;
    }
 
-    public employees (int id, String name, String surname) {
+    public Employees(int id, String name, String surname) {
         this.id = id;
         this.name = name;
         this.surname = surname;
     }
 
-    //TODO Java code convention!!!
-    public abstract double PayCalc ();
+    //TODO Java code convention!!! - FIXED
+    public abstract double payCalc();
+
+    public abstract void printInfo();
 
 }
