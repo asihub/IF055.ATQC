@@ -12,7 +12,8 @@ public class PerHourEmployee extends Employee {
 	}		
 
 	@Override
-	public float SalaryCalc() {
+    //TODO Java code convention!!!
+    public float SalaryCalc() {
 		float salary;
 		salary = (float) (hourRate * 20.8 * 8);
 		return salary;

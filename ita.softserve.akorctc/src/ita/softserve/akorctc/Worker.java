@@ -15,6 +15,7 @@ public abstract class Worker {
 
     public abstract double getMonthlyIncome();
 
+    //TODO use toString() override in each sub class instead of this
     public void getWorkerInfo() {
         StringBuilder result = new StringBuilder("");
         result.append(id).append(" ").append(name).append(" ").append(lastname).append(" ").append(monthlyIncome);

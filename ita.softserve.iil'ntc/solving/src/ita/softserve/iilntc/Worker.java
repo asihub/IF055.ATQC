@@ -13,7 +13,7 @@ public abstract class Worker {
     }
 
     abstract public double monthlySalary();
-
+    //TODO use toString() override
     public String getWorkerInformation(){
         return "ID " + id + " Name " + name + " Surname " + surname + " Payment " + monthlySalary() + " $";
     }

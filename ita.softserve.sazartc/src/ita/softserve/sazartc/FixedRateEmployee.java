@@ -12,7 +12,8 @@ public class FixedRateEmployee extends Employee {
 	}	
 	
 	@Override
-	public float SalaryCalc() {		
+    //TODO Java code convention!!!
+    public float SalaryCalc() {
 		return this.fixedRate;
 	}
 

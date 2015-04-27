@@ -1,5 +1,5 @@
 package ita.softserve.akorctc;
-
+//TODO rename class to something more informative - HourlySalaryWorker etc
 public class HourlySalary extends Worker {
 
     private double hourlySalary;

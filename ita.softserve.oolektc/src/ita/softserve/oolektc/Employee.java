@@ -15,7 +15,7 @@ public abstract class Employee {
     protected double monthlyWage;
 
     public abstract double getMonthlyWage();
-
+    //TODO use toString() method override instead of this
     public void getEmployeeInfo(){
         StringBuilder sb = new StringBuilder("");
         sb.append(id).append(" ").append(name).append(" ").append(surname).append(" ").append(monthlyWage);

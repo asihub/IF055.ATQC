@@ -1,5 +1,5 @@
 package if055_atqc;
-
+//TODO one file - one class, move classes to separate files
 abstract class Salary {
 	String name;
 	String surname;
@@ -9,7 +9,7 @@ abstract class Salary {
 		name = n;
 		surname = s;
 	}
-	
+	//TODO use toString() method instead of this
 	public void employeeInfo(){
 		System.out.print("#" + id );
 		System.out.print(" " + name );
@@ -18,9 +18,10 @@ abstract class Salary {
 	
 	abstract double avarageSalary();
 }
-
+//TODO rename class to HourlyRateEmployee etc
 class HourlyRate extends Salary{
 	double rate;
+    //TODO what's r?
 	HourlyRate(int num, String n, String s, double r){
 		super(num, n, s);
 		rate = r;
@@ -31,10 +32,11 @@ class HourlyRate extends Salary{
 		
 	};
 }
-
+//TODO rename class
 class FixedRate extends Salary{
 	double rate;
-	FixedRate(int num, String n, String s, double r){
+    //TODO what's r?
+    FixedRate(int num, String n, String s, double r){
 		super(num, n, s);
 		rate = r;
 	}
@@ -75,12 +77,14 @@ public class SalaryCalculations {
 		System.out.println("Information About Employee:");
 		
 		System.out.println(" Avarage Salary (Hourly Rated): ");
+        //TODO use for each loops
 		for (int i=0; i < hrArr.length;i++){
 			hrArr[i].employeeInfo();
 			System.out.println(hrArr[i].avarageSalary() );
 		}
-		
-		System.out.println(" Avarage Salary (Hourly Rated): ");
+
+        //TODO use for each loops
+        System.out.println(" Avarage Salary (Hourly Rated): ");
 		for (int i=0; i < frArr.length;i++){
 			hrArr[i].employeeInfo();
 			System.out.println(frArr[i].avarageSalary() );

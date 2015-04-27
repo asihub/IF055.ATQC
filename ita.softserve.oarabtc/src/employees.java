@@ -1,6 +1,7 @@
 /**
  * Created by Olia on 26.04.2015.
  */
+//TODO Java code convention!!!
 public abstract class employees {
 
     private int id;
@@ -23,7 +24,7 @@ public abstract class employees {
         this.surname = surname;
     }
 
-
+    //TODO Java code convention!!!
     public abstract double PayCalc ();
 
 }

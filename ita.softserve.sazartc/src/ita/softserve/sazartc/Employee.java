@@ -17,10 +17,12 @@ public abstract class Employee {
 	public String getSurname() {
 		return surname;
 	}
-
+    //TODO Java code convention!!!
 	public abstract float SalaryCalc();
-	
-	public void SalaryPrint() {
+
+    //TODO Java code convention!!!
+    //TODO use toString() method override
+    public void SalaryPrint() {
 		System.out.printf("[%d] %s %s: ", getId(), getName(), getSurname());	
 		System.out.printf("%.2f\n", SalaryCalc());
 	}

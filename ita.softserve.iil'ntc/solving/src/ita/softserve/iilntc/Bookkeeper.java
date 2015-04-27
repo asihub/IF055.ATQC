@@ -2,7 +2,7 @@ package ita.softserve.iilntc;
 
 public class Bookkeeper {
     public static void main (String [] args) {
-
+        //TODO what's z?
         int z = 1;
         Worker coworker[] = new Worker[6];
 
