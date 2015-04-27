@@ -5,7 +5,7 @@ public abstract class WorkerStudy {
     private int id;
     private String name;
     private String surname;
-    public double payment;
+    protected double payment;
 
     public WorkerStudy(int id, String name, String surname){
         this.id = id;
