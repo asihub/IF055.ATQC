@@ -13,8 +13,9 @@ public abstract class Worker {
     }
 
     abstract public double monthlySalary();
-    //TODO use toString() override
-    public String getWorkerInformation(){
+    //TODO use toString() override - FIXED
+    @Override
+    public String toString(){
         return "ID " + id + " Name " + name + " Surname " + surname + " Payment " + monthlySalary() + " $";
     }
 }
