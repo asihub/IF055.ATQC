@@ -9,8 +9,8 @@ public class HourSalaryWorker extends Worker {
     }
     @Override
     public double monthlySalary(){
-        double hours = 8;
-        double averageDays = 20.8;
+        double hours = 8.00;
+        double averageDays = 20.80;
         return paymentPerHour * hours * averageDays;
     }
 }
