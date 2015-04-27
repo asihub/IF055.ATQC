@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class PhoneBookCheckingClass {
     public static void main (String [] args) {
 
-        Pattern reTemplate = Pattern.compile("\\(?\\d+\\)?\\D?\\d+\\D?\\d+");
+        Pattern reTemplate = Pattern.compile("\\(?\\d+\\)?\\W?\\d+\\D?\\d+");
         TreeMap<Integer, String> myPhoneBook = new TreeMap<>();
         myPhoneBook.put(1, "123 123 7777");
         myPhoneBook.put(2, "(123) 456 7899");
@@ -18,10 +18,11 @@ public class PhoneBookCheckingClass {
         myPhoneBook.put(9, "fu*k");
         myPhoneBook.put(10, "HNY");
         myPhoneBook.put(11, "www.google.com.ua");
+        myPhoneBook.put(12, "(123)x456x7899");
 
         for (Map.Entry<Integer, String> phoneNumber : myPhoneBook.entrySet()) {
             Matcher phoneExample = reTemplate.matcher(phoneNumber.getValue());
-            System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - " + phoneExample.matches() + " number.");
+            System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - " + phoneExample.matches() + " number");
         }
     }
 }
