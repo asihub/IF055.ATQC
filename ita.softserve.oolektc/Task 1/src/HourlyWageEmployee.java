@@ -13,7 +13,7 @@ public class HourlyWageEmployee extends Employee {
 
     @Override
     public double getMonthlyWage() {
-        return 20.8*8*hourlyWage;
+        return 20.8 * 8 * hourlyWage;
 
     }
 }
