@@ -3,7 +3,7 @@ package ita.softserve.sazartc;
 public class Main {
 	
 	public static PerHourEmployee[] perHourEmployees;	
-	public static FixedTaxEmployee[] fixedTaxEmployees;
+	public static FixedRateEmployee[] fixedRateEmployees;
 
 	public static void main(String[] args) {
 
@@ -16,13 +16,13 @@ public class Main {
 			perHourEmployees[i].SalaryPrint();
 		}
 		
-		fixedTaxEmployees = new FixedTaxEmployee[3];
-		fixedTaxEmployees[0] = new FixedTaxEmployee(3, "Остапчук", "Галина", 2500);
-		fixedTaxEmployees[1] = new FixedTaxEmployee(4, "Мельник", "Василина", 3000);
-		fixedTaxEmployees[2] = new FixedTaxEmployee(5, "Андрюк", "Оксана", 2800);
+		fixedRateEmployees = new FixedRateEmployee[3];
+		fixedRateEmployees[0] = new FixedRateEmployee(3, "Остапчук", "Галина", 2500);
+		fixedRateEmployees[1] = new FixedRateEmployee(4, "Мельник", "Василина", 3000);
+		fixedRateEmployees[2] = new FixedRateEmployee(5, "Андрюк", "Оксана", 2800);
 		
 		for(int i=0; i<3; i++) {
-			fixedTaxEmployees[i].SalaryPrint();
+			fixedRateEmployees[i].SalaryPrint();
 		}
 	}
 

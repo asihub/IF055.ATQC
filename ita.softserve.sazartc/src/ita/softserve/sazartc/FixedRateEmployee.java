@@ -1,19 +1,19 @@
 package ita.softserve.sazartc;
 
-public class FixedTaxEmployee extends Employee {
+public class FixedRateEmployee extends Employee {
 	
-	private float fixedTax;
+	private float fixedRate;
 
-	FixedTaxEmployee(int id, String name, String surname, float fixedTax) {
+	FixedRateEmployee(int id, String name, String surname, float fixedRate) {
 		super.id = id;
 		super.name = name;
 		super.surname = surname;
-		this.fixedTax = fixedTax;
+		this.fixedRate = fixedRate;
 	}	
 	
 	@Override
 	public float SalaryCalc() {		
-		return this.fixedTax;
+		return this.fixedRate;
 	}
 
 }
