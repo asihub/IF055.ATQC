@@ -21,8 +21,8 @@ public class PhoneBookCheckingClass {
         myPhoneBook.put(12, "(123)x456x7899");
 
         for (Map.Entry<Integer, String> phoneNumber : myPhoneBook.entrySet()) {
-            Matcher endPhoneNumberExample = reTemplate.matcher(phoneNumber.getValue());
-            System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - " + endPhoneNumberExample.matches() + " number.");
+            Matcher andPhoneNumberExample = reTemplate.matcher(phoneNumber.getValue());
+            System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - " + andPhoneNumberExample.matches() + " number.");
         }
     }
 }
