@@ -22,7 +22,7 @@ public class PhoneBookCheckingClass {
 
         for (Map.Entry<Integer, String> phoneNumber : myPhoneBook.entrySet()) {
             Matcher phoneExample = reTemplate.matcher(phoneNumber.getValue());
-            System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - " + phoneExample.matches() + " number");
+            System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - " + phoneExample.matches() + " number.");
         }
     }
 }
