@@ -3,7 +3,7 @@ package ita.softserve.idyntc;
 
 public class FixedSalaryEmployee extends Employee{
 
-    private float  fixedSalary;
+    private double  fixedSalary;
 
     public FixedSalaryEmployee(int id, String name, String surname, int fixedSalary){
         super.id=id;
@@ -17,7 +17,7 @@ public class FixedSalaryEmployee extends Employee{
      * @return salary for these employees
      */
     @Override
-    public float getSalary() {
+    public double getSalary() {
         if (fixedSalary<=0){
             System.out.println("Error input for fixed salary employees");
         }
