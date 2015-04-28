@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class PhoneBookCheckingClass {
     public static void main (String [] args) {
 
-        Pattern reTemplate = Pattern.compile("^(((\(?\d{3}\)?)|(\d{3}))[\.\s\-](\d{3})[\.\s\-](\d{4})|\d{10})");
+        Pattern reTemplate = Pattern.compile("^(((\\(?\\d{3}\\)?)|(\\d{3}))[\\.\\s\\-](\\d{3})[\\.\\s\\-](\\d{4})|\\d{10})");
         TreeMap<Integer, String> myPhoneBook = new TreeMap<>();
         myPhoneBook.put(1, "123?123?7777");
         myPhoneBook.put(2, "(123) 456 7899");
