@@ -1,34 +1,34 @@
 package ita.softserve.sazartc;
 
 public class Main {
-	//TODO why is this static?
-	public static PerHourEmployee[] perHourEmployees;	
-	public static FixedRateEmployee[] fixedRateEmployees;
+	//FIXED TODO why is this static? FIXED
+	//My fault, I've used them like data fields of class. Removed
 
 	public static void main(String[] args) {
 
-		perHourEmployees = new PerHourEmployee[3];
-        //TODO don't use cyrillic name in classes, just don't
-		perHourEmployees[0] = new PerHourEmployee(0, "Петренко", "Володимир", 25);
-		perHourEmployees[1] = new PerHourEmployee(1, "Наказнюк", "Дмитро", 30);
-		perHourEmployees[2] = new PerHourEmployee(2, "Павлюк", "Олег", 28);
+		PerHourEmployee[] perHourEmployees = new PerHourEmployee[3];
+        //FIXED TODO don't use cyrillic name in classes, just don't FIXED
+		perHourEmployees[0] = new PerHourEmployee(0, "Petrenko", "Volodymyr", 25);
+		perHourEmployees[1] = new PerHourEmployee(1, "Nakazniuk", "Dmytro", 30);
+		perHourEmployees[2] = new PerHourEmployee(2, "Pavliuk", "Oleh", 28);
 
-        //TODO why not use for each loop?
-		for(int i=0; i<3; i++) {
-			perHourEmployees[i].SalaryPrint();
-		}
+        //FIXED TODO why not use for each loop? FIXED
+		for(PerHourEmployee employee: perHourEmployees) {
+			System.out.println(employee.toString());
+		}		
 		
-		fixedRateEmployees = new FixedRateEmployee[3];
+		FixedRateEmployee[] fixedRateEmployees = new FixedRateEmployee[3];
 
-        //TODO don't use cyrillic name in classes, just don't
-        fixedRateEmployees[0] = new FixedRateEmployee(3, "Остапчук", "Галина", 2500);
-		fixedRateEmployees[1] = new FixedRateEmployee(4, "Мельник", "Василина", 3000);
-		fixedRateEmployees[2] = new FixedRateEmployee(5, "Андрюк", "Оксана", 2800);
+        //FIXED TODO don't use cyrillic name in classes, just don't FIXED
+        fixedRateEmployees[0] = new FixedRateEmployee(3, "Ostapchuk", "Galyna", 2500);
+		fixedRateEmployees[1] = new FixedRateEmployee(4, "Melnyk", "Vasylyna", 3000);
+		fixedRateEmployees[2] = new FixedRateEmployee(5, "Andriuk", "Oksana", 2800);
 
-        //TODO why not use for each loop?
-        for(int i=0; i<3; i++) {
-			fixedRateEmployees[i].SalaryPrint();
-		}
+        //FIXED TODO why not use for each loop? FIXED
+		for(FixedRateEmployee employee: fixedRateEmployees) {
+			System.out.println(employee.toString());
+		}	        
+        
 	}
 
 }

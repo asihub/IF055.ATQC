@@ -2,9 +2,9 @@ package ita.softserve.sazartc;
 
 public class FixedRateEmployee extends Employee {
 	
-	private float fixedRate;
+	private double fixedRate;
 
-	FixedRateEmployee(int id, String name, String surname, float fixedRate) {
+	FixedRateEmployee(int id, String name, String surname, double fixedRate) {
 		super.id = id;
 		super.name = name;
 		super.surname = surname;
@@ -12,8 +12,8 @@ public class FixedRateEmployee extends Employee {
 	}	
 	
 	@Override
-    //TODO Java code convention!!!
-    public float SalaryCalc() {
+    //FIXED TODO Java code convention!!! FIXED
+    public double calculateSalary() {
 		return this.fixedRate;
 	}
 
