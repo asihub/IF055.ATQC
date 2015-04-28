@@ -6,18 +6,6 @@ public abstract class Employee {
 	protected String name;
 	protected String surname;
 	
-	public int getId() {
-		return this.id;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-
-	public String getSurname() {
-		return surname;
-	}
-	
     //FIXED TODO Java code convention!!! FIXED
 	abstract public double calculateSalary();
 
@@ -27,7 +15,7 @@ public abstract class Employee {
 	@Override
 	public String toString() {		
 		String result = String.format("[%d] %s %s: %.2f", 
-			getId(), getName(), getSurname(), calculateSalary()); 
+			this.id, this.name, this.surname, calculateSalary()); 
 		return result;
 	}    
     
