@@ -2,10 +2,10 @@ package ita.softserve.idyntc;
 
 public class PerHourSalaryEmployee extends Employee{
 
-    private float hourlyRate;
+    private double hourlyRate;
 
 
-    public PerHourSalaryEmployee(int id, String name, String surname, float hourlyRate){
+    public PerHourSalaryEmployee(int id, String name, String surname, double hourlyRate){
         super.id=id;
         super.name=name;
         super.surname=surname;
@@ -18,11 +18,11 @@ public class PerHourSalaryEmployee extends Employee{
      * @return salary for these employees
      */
     @Override
-    public float getSalary() {
+    public double getSalary() {
         if (hourlyRate<=0){
             System.out.printf("Error input for per hourly salary employees");
         }
-        //TODO why just not use double?
-        return (float) (20.8*8*hourlyRate);
+        //TODO why just not use double?   fixed 
+        return 20.8*8*hourlyRate;
     }
 }
