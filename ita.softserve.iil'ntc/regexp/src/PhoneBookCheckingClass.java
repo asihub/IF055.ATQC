@@ -14,6 +14,7 @@ public class PhoneBookCheckingClass {
         myPhoneBook.put(4, "(123)-456-7899");
         myPhoneBook.put(5, "123-456-7899");
         myPhoneBook.put(6, "123 456 7899");
+        myPhoneBook.put(7, "123.456.7899");
         myPhoneBook.put(8, "1234567899");
         myPhoneBook.put(9, "fu*k");
         myPhoneBook.put(10, "HNY");
