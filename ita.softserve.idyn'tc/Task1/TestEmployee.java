@@ -18,8 +18,8 @@ public class TestEmployee {
         list.add(5,new FixedSalaryEmployee(5,"Oleg","Olegko",2500));
 
        for (Employee emp : list){
-           //TODO toString() call is not needed
-           System.out.println(emp.toString());
+           //TODO toString() call is not needed     FIXED
+           System.out.println(emp);
        }
 
 
