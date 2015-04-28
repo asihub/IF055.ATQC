@@ -7,7 +7,7 @@ public abstract class Employee {
     protected String name;
     protected String surname;
 
-    public abstract float getSalary();
+    public abstract double getSalary();
 
     /**
      * this method helps to print employees info more correctly
