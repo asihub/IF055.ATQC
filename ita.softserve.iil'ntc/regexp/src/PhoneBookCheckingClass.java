@@ -4,12 +4,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PhoneBookCheckingClass {
+    double i = .4;
     public static void main (String [] args) {
 
-        Pattern reTemplate = Pattern.compile("^(\\(?\\d{3}\\)?)([\\s\\.\\-]?\\d{3}){2}\\d");
+        Pattern reTemplate = Pattern.compile("(^(\\(?\\d{3}\\)?)((\\.\\d{3}\\.)|(\\-\\d{3}\\-)|(\\s\\d{3}\\s))\\d{4})|\\d{10}");
         TreeMap<Integer, String> myPhoneBook = new TreeMap<>();
         myPhoneBook.put(1, "123?123?7777");
-        myPhoneBook.put(2, "(123) 456 7899");
+        myPhoneBook.put(2, "(123) 456.7899");
         myPhoneBook.put(3, "(123).456.7899");
         myPhoneBook.put(4, "(123)-456-7899");
         myPhoneBook.put(5, "123-456-7899");
