@@ -2,9 +2,9 @@ package ita.softserve.sazartc;
 
 public class PerHourEmployee extends Employee {
 	
-	private float hourRate;
+	private double hourRate;
 	
-	PerHourEmployee(int id, String name, String surname, float hourRate) {
+	PerHourEmployee(int id, String name, String surname, double hourRate) {
 		super.id = id;
 		super.name = name;
 		super.surname = surname;
@@ -12,10 +12,10 @@ public class PerHourEmployee extends Employee {
 	}		
 
 	@Override
-    //TODO Java code convention!!!
-    public float SalaryCalc() {
-		float salary;
-		salary = (float) (hourRate * 20.8 * 8);
+    //FIXED TODO Java code convention!!! FIXED
+    public double calculateSalary() {
+		double salary;
+		salary = hourRate * 20.8 * 8;
 		return salary;
 	}
 
