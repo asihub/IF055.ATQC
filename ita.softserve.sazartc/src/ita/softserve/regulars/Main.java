@@ -34,16 +34,19 @@ public class Main {
 
 		System.out.println("Numbers extractor checking:");
 		List<String> groups = new ArrayList<String>();
+
 		for(NumbersExtractor num_string: num_strings) {
 
 			groups = num_string.check();
-			
+				
 			for(String group: groups) {				
 				System.out.printf("%s, ", group);
 			}
+			
 			System.out.println("");
 		}
-		
 	}
-
+	
 }
+
+

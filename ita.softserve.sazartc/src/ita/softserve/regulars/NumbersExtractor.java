@@ -17,8 +17,6 @@ public class NumbersExtractor {
 		this.inputString = inputString;
 	}
 	
-	
-	
 	public List<String> check() {
 		
         Pattern pattern = Pattern.compile("\\d+\\.?\\d*");
@@ -26,11 +24,10 @@ public class NumbersExtractor {
         
         List<String> groups = new ArrayList<String>();
         while (matcher.find()) {
-			//System.out.print(matcher.group());
         	groups.add(matcher.group());
 		}
         
-        return groups;        
+      	return groups;        
 	}
 
 	@Override
