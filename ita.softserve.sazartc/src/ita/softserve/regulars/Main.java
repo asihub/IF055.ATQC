@@ -18,8 +18,7 @@ public class Main {
 		phones.add(new PhoneNumber("test"));
 		phones.add(new PhoneNumber("123 ooopps..."));
 		phones.add(new PhoneNumber("456 789 ()"));
-		phones.add(new PhoneNumber(".123.456789"));
-		
+		phones.add(new PhoneNumber(".123.456789"));		
 		
 		System.out.println("Phone number checking:");
 		for(PhoneNumber phoneNumber: phones) {
