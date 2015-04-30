@@ -1,7 +1,4 @@
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
@@ -38,6 +35,26 @@ public class Main {
             System.out.println(list);
         }
 
+        ListIterator<Employee> iterator = employeeList.listIterator();
+
+        while (iterator.hasNext()){
+
+            if (iterator.next().equals(employee5)){
+                iterator.remove();
+            } else if (iterator.previousIndex() == 4){
+                iterator.add(new Employee(107, "David Mitchell"));
+            } else if (iterator.nextIndex() == 1){
+                iterator.set(new Employee(109, "Jamie XX"));
+            }
+        }
+
+        System.out.println();
+        System.out.println("-------------------Modified List----------------------");
+
+        for (Employee list: employeeList){
+            System.out.println(list);
+        }
+
         System.out.println();
         System.out.println("-------------------------Map--------------------------");
 
@@ -46,17 +63,6 @@ public class Main {
             Employee value = entry.getValue();
 
             System.out.println("Map key: " + key + "     " + value);
-        }
-
-        employeeList.add(new Employee(107, "David Mitchell"));
-        employeeList.set(5, new Employee(109, "Jamie XX"));
-        employeeList.remove(4);
-
-        System.out.println();
-        System.out.println("-------------------Modified List----------------------");
-
-        for (Employee list: employeeList){
-            System.out.println(list);
         }
 
         Employee employee7 = new Employee(110, "Liam Gallagher");
