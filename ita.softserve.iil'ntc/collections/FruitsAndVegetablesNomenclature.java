@@ -8,11 +8,19 @@ public class FruitsAndVegetablesNomenclature {
         this.name = name;
     }
 
-    public int lookForObjectCode() {
+    protected void changeObjectCode(){
+        this.code = code;
+    }
+
+    protected void changeObjectName(){
+        this.name = name;
+    }
+
+    protected int lookForObjectCode() {
         return this.code;
     }
 
-    public String lookForObjectName() {
+    protected String lookForObjectName() {
         return this.name;
     }
 
