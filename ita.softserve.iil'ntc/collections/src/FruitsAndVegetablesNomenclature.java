@@ -8,11 +8,11 @@ public class FruitsAndVegetablesNomenclature {
         this.name = name;
     }
 
-    protected void changeObjectCode(){
+    protected void changeObjectCode(int code){
         this.code = code;
     }
 
-    protected void changeObjectName(){
+    protected void changeObjectName(String name){
         this.name = name;
     }
 

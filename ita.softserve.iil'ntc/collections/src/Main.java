@@ -40,7 +40,7 @@ public class Main {
         //Also we are going to change LinkedList with iterator.
         int forIteration = 0;
         while(it.hasNext()){
-            if (goodsLinkedList.get(forIteration).lookForObjectName().equals("cucumber")){
+            if (goodsLinkedList.get(forIteration).lookForObjectName().equals("cucumber")) {
                 it.next();
                 it.remove();
             } else {
@@ -50,6 +50,11 @@ public class Main {
         }
 
         System.out.println("Now list size is: " + goodsLinkedList.size() + ".");
+
+        //We wanna change objects by adding shop name (Good Shop).
+        for (int i=0; i < goodsLinkedList.size(); i++) {
+            goodsLinkedList.get(i).changeObjectName("'Good Shop': " + goodsLinkedList.get(i).lookForObjectName() + ".");
+        }
         System.out.println("Our list looks as following:");
 
         for (int i=0; i < goodsLinkedList.size(); i++){
