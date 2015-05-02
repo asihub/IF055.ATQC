@@ -23,7 +23,7 @@ public class Bookkeeper {
         listOfFixedSalaryWorker.sort(Comparator.comparing(FixedSalaryWorker::monthlySalary)
                 .thenComparing(FixedSalaryWorker::getSurname));
 
-        //Here we are printing sorted list.
+        //Here we are printing our sorted list.
         for (FixedSalaryWorker fsw : listOfFixedSalaryWorker) System.out.println(fsw);
 
         System.out.println();
@@ -46,11 +46,11 @@ public class Bookkeeper {
         listOfHourSalaryWorker.add(new HourSalaryWorker(9, "Jeremy", "Raymond", 100));
         listOfHourSalaryWorker.add(new HourSalaryWorker(10, "Arnold", "Try", 150));
 
-        //Next step is to sort our list by monthly salary and by surname.
+        //Next step is to sort our list by monthly salary and surname.
         listOfHourSalaryWorker.sort(Comparator.comparing(HourSalaryWorker::monthlySalary)
                 .thenComparing(HourSalaryWorker::getSurname));
 
-        //Here we are printing sorted list.
+        //Here we are printing our sorted list.
         for (HourSalaryWorker hsw : listOfHourSalaryWorker) System.out.println(hsw);
 
         System.out.println();
