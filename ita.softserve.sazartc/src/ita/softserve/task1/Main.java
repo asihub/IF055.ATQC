@@ -1,4 +1,4 @@
-package ita.softserve.sazartc;
+package ita.softserve.task1;
 
 public class Main {
 	//FIXED TODO why is this static? FIXED

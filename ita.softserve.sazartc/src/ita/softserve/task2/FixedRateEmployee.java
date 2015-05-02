@@ -1,18 +1,19 @@
-package ita.softserve.sazartc;
+package ita.softserve.task2;
 
+/**
+ * Child Employee class described Employee with fixed salary calculated
+ * on monthly wage
+ */
 public class FixedRateEmployee extends Employee {
 	
 	private double fixedRate;
 
 	FixedRateEmployee(int id, String name, String surname, double fixedRate) {
-		super.id = id;
-		super.name = name;
-		super.surname = surname;
+		super(id, name, surname);
 		this.fixedRate = fixedRate;
 	}	
 	
 	@Override
-    //FIXED TODO Java code convention!!! FIXED
     public double calculateSalary() {
 		return this.fixedRate;
 	}

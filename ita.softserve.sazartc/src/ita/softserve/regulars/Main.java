@@ -21,24 +21,26 @@ public class Main {
 		phones.add(new PhoneNumber(".123.456789"));		
 		
 		System.out.println("Phone number checking:");
-		for(PhoneNumber phoneNumber: phones) {
+		for (PhoneNumber phoneNumber: phones) {
 			System.out.printf("%s: ", phoneNumber.toString());
 			System.out.println(phoneNumber.check());
 		}
 
 		// Numbers extractor checking
-		ArrayList<NumbersExtractor> num_strings = new ArrayList<NumbersExtractor>();		
-		num_strings.add(new NumbersExtractor("Hello 2.15 digital World 5,3"));
-		num_strings.add(new NumbersExtractor("Is 543 there 1.54 2,5 anybody here ?"));
+		ArrayList<NumbersExtractor> numStrings 
+				= new ArrayList<NumbersExtractor>();		
+		numStrings.add(new NumbersExtractor("Hello 2.15 digital World 5,3"));
+		numStrings.add(new NumbersExtractor(
+				"Is 543 there 1.54 2,5 anybody here ?"));
 
 		System.out.println("Numbers extractor checking:");
 		List<String> groups = new ArrayList<String>();
 
-		for(NumbersExtractor num_string: num_strings) {
+		for (NumbersExtractor num_string: numStrings) {
 
 			groups = num_string.check();
 				
-			for(String group: groups) {				
+			for (String group: groups) {				
 				System.out.printf("%s, ", group);
 			}
 			
