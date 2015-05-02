@@ -83,12 +83,28 @@ public class Main {
 
         //Deleting object with key "2" in map.
         Integer elementKeyForDeleting = 2;
+        System.out.println("We are deleting the " + elementKeyForDeleting + " element from map.");
         for (Iterator <Integer> itt = goodsMap.keySet().iterator(); itt.hasNext();) {
             if(itt.next().equals(elementKeyForDeleting)) itt.remove();
         }
 
         //Map after deleting the second element.
-        System.out.println("We have deleted the " + elementKeyForDeleting + " element and the map looks like following:");
+        System.out.println("Our map:");
+        for(Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
+            System.out.println(map.getKey() + ":---> " + map.getValue());
+        }
+
+        System.out.println("We are deleting cucumbers from map.");
+        Iterator <Map.Entry<Integer, FruitsAndVegetablesNomenclature>> iter = goodsMap.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry<Integer, FruitsAndVegetablesNomenclature> entry = iter.next();
+            if("cucumber".equals(entry.getValue().lookForObjectName())){
+                iter.remove();
+            }
+        }
+
+        //Map after other deleting.
+        System.out.println("Our map:");
         for(Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
             System.out.println(map.getKey() + ":---> " + map.getValue());
         }
