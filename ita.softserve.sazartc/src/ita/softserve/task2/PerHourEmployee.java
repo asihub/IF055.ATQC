@@ -6,6 +6,8 @@ package ita.softserve.task2;
  */
 public class PerHourEmployee extends Employee {
 	
+	final private double DAYS_COUNT = 20.8; 	// avarage count of worked days
+	final private int HOURS_PER_DAY = 8;		// count of hours in worked day
 	private double hourRate;
 	
 	PerHourEmployee(int id, String name, String surname, double hourRate) {
@@ -16,7 +18,7 @@ public class PerHourEmployee extends Employee {
 	@Override
     public double calculateSalary() {
 		double salary;
-		salary = hourRate * 20.8 * 8;
+		salary = hourRate * DAYS_COUNT * HOURS_PER_DAY;
 		return salary;
 	}
 

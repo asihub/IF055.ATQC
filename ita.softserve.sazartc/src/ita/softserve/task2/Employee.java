@@ -19,9 +19,8 @@ public abstract class Employee {
 
 	@Override
 	public String toString() {		
-		String result = String.format("[%d] %s %s: %.2f", 
-			this.id, this.name, this.surname, calculateSalary()); 
-		return result;
+		return String.format("[%d] %s %s: %.2f", 
+				this.id, this.name, this.surname, calculateSalary()); 
 	}    
     
 }
