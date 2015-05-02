@@ -7,7 +7,7 @@ public class Bookkeeper {
     public static void main(String[] args) {
 
         //Here we are creating our unsorted list of workers with fixed salary.
-        LinkedList <FixedSalaryWorker> listOfFixedSalaryWorker = new LinkedList <> ();
+        LinkedList<FixedSalaryWorker> listOfFixedSalaryWorker = new LinkedList<>();
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(1, "John", "Smith", 5000));
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(2, "Anna", "Bee", 6700));
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(3, "Anna", "Brighton", 4500));
@@ -23,13 +23,18 @@ public class Bookkeeper {
         listOfFixedSalaryWorker.sort(Comparator.comparing(FixedSalaryWorker::monthlySalary)
                 .thenComparing(FixedSalaryWorker::getSurname));
 
-        //Here we are printing our sorted list.
+        //Here we are printing sorted list.
         for (FixedSalaryWorker fsw : listOfFixedSalaryWorker) System.out.println(fsw);
 
         System.out.println();
 
         //The first 5 names from list.
         for (int i=0; i < 5; i++) System.out.println(listOfFixedSalaryWorker.get(i).getName());
+
+        System.out.println();
+
+        //The last 3 ids from list.
+        for (int i = 7; i < 10; i++) System.out.println(listOfFixedSalaryWorker.get(i).getId());
 
         System.out.println();
 
@@ -46,12 +51,17 @@ public class Bookkeeper {
         listOfHourSalaryWorker.add(new HourSalaryWorker(9, "Jeremy", "Raymond", 100));
         listOfHourSalaryWorker.add(new HourSalaryWorker(10, "Arnold", "Try", 150));
 
-        //Next step is to sort our list by monthly salary and surname.
+        //Next step is to sort our list by monthly salary and by surname.
         listOfHourSalaryWorker.sort(Comparator.comparing(HourSalaryWorker::monthlySalary)
                 .thenComparing(HourSalaryWorker::getSurname));
 
-        //Here we are printing our sorted list.
+        //Here we are printing sorted list.
         for (HourSalaryWorker hsw : listOfHourSalaryWorker) System.out.println(hsw);
+
+        System.out.println();
+
+        //The first 5 names from list.
+        for (int i=0; i < 5; i++) System.out.println(listOfHourSalaryWorker.get(i).getName());
 
         System.out.println();
 
