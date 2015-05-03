@@ -15,11 +15,11 @@ public class HourlyPayEmployee extends Employees {
 
     //TODO what's hPay? - FIXED
     public double hourPay;
-    final double hourPrice = 20.8;
-    final int quantityofHour = 8;
+    final double PAY_DAYS = 20.8;
+    final int PAY_HOUR = 8;
     //TODO Java code convention!!! - FIXED
     public double payCalc() {
-        return hourPay = (hourPrice * quantityofHour * hourlyPay); }
+        return hourPay = (PAY_DAYS * PAY_HOUR * hourlyPay); }
 
     public void printInfo() {
         System.out.println("Employee: " + getName() + " " + getSurname() + " - " + payCalc() + " $");
