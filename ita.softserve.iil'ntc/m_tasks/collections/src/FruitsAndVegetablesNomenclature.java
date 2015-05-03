@@ -3,7 +3,7 @@ public class FruitsAndVegetablesNomenclature {
     private int code;
     private String name;
 
-    public FruitsAndVegetablesNomenclature(int code, String name){
+    protected FruitsAndVegetablesNomenclature(int code, String name){
         this.code = code;
         this.name = name;
     }

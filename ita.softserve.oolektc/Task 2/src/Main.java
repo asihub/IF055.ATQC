@@ -44,8 +44,11 @@ public class Main {
         fixedWageEmployees.forEach(System.out::println);
 
         System.out.println();
-        fixedWageEmployees.subList(0, 5).forEach(n -> System.out.println(n.getFirstName()));
-        fixedWageEmployees.subList(fixedWageEmployees.size() - 3, fixedWageEmployees.size())
+        fixedWageEmployees.stream()
+                .limit(5)
+                .forEach(n -> System.out.println(n.getFirstName()));
+        fixedWageEmployees.stream()
+                .skip(fixedWageEmployees.size() - 3)
                 .forEach(n -> System.out.println(n.getId()));
 
         System.out.println();
@@ -58,9 +61,11 @@ public class Main {
         hourlyWageEmployees.forEach(System.out::println);
 
         System.out.println();
-
-        hourlyWageEmployees.subList(0, 5).forEach(n -> System.out.println(n.getFirstName()));
-        hourlyWageEmployees.subList(hourlyWageEmployees.size() - 3, hourlyWageEmployees.size())
+        hourlyWageEmployees.stream()
+                .limit(5)
+                .forEach(n -> System.out.println(n.getFirstName()));
+        hourlyWageEmployees.stream()
+                .skip(hourlyWageEmployees.size() - 3)
                 .forEach(n -> System.out.println(n.getId()));
     }
 }
