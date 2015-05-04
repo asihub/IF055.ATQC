@@ -29,4 +29,9 @@ public abstract class Employees {
 
     public abstract void printInfo();
 
+    @Override
+    public String toString() {
+        return "Employee: " + "(id " + getId() + ") " + getName() + " - " + payCalc() + " $";
+    }
+
 }
