@@ -1,5 +1,3 @@
-package ita.softserve.iilntc;
-
 public class FixedSalaryWorker extends Worker {
     private double paymentPerMonth;
 
