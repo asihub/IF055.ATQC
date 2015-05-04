@@ -1,6 +1,6 @@
 package ita.softserve.oolektc;
 
-public class Main {
+public class Task1 {
 
     public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class Task2 {
 
     public static void main(String[] args) {
 
@@ -36,46 +36,31 @@ public class Main {
                 .thenComparing(Employee::getLastName);
 
         System.out.println("Fixed wage employee list:");
-        //TODO move out to separate print method
-        fixedWageEmployees.forEach(System.out::println);
-        //TODO use "\n" for newline instead
-        System.out.println();
-        System.out.println("Sorted fixed wage employee list:");
+        //TODO move out to separate print method - FIXED
+        Employee.printEmployeeList(fixedWageEmployees);
+        //TODO use "\n" for newline instead - FIXED
+        System.out.println("\nSorted fixed wage employee list:");
         fixedWageEmployees.sort(employeeComparator);
-        //TODO move out to separate print method
-        fixedWageEmployees.forEach(System.out::println);
+        //TODO move out to separate print method - FIXED
+        Employee.printEmployeeList(fixedWageEmployees);
 
-        //TODO use "\n" for newline instead
-        System.out.println();
+        //TODO move out to separate print method - FIXED
+        Employee.printFirstElementsFromList(fixedWageEmployees, 5, "first name");
         //TODO move out to separate print method
-        fixedWageEmployees.stream()
-                .limit(5)
-                .forEach(n -> System.out.println(n.getFirstName()));
-        //TODO move out to separate print method
-        //TODO move out to separate print method
-        fixedWageEmployees.stream()
-                .skip(fixedWageEmployees.size() - 3)
-                .forEach(n -> System.out.println(n.getId()));
+        Employee.printLastElementsFromList(fixedWageEmployees, 3, "id");
 
-        //TODO use "\n" for newline instead
-        System.out.println();
-        System.out.println("Hourly wage employee list:");
-        hourlyWageEmployees.forEach(System.out::println);
+        //TODO use "\n" for newline instead - FIXED
+        System.out.println("\nHourly wage employee list:");
+        Employee.printEmployeeList(hourlyWageEmployees);
 
-        //TODO use "\n" for newline instead
-        System.out.println();
-        System.out.println("Sorted hourly wage employee list:");
+        //TODO use "\n" for newline instead - FIXED
+        System.out.println("\nSorted hourly wage employee list:");
         hourlyWageEmployees.sort(employeeComparator);
-        hourlyWageEmployees.forEach(System.out::println);
+        Employee.printEmployeeList(hourlyWageEmployees);
 
-        //TODO use "\n" for newline instead
-        System.out.println();
-        hourlyWageEmployees.stream()
-                .limit(5)
-                .forEach(n -> System.out.println(n.getFirstName()));
-        //TODO move out to separate print method
-        hourlyWageEmployees.stream()
-                .skip(hourlyWageEmployees.size() - 3)
-                .forEach(n -> System.out.println(n.getId()));
+        //TODO move out to separate print method - FIXED
+        Employee.printFirstElementsFromList(hourlyWageEmployees, 5, "first name");
+        //TODO move out to separate print method - FIXED
+        Employee.printLastElementsFromList(hourlyWageEmployees, 3, "id");
     }
 }
