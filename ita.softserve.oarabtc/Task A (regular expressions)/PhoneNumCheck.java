@@ -21,7 +21,7 @@ public class PhoneNumCheck {
             add("phoneNumber");
             add("0502610717");
             add("(0342)787878");
-            add("(067))346711");
+            add("(067))346721");
             add("050)9999888");
             add("re098call");
         }};
