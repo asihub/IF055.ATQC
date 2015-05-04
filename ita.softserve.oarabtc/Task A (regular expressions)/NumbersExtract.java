@@ -27,7 +27,7 @@ public class NumbersExtract {
 
     public static void main(String[] args) {
 
-        String text1 = "Carrots (3.14 high) have fun 4ever times, even at 11 p.m.";
+        String text1 = "2 Carrots (3.14 high) have fun 4ever times, even at 11 p.m.";
         String text2 = "Broccoli seriously men, don't have fun";
 
         System.out.println("Numbers of text #1: " + textCheck(text1));
