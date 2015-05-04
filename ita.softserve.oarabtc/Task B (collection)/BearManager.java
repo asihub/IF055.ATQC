@@ -34,6 +34,7 @@ public class BearManager {
 
         bears.add(new Bear("Arthur", 12));
         bears.add(new Bear("Frank", 4));
+        bears.set(1,new Bear("Clare", bears.get(1).getSize()));
 
         for (Bear bigBearChange : bears) {
             bearViewChange(bigBearChange);

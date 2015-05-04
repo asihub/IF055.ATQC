@@ -25,7 +25,9 @@ public class BearMapManager {
 
         System.out.println();
 
-        Integer elementKeyForDeleting = 2;
+        bears.get(0).setSize(10);
+        bears.get(2).setName("Ted");
+        Integer elementKeyForDeleting = 3;
         for (Iterator<Integer> itt = bears.keySet().iterator(); itt.hasNext(); ) {
             if (itt.next().equals(elementKeyForDeleting)) itt.remove();
         }
