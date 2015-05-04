@@ -1,6 +1,8 @@
 /**
  * Created by Olia on 26.04.2015.
  */
+
+
 //TODO Java code convention!!! - FIXED
 //TODO what's hourlyPayEm? HourlyPayEmployee maybe? - FIXED
 public class HourlyPayEmployee extends Employees {

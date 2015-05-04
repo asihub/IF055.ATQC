@@ -1,6 +1,8 @@
 /**
  * Created by Olia on 26.04.2015.
  */
+
+
     //TODO Java code convention!!! - FIXED
     //TODO what's fixedPayEm? FixedPayEmployee maybe? - FIXED
     public class FixedPayEmployee extends Employees {
