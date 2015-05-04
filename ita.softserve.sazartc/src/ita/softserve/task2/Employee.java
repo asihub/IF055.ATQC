@@ -1,21 +1,24 @@
 package ita.softserve.task2;
 
 /**
- * Abstract class described Emplyee' properties
+ * Abstract class described Emplyee' properties with cached salary
  */
-public abstract class Employee implements Comparable<Employee> {
+abstract public class Employee implements Comparable<Employee> {
 	
 	protected int id;
 	protected String name;
 	protected String surname;
+	protected double salaryBase;
 	
-	public Employee(int id, String surname, String name) {
+	public Employee(int id, String surname, String name, double salaryBase) {
 		this.id = id;
 		this.name = name;
-		this.surname = surname;		
+		this.surname = surname;
+		this.salaryBase = salaryBase;
 	}
 	
 	abstract public double calculateSalary();
+	//abstract public double getSalaryBase();
 
 	@Override
 	public String toString() {		

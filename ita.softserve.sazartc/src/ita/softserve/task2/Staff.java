@@ -1,5 +1,9 @@
 package ita.softserve.task2;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +18,8 @@ public class Staff {
 	public void addEmployee(Employee employee) {
 		employees.add(employee);
 	}
+	
+//	abstract public void loadFromFile(String fileName) throws IOException;
 	
 	@Override
 	public String toString() {
@@ -62,6 +68,55 @@ public class Staff {
 		Collections.sort(this.employees);
 	}
 	
+	public void saveToFile(String fileName) throws IOException {
+		FileWriter writer = null;
+		try {
+			writer = new FileWriter(fileName, false);
+			for (Employee employee: employees) {
+				writer.write(String.format("%s,,,", employee.id));
+				writer.write(String.format("%s,,,", employee.surname)); 
+				writer.write(String.format("%s,,,", employee.name)); 
+				writer.write(String.format("%f\n", employee.salaryBase));
+			}
+		} catch (IOException e) {
+            System.out.println(e.getMessage());
+	    } finally {
+	    	if (writer != null) writer.close();
+	    }
+		
+	}
+	
+	public void loadFromFile(String fileName, String initType) throws IOException {		
+		
+		List<Employee> tmpEmployees = new ArrayList<Employee>();
+		BufferedReader reader = null;		
+		try {
+			reader = new BufferedReader(new FileReader(fileName));
+			while (true) {
+				String line = reader.readLine();
+				if (line == null) break;
+
+				String[] lineArr = line.split(",,,");
+				
+				if (initType.equals("PER_HOUR")) {
+					tmpEmployees.add(new PerHourEmployee(Integer.parseInt(lineArr[0]), 
+							lineArr[1], lineArr[2], Double.parseDouble(lineArr[3])));
+				} else if (initType.equals("FIXED_RATE")) {
+					tmpEmployees.add(new FixedRateEmployee(Integer.parseInt(lineArr[0]), 
+							lineArr[1], lineArr[2], Double.parseDouble(lineArr[3])));
+				} else throw new IllegalArgumentException();	
+			}
+			
+			this.employees.clear();
+			this.employees = tmpEmployees;
+			
+		} catch (IOException e) {
+            System.out.println(e.getMessage());
+	    } finally {
+	    	if (reader != null) reader.close();
+	    }
+		
+	}
 
 
 }

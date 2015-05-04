@@ -6,16 +6,14 @@ package ita.softserve.task2;
  */
 public class FixedRateEmployee extends Employee {
 	
-	private double fixedRate;
-
-	FixedRateEmployee(int id, String name, String surname, double fixedRate) {
-		super(id, name, surname);
-		this.fixedRate = fixedRate;
+	FixedRateEmployee(int id, String name, String surname, double salaryBase) {
+		super(id, name, surname, salaryBase);
 	}	
 	
 	@Override
     public double calculateSalary() {
-		return this.fixedRate;
+		return this.salaryBase;
 	}
 
+	
 }

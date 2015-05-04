@@ -9,8 +9,8 @@ public abstract class Employee {
     //FIXED TODO Java code convention!!! FIXED
 	abstract public double calculateSalary();
 
-    //TODO Java code convention!!!
-    //TODO use toString() method override
+    //FIXED TODO Java code convention!!! FIXED
+    //FIXED TODO use toString() method override FIXED
 	
 	@Override
 	public String toString() {		
