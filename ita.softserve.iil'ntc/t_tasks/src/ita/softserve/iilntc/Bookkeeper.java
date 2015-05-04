@@ -20,6 +20,7 @@ public class Bookkeeper {
         for(int i = 0; i < coworker.length; ++i){
             System.out.println(coworker[i]);
         }
+        //TODO use "\n" for newline instead
         System.out.println();
         //Here we are creating our unsorted list of workers with fixed salary.
         LinkedList<FixedSalaryWorker> listOfFixedSalaryWorker = new LinkedList<>();
@@ -39,18 +40,24 @@ public class Bookkeeper {
                 .thenComparing(FixedSalaryWorker::getSurname));
 
         //Here we are printing sorted list.
+        //TODO move out to separate print method
         for (FixedSalaryWorker fsw : listOfFixedSalaryWorker) System.out.println(fsw);
 
+        //TODO use "\n" for newline instead
         System.out.println();
 
         //The first 5 names from list.
+        //TODO move out to separate print method
         for (int i=0; i < 5; i++) System.out.println(listOfFixedSalaryWorker.get(i).getName());
 
+        //TODO use "\n" for newline instead
         System.out.println();
 
         //The last 3 ids from list.
+        //TODO move out to separate print method
         for (int i = 7; i < 10; i++) System.out.println(listOfFixedSalaryWorker.get(i).getId());
 
+        //TODO use "\n" for newline instead
         System.out.println();
 
         //Here we are creating our unsorted list of workers with hourly salary.
@@ -71,16 +78,21 @@ public class Bookkeeper {
                 .thenComparing(HourSalaryWorker::getSurname));
 
         //Here we are printing sorted list.
+        //TODO move out to separate print method
         for (HourSalaryWorker hsw : listOfHourSalaryWorker) System.out.println(hsw);
 
+        //TODO use "\n" for newline instead
         System.out.println();
 
         //The first 5 names from list.
+        //TODO move out to separate print method
         for (int i=0; i < 5; i++) System.out.println(listOfHourSalaryWorker.get(i).getName());
 
+        //TODO use "\n" for newline instead
         System.out.println();
 
         //The last 3 ids from list.
+        //TODO move out to separate print method
         for (int i = 7; i < 10; i++) System.out.println(listOfHourSalaryWorker.get(i).getId());
 
     }
