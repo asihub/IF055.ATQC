@@ -1,8 +1,8 @@
-package ita.softserve.iilntc;
+import java.util.Comparator;
+import java.util.LinkedList;
 
-public class Bookkeeper {
+public class Task1 {
     public static void main (String [] args) {
-        
         //TODO what's z? - FIXED
         int keyForIdGenerator = 1;
         Worker coworker[] = new Worker[6];
@@ -18,6 +18,6 @@ public class Bookkeeper {
         for(int i = 0; i < coworker.length; ++i){
             System.out.println(coworker[i]);
         }
-        
+
     }
 }

@@ -1,5 +1,3 @@
-package ita.softserve.iilntc;
-
 public class HourSalaryWorker extends Worker {
     private double paymentPerHour;
 
