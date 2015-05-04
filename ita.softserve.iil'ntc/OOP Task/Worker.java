@@ -1,3 +1,5 @@
+package ita.softserve.iilntc;
+
 public abstract class Worker {
 
     private int id;
