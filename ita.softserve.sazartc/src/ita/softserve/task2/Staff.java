@@ -19,8 +19,6 @@ public class Staff {
 		employees.add(employee);
 	}
 	
-//	abstract public void loadFromFile(String fileName) throws IOException;
-	
 	@Override
 	public String toString() {
 		StringBuilder result = new StringBuilder();

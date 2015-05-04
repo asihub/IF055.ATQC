@@ -18,7 +18,6 @@ abstract public class Employee implements Comparable<Employee> {
 	}
 	
 	abstract public double calculateSalary();
-	//abstract public double getSalaryBase();
 
 	@Override
 	public String toString() {		
