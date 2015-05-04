@@ -4,10 +4,25 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Bookkeeper {
-    public static void main(String[] args) {
+    public static void main (String [] args) {
+        //TODO what's z? - FIXED
+        int keyForIdGenerator = 1;
+        Worker coworker[] = new Worker[6];
 
+        coworker[0] = new HourSalaryWorker(100000+100*(keyForIdGenerator++), "John", "Thompson", 50.00);
+        coworker[1] = new HourSalaryWorker(100000+100*(keyForIdGenerator++), "Sarah", "Loich", 60.00);
+        coworker[2] = new HourSalaryWorker(100000+100*(keyForIdGenerator++), "Tomas", "Gordon", 61.00);
+
+        coworker[3] = new FixedSalaryWorker(100000+100*(keyForIdGenerator++), "Garry", "Writer", 3900.00);
+        coworker[4] = new FixedSalaryWorker(100000+100*(keyForIdGenerator++), "Mimi", "Lo", 5000.00);
+        coworker[5] = new FixedSalaryWorker(100000+100*(keyForIdGenerator++), "Moro", "Moon", 9000.00);
+
+        for(int i = 0; i < coworker.length; ++i){
+            System.out.println(coworker[i]);
+        }
+        System.out.println();
         //Here we are creating our unsorted list of workers with fixed salary.
-        LinkedList <FixedSalaryWorker> listOfFixedSalaryWorker = new LinkedList <> ();
+        LinkedList<FixedSalaryWorker> listOfFixedSalaryWorker = new LinkedList<>();
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(1, "John", "Smith", 5000));
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(2, "Anna", "Bee", 6700));
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(3, "Anna", "Brighton", 4500));
@@ -23,7 +38,7 @@ public class Bookkeeper {
         listOfFixedSalaryWorker.sort(Comparator.comparing(FixedSalaryWorker::monthlySalary)
                 .thenComparing(FixedSalaryWorker::getSurname));
 
-        //Here we are printing our sorted list.
+        //Here we are printing sorted list.
         for (FixedSalaryWorker fsw : listOfFixedSalaryWorker) System.out.println(fsw);
 
         System.out.println();
@@ -51,7 +66,7 @@ public class Bookkeeper {
         listOfHourSalaryWorker.add(new HourSalaryWorker(9, "Jeremy", "Raymond", 100));
         listOfHourSalaryWorker.add(new HourSalaryWorker(10, "Arnold", "Try", 150));
 
-        //Next step is to sort our list by monthly salary and surname.
+        //Next step is to sort our list by monthly salary and by surname.
         listOfHourSalaryWorker.sort(Comparator.comparing(HourSalaryWorker::monthlySalary)
                 .thenComparing(HourSalaryWorker::getSurname));
 
@@ -69,4 +84,5 @@ public class Bookkeeper {
         for (int i = 7; i < 10; i++) System.out.println(listOfHourSalaryWorker.get(i).getId());
 
     }
+
 }

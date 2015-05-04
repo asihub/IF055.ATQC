@@ -12,6 +12,31 @@ public abstract class Worker {
         this.surname = surname;
     }
 
+    //Getters with setters have been added.
+    public int getId(){
+        return this.id;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getSurname(){
+        return this.surname;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setSurname(String surname){
+        this.surname = surname;
+    }
+
     abstract public double monthlySalary();
     //TODO use toString() override - FIXED
     @Override
