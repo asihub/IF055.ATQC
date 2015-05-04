@@ -36,34 +36,44 @@ public class Main {
                 .thenComparing(Employee::getLastName);
 
         System.out.println("Fixed wage employee list:");
+        //TODO move out to separate print method
         fixedWageEmployees.forEach(System.out::println);
-
+        //TODO use "\n" for newline instead
         System.out.println();
         System.out.println("Sorted fixed wage employee list:");
         fixedWageEmployees.sort(employeeComparator);
+        //TODO move out to separate print method
         fixedWageEmployees.forEach(System.out::println);
 
+        //TODO use "\n" for newline instead
         System.out.println();
+        //TODO move out to separate print method
         fixedWageEmployees.stream()
                 .limit(5)
                 .forEach(n -> System.out.println(n.getFirstName()));
+        //TODO move out to separate print method
+        //TODO move out to separate print method
         fixedWageEmployees.stream()
                 .skip(fixedWageEmployees.size() - 3)
                 .forEach(n -> System.out.println(n.getId()));
 
+        //TODO use "\n" for newline instead
         System.out.println();
         System.out.println("Hourly wage employee list:");
         hourlyWageEmployees.forEach(System.out::println);
 
+        //TODO use "\n" for newline instead
         System.out.println();
         System.out.println("Sorted hourly wage employee list:");
         hourlyWageEmployees.sort(employeeComparator);
         hourlyWageEmployees.forEach(System.out::println);
 
+        //TODO use "\n" for newline instead
         System.out.println();
         hourlyWageEmployees.stream()
                 .limit(5)
                 .forEach(n -> System.out.println(n.getFirstName()));
+        //TODO move out to separate print method
         hourlyWageEmployees.stream()
                 .skip(hourlyWageEmployees.size() - 3)
                 .forEach(n -> System.out.println(n.getId()));
