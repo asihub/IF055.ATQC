@@ -42,6 +42,7 @@ public class Main {
         System.out.println("Now we are going to change our list: \n1)add few objects; \n" +
                 "2)remove cucumber; \n3)add shop's name - 'Good Shop'.");
 
+        //Adding element.
         goodsList.add(new FruitsAndVegetablesNomenclature(1016, "unknown vegetable"));
         goodsList.add(15, new FruitsAndVegetablesNomenclature(1111, "unknown fruit"));
 
@@ -85,10 +86,10 @@ public class Main {
         }
 
         //Changing map.
-        //Deleting object with key "2" in map.
         System.out.println("Now we are going to change our map: \n1)delete the second object; \n" +
                 "2)remove melon; \n3)change name from onion to bow.");
 
+        //Deleting object with key "2".
         Integer elementKeyForDeleting = 2;
 
         for (Iterator <Integer> itt = goodsMap.keySet().iterator(); itt.hasNext();) {
