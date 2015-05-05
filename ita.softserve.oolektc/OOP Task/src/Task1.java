@@ -1,4 +1,3 @@
-package ita.softserve.oolektc;
 
 public class Task1 {
 
