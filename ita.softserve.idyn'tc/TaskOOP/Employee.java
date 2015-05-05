@@ -29,7 +29,7 @@ public abstract class Employee {
     /**
      * this method gets the employee from arraylist
      *
-     * @param list       Which list of employee would you like to choose?
+     * @param list       choose the list which you'd like
      * @param firstIndex output from first index of list
      * @param lastIndex  output to lastIndex of this list
      * @param data       kind of data, for eaxample: ID, Name or Surname
@@ -61,6 +61,20 @@ public abstract class Employee {
 
         } catch (IllegalArgumentException e) {
             System.out.println("wrong input parameter");
+        }
+
+    }
+
+    /**
+     * this method gets the employee from arraylist
+     *
+     * @param list       choose the list which you'd like
+     * @param firstIndex output from first index of lis
+     * @param lastIndex  output to lastIndex of this list
+     */
+    public static void outputEmployee(List<Employee> list, int firstIndex, int lastIndex) {
+        for (int i = firstIndex; i <= lastIndex; i++) {
+            System.out.println(list.get(i));
         }
 
     }
