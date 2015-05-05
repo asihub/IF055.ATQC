@@ -1,17 +1,14 @@
-import java.util.Comparator;
-
-
 
 public abstract class EmployeeInfo {
 	private String name;
 	private String surname;
 	private int id;
 
-	//TODO what's n and s? rename them
-	EmployeeInfo(int num, String n, String s){
-		id = num;
-		name = n;
-		surname = s;
+	//TODO what's n and s? rename them - FIXED
+	EmployeeInfo(int id, String name, String surname ){
+		this.id = id ;
+		this.name = name;
+		this.surname = surname;
 	}
 	
 	public String getName() {
@@ -44,5 +41,6 @@ public abstract class EmployeeInfo {
 	};
 	
 	abstract double avarageSalary();
-	
+
+
 }

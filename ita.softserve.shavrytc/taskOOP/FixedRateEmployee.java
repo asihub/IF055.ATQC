@@ -1,16 +1,16 @@
 
 public class FixedRateEmployee extends EmployeeInfo{
-		
 	double rate;
-		
-	//TODO what's n and s? rename
-	FixedRateEmployee(int num, String n, String s, double rate){
-		super(num, n, s);
+	
+	//TODO what's n and s? rename - FIXED
+	FixedRateEmployee(int id, String name, String surname, double rate){
+		super(id, name, surname);
 		this.rate = rate;
 	}
 	    
 	double avarageSalary(){
 		return rate;
 	};
-}
 
+
+}

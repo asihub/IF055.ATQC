@@ -1,8 +1,8 @@
-//TODO one file - one class, move classes to separate files
+//TODO one file - one class, move classes to separate files - FIXED
 import java.util.List;
 import java.util.ArrayList;
 
-public class SalaryCalculations {
+public class Task1 {
 
 	public static void main(String[] args) {
 		
@@ -22,7 +22,7 @@ public class SalaryCalculations {
 		
 		System.out.println("Information About Employee:");
       
-		//TODO use for each loops +FIXED
+		//TODO use for each loops - FIXED
 	
 		for (EmployeeInfo ei: list){
 			System.out.println(ei);
