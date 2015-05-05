@@ -6,7 +6,8 @@ public abstract class EmployeeInfo {
 	private String name;
 	private String surname;
 	private int id;
-	
+
+	//TODO what's n and s? rename them
 	EmployeeInfo(int num, String n, String s){
 		id = num;
 		name = n;
@@ -37,7 +38,6 @@ public abstract class EmployeeInfo {
 		this.id = id;
 	}
 
-	//TODO use toString() method instead of this + FIXED
 	@Override
 	public String toString(){
 		return "#" + id +" " + name +" " + surname + " " + avarageSalary();

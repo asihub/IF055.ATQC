@@ -11,8 +11,10 @@ public class SalaryCalculations  {
 		System.out.println("=============================================");
 		System.out.println("           Information About Employee:");
 		System.out.println("=============================================");
+		//TODO use "\n" for new lines
 		System.out.println("");
-		
+
+		//TODO what's hre?
 		List <HourlyRateEmployee> hre = new ArrayList <HourlyRateEmployee>(20);
 		
 		hre.add(new HourlyRateEmployee(1, "Ivan", "Ivanenko", 15));
@@ -31,9 +33,11 @@ public class SalaryCalculations  {
 		for (EmployeeInfo ei: hre){
 			System.out.println(ei);
 		}
-		
+
+		//TODO use "\n" for new lines
 		System.out.println();
-		
+
+		//TODO what's fre?
 		List <EmployeeInfo> fre = new ArrayList <EmployeeInfo>(20);
 		
 		fre.add(new FixedRateEmployee(1, "Olga", "Olshenko", 2000));
@@ -47,17 +51,18 @@ public class SalaryCalculations  {
 		fre.add(new FixedRateEmployee(9, "Stepan", "Vasylechko", 5000));
 		fre.add(new FixedRateEmployee(10, "Yuriy", "Romanenko", 6000)); 
 		      
-		//TODO use for each loops +FIXED
 		System.out.println("-----------Fixed Rated Employee:-----------");
-		
+
+		//TODO what's ei?
 		for (EmployeeInfo ei: fre){
 			System.out.println(ei);
 		}
-		
+		//TODO use "\n" for new lines
 		System.out.println("");
 		System.out.println("-----------Fixed Rated Employee after Sorting:-----------");
+		//TODO use "\n" for new lines
 		System.out.println("");
-				
+		//TODO use Comparator.comparing(), it's less code
 		Comparator <EmployeeInfo> employeeComparator = new Comparator<EmployeeInfo>(){
 			
 			@Override
@@ -87,7 +92,7 @@ public class SalaryCalculations  {
 		// Sorting Fixed Rate Employee
 		
 		fre.sort(employeeComparator);
-		
+		//TODO create a separate printing method
 		for (EmployeeInfo f: fre){
 			System.out.println(f);
 		}
@@ -99,7 +104,8 @@ public class SalaryCalculations  {
 		System.out.println("");
 			
 		hre.sort(employeeComparator);
-		
+		//TODO create a separate printing method
+		//TODO What's f?
 		for (EmployeeInfo f: hre){
 			System.out.println(f);
 		}

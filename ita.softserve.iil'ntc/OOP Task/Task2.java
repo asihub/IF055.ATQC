@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Task2 {
     public static void main(String[] args) {
-        //TODO use "\n" for newline instead - FIXED
         //Here we are creating our unsorted list of workers with fixed salary.
         LinkedList <FixedSalaryWorker> listOfFixedSalaryWorker = new LinkedList<>();
         listOfFixedSalaryWorker.add(new FixedSalaryWorker(1, "John", "Smith", 5000));
@@ -43,42 +42,30 @@ public class Task2 {
 
         //Here we are printing sorted list of workers who get fixed salary.
         System.out.println("\n" + "The sorted list of workers who get fixed salary:");
-        //TODO move out to separate print method - FIXED
         for (FixedSalaryWorker fsw : listOfFixedSalaryWorker) System.out.println(fsw);
-
-        //TODO use "\n" for newline instead - FIXED
 
         //The first 5 names from sorted list of workers who get fixed salary.
         System.out.println("\n" + "The first five names of workers who get fixed salary are:");
-        //TODO move out to separate print method - FIXED
         for (int i = 0; i < 5; i++) System.out.println(listOfFixedSalaryWorker.get(i).getName());
-
-        //TODO use "\n" for newline instead - FIXED
 
         //The last 3 ids from sorted list of workers who get fixed salary.
         System.out.println("\n" + "The last three ids of workers who get fixed salary are:");
-        //TODO move out to separate print method - FIXED
         for (int i = 7; i < 10; i++) System.out.println(listOfFixedSalaryWorker.get(i).getId());
-
-        //TODO use "\n" for newline instead - FIXED
 
         //Here we are printing sorted list of workers who get hourly salary.
         System.out.println("\n" + "The sorted list of workers who get hourly salary:");
-        //TODO move out to separate print method - FIXED
         for (HourSalaryWorker hsw : listOfHourSalaryWorker) System.out.println(hsw);
 
-        //TODO use "\n" for newline instead - FIXED
 
         //The first 5 names from sorted list of workers who get hourly salary.
         System.out.println("\n" + "The first five names of workers who get hourly salary are:");
-        //TODO move out to separate print method - FIXED
+        //TODO where's the printing method?
         for (int i = 0; i < 5; i++) System.out.println(listOfHourSalaryWorker.get(i).getName());
 
-        //TODO use "\n" for newline instead - FIXED
 
         //The last 3 ids from sorted list of workers who get hourly salary.
         System.out.println("\n" + "The last three ids of workers who get hourly salary are:");
-        //TODO move out to separate print method - FIXED.
+        //TODO where's the printing method?
         for (int i = 7; i < 10; i++) System.out.println(listOfHourSalaryWorker.get(i).getId());
 
     }

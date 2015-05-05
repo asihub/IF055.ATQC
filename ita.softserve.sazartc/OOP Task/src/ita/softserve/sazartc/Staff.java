@@ -97,7 +97,8 @@ public class Staff {
      * @param initType - an initialization type of employee entry. 
      * Might be "PER_HOUR" or "FIXED_RATE"
      * @param fileName - file in root project directory
-     */    
+     */
+    //TODO load what? rename the method to make it more obvious
     public void loadFromFile(String fileName, String initType)
             throws IOException {
 

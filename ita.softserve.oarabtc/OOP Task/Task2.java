@@ -26,6 +26,7 @@ public class Task2 {
         fixedPayEmployee.add(new FixedPayEmployee(9, "John", "Faa", 390));
         fixedPayEmployee.add(new FixedPayEmployee(10, "Farder", "Coram", 1200));
 
+        //TODO why two sortings?
         Collections.sort(fixedPayEmployee,
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
@@ -34,19 +35,21 @@ public class Task2 {
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
         );
-
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ Sorted fixed pay employee list ____");
         for (Employees emp : fixedPayEmployee) {
             System.out.println(emp);
         }
 
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 5 first fixed pay employee list ____");
         for (int i = 0; i < 5; i++) System.out.println(fixedPayEmployee.get(i).getName());
 
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 3 last fixed pay employee list ____");
         for (int i = 7; i < 10; i++) System.out.println(fixedPayEmployee.get(i).getName());
 
-
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "____ Unsorted hour pay employee list ____");
 
         ArrayList<Employees> hourlyPayEmployee = new ArrayList<Employees>();
@@ -62,6 +65,7 @@ public class Task2 {
         hourlyPayEmployee.add(new HourlyPayEmployee(9, "Mace", "Windu", 7.7));
         hourlyPayEmployee.add(new HourlyPayEmployee(10, "Gungan", "Binks", 6.8));
 
+        //TODO why two sortings?
         Collections.sort(hourlyPayEmployee,
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
@@ -70,15 +74,16 @@ public class Task2 {
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
         );
-
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ Sorted hour pay employee list ____");
         for (Employees emp : hourlyPayEmployee) {
             System.out.println(emp);
         }
-
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 5 first hour pay employee list ____");
         for (int i = 0; i < 5; i++) System.out.println(hourlyPayEmployee.get(i).getName());
 
+        //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 3 last hour pay employee list ____");
         for (int i = 7; i < 10; i++) System.out.println(hourlyPayEmployee.get(i).getName());
     }

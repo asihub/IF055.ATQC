@@ -3,7 +3,6 @@
  */
 
 
-//TODO Java code convention!!! - FIXED
 public abstract class Employees {
 
     private int id;
@@ -26,7 +25,6 @@ public abstract class Employees {
         this.surname = surname;
     }
 
-    //TODO Java code convention!!! - FIXED
     public abstract double payCalc();
 
     public abstract void printInfo();
