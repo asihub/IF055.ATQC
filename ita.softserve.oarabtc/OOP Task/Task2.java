@@ -37,16 +37,19 @@ public class Task2 {
         );
         //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ Sorted fixed pay employee list ____");
+        //TODO what's emp? create a separate method for printing employees
         for (Employees emp : fixedPayEmployee) {
             System.out.println(emp);
         }
 
         //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 5 first fixed pay employee list ____");
+        //TODO create a separate method for printing employees
         for (int i = 0; i < 5; i++) System.out.println(fixedPayEmployee.get(i).getName());
 
         //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 3 last fixed pay employee list ____");
+        //TODO create a separate method for printing employees
         for (int i = 7; i < 10; i++) System.out.println(fixedPayEmployee.get(i).getName());
 
         //TODO no need to concat strings - use "\nSome text ..."
@@ -76,15 +79,18 @@ public class Task2 {
         );
         //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ Sorted hour pay employee list ____");
+        //TODO what's emp? create a separate method for printing employees
         for (Employees emp : hourlyPayEmployee) {
             System.out.println(emp);
         }
         //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 5 first hour pay employee list ____");
+        //TODO create a separate method for printing employees
         for (int i = 0; i < 5; i++) System.out.println(hourlyPayEmployee.get(i).getName());
 
         //TODO no need to concat strings - use "\nSome text ..."
         System.out.println("\n" + "___ 3 last hour pay employee list ____");
+        //TODO create a separate method for printing employees
         for (int i = 7; i < 10; i++) System.out.println(hourlyPayEmployee.get(i).getName());
     }
 }

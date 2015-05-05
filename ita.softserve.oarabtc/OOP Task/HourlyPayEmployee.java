@@ -19,7 +19,7 @@ public class HourlyPayEmployee extends Employees {
     public double payCalc() {
         return hourPay = (PAY_DAYS * PAY_HOUR * hourlyPay);
     }
-
+    //TODO use toString() instead of this and add a separate print method
     public void printInfo() {
         System.out.println("Employee: " + getName() + " " + getSurname() + " - " + payCalc() + " $");
 

@@ -15,7 +15,7 @@
     public double payCalc() {
         return fixedPay;
     }
-
+//TODO use toString() instead of this and add a separate print method
     public void printInfo() {
         System.out.println("Employee: " + getName() + " " + getSurname() + " - " + payCalc() + " $");
     }
