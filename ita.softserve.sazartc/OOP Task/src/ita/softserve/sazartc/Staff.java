@@ -33,6 +33,11 @@ public class Staff {
         return result.toString();
     }
 
+    /**
+     * Overloaded for return part of list
+     * @param index - select > 0 for return first n elements
+     * or select < 0 for return last n elements      
+     */    
     public String toString(int index) {
         int fromIndex;
         int toIndex;
@@ -66,6 +71,9 @@ public class Staff {
         Collections.sort(this.employees);
     }
 
+    /**
+     * Save employees' data to the file in root project directory 
+     */
     public void saveToFile(String fileName) throws IOException {
         FileWriter writer = null;
         try {
@@ -79,12 +87,17 @@ public class Staff {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         } finally {
-            if (writer != null)
-                writer.close();
+            if (writer != null) writer.close();
         }
 
     }
 
+    /**
+     * Load employees' data from the file
+     * @param initType - an initialization type of employee entry. 
+     * Might be "PER_HOUR" or "FIXED_RATE"
+     * @param fileName - file in root project directory
+     */    
     public void loadFromFile(String fileName, String initType)
             throws IOException {
 
@@ -117,8 +130,7 @@ public class Staff {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         } finally {
-            if (reader != null)
-                reader.close();
+            if (reader != null) reader.close();
         }
 
     }

@@ -1,7 +1,7 @@
 package ita.softserve.sazartc;
 
 /**
- * Abstract class described Emplyee' properties with cached salary
+ * Abstract class described Emplyee' properties
  */
 abstract public class Employee implements Comparable<Employee> {
 
