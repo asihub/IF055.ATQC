@@ -38,6 +38,29 @@ public abstract class Worker {
     }
 
     abstract public double monthlySalary();
+    
+    public static void printListOfWorkers(List <Worker> listForPrint){
+        for (int i = 0; i < listForPrint.size(); i++) System.out.println(listForPrint.get(i));
+    }
+
+    public static void printPartOfListOfWorkers(List <Worker> listForPrint, String field, int fromNumber, int toNumber) {
+        if (field.equals("id")) {
+            for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getId());
+        }
+        else if (field.equals("name")) {
+            for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getName());
+        }
+        else if (field.equals("surname")) {
+            for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getSurname());
+        }
+        else if (field.equals("salary")) {
+            for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).monthlySalary());
+        }
+        else {
+            System.out.println("Please put correct field (id, name, surname or salary) and try again!");
+        }
+    }
+    
     //TODO use toString() override - FIXED
     @Override
     public String toString(){
