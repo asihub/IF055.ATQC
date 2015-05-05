@@ -55,40 +55,12 @@ public static void main(String[] args) {
 		System.out.println("\n"); 
 		System.out.println("-----------Fixed Rated Employee after Sorting:-----------");
 		
-		//TODO use Comparator.comparing(), it's less code
+		//TODO use Comparator.comparing(), it's less code - FIXED
 		
-		//Comparator<EmployeeInfo> byAvarageSalary =Comparator.comparing(EmployeeInfo::avarageSalary);
-		//Comparator<EmployeeInfo> bySurname =Comparator.comparing(EmployeeInfo::getSurname);
-		//Comparator<EmployeeInfo> byName =Comparator.comparing(EmployeeInfo::getName);
-		//fixedRateEmployee.sort(byAvarageSalary);
-		//fixedRateEmployee.sort(bySurname);
-		//fixedRateEmployee.sort(byName);
-		Comparator <EmployeeInfo> employeeComparator = new Comparator<EmployeeInfo>(){
-			
-			@Override
-			public int compare(EmployeeInfo hre1, EmployeeInfo hre2) {
-				
-				if (hre1.avarageSalary() > hre2.avarageSalary()) {
-					return 1;
-				}
-				
-					else if (hre1.avarageSalary() < hre2.avarageSalary()){
-						return -1;
-					}
-				
-						else if (hre1.getSurname().compareTo(hre2.getSurname())>0){
-							return 1;
-						}
-				
-							else if (hre1.getSurname().compareTo(hre2.getSurname())<0){
-								return -1;
-							}
-								else return hre1.getName().compareTo(hre2.getName());
-			}
-		};
+		Comparator <EmployeeInfo> employeeComparator = Comparator.comparing(EmployeeInfo::avarageSalary)
+				.thenComparing(EmployeeInfo::getSurname);
 						
 		// Sorting Fixed Rate Employee
-
 		fixedRateEmployee.sort(employeeComparator);
 		//TODO create a separate printing method -FIXED
 		printList(fixedRateEmployee);
