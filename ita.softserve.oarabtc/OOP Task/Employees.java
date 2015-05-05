@@ -1,7 +1,4 @@
-/**
- * Created by Olia on 26.04.2015.
- */
-
+import java.util.ArrayList;
 
 public abstract class Employees {
 
@@ -9,15 +6,15 @@ public abstract class Employees {
     private String name;
     private String surname;
 
-   public int getId() {
-       return id;
-   }
-   public String getName() {
-       return name;
-   }
-   public String getSurname() {
-       return surname;
-   }
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getSurname() {
+        return surname;
+    }
 
     public Employees(int id, String name, String surname) {
         this.id = id;
@@ -27,11 +24,26 @@ public abstract class Employees {
 
     public abstract double payCalc();
 
-    public abstract void printInfo();
-
     @Override
     public String toString() {
-        return "Employee: " + "(id " + getId() + ") " + getName() + " - " + payCalc() + " $";
+        return "Employee: " + getName() + " " + getSurname() + " - " + payCalc() + " $";
     }
 
+    public static void printEmployeeList(ArrayList<Employees> PayEmployee) {
+        PayEmployee.forEach(Employees -> System.out.println(
+                "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.payCalc() + " $"));
+
+    }
+
+    public static void printFirstEmployeeList(ArrayList<Employees> PayEmployee, int id, String name) {
+        int i = id;
+        for (i = 0; i < 5; i++) {System.out.println(PayEmployee.get(i).getName());
+        }
+    }
+
+    public static void printLastEmployeeList(ArrayList<Employees> PayEmployee, int id, String name) {
+        int i = id;
+        for (i = 7; i < 10; i++) {System.out.println(PayEmployee.get(i).getName());
+        }
+    }
 }

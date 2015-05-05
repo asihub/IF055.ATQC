@@ -1,8 +1,3 @@
-/**
- * Created by Olia on 03.05.2015.
- */
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -10,8 +5,6 @@ import java.util.Comparator;
 public class Task2 {
 
     public static void main(String[] args) {
-
-        System.out.println("___ Unsorted fixed pay employee list ____");
 
         ArrayList<Employees> fixedPayEmployee = new ArrayList<Employees>();
 
@@ -26,34 +19,30 @@ public class Task2 {
         fixedPayEmployee.add(new FixedPayEmployee(9, "John", "Faa", 390));
         fixedPayEmployee.add(new FixedPayEmployee(10, "Farder", "Coram", 1200));
 
-        //TODO why two sortings?
+        //TODO why two sortings? - FIXED
         Collections.sort(fixedPayEmployee,
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
         );
-        fixedPayEmployee.sort(
-                Comparator.comparing((Employees e1) -> e1.payCalc())
-                        .thenComparing(e1 -> e1.getSurname())
-        );
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "___ Sorted fixed pay employee list ____");
-        //TODO what's emp? create a separate method for printing employees
-        for (Employees emp : fixedPayEmployee) {
-            System.out.println(emp);
-        }
 
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "___ 5 first fixed pay employee list ____");
-        //TODO create a separate method for printing employees
-        for (int i = 0; i < 5; i++) System.out.println(fixedPayEmployee.get(i).getName());
+        //TODO no need to concat strings - use "\nSome text ..." FIXED
+        System.out.println("___ Sorted fixed pay employee list ____");
 
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "___ 3 last fixed pay employee list ____");
-        //TODO create a separate method for printing employees
-        for (int i = 7; i < 10; i++) System.out.println(fixedPayEmployee.get(i).getName());
+        //TODO what's emp? create a separate method for printing employees - FIXED
+        FixedPayEmployee.printEmployeeList(fixedPayEmployee);
 
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "____ Unsorted hour pay employee list ____");
+
+        //TODO no need to concat strings - use "\nSome text ..." - FIXED
+        System.out.println("\n___ 5 first fixed pay employee list ____");
+
+        //TODO create a separate method for printing employees - FIXED
+        FixedPayEmployee.printFirstEmployeeList(fixedPayEmployee, 5, "Name");
+
+        //TODO no need to concat strings - use "\nSome text ..." - FIXED
+        System.out.println("\n___ 3 last fixed pay employee list ____");
+
+        //TODO create a separate method for printing employees - FIXED
+        FixedPayEmployee.printLastEmployeeList(fixedPayEmployee, 3, "Name");
 
         ArrayList<Employees> hourlyPayEmployee = new ArrayList<Employees>();
 
@@ -68,29 +57,28 @@ public class Task2 {
         hourlyPayEmployee.add(new HourlyPayEmployee(9, "Mace", "Windu", 7.7));
         hourlyPayEmployee.add(new HourlyPayEmployee(10, "Gungan", "Binks", 6.8));
 
-        //TODO why two sortings?
+        //TODO why two sortings? - FIXED
         Collections.sort(hourlyPayEmployee,
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
         );
-        hourlyPayEmployee.sort(
-                Comparator.comparing((Employees e1) -> e1.payCalc())
-                        .thenComparing(e1 -> e1.getSurname())
-        );
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "___ Sorted hour pay employee list ____");
-        //TODO what's emp? create a separate method for printing employees
-        for (Employees emp : hourlyPayEmployee) {
-            System.out.println(emp);
-        }
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "___ 5 first hour pay employee list ____");
-        //TODO create a separate method for printing employees
-        for (int i = 0; i < 5; i++) System.out.println(hourlyPayEmployee.get(i).getName());
 
-        //TODO no need to concat strings - use "\nSome text ..."
-        System.out.println("\n" + "___ 3 last hour pay employee list ____");
-        //TODO create a separate method for printing employees
-        for (int i = 7; i < 10; i++) System.out.println(hourlyPayEmployee.get(i).getName());
+        //TODO no need to concat strings - use "\nSome text ..." - FIXED
+        System.out.println("\n___ Sorted hour pay employee list ____");
+
+        //TODO what's emp? create a separate method for printing employees - FIXED
+        HourlyPayEmployee.printEmployeeList(hourlyPayEmployee);
+
+        //TODO no need to concat strings - use "\nSome text ..." - FIXED
+        System.out.println("\n___ 5 first hour pay employee list ____");
+
+        //TODO create a separate method for printing employees - FIXED
+        HourlyPayEmployee.printFirstEmployeeList(hourlyPayEmployee, 5, "Name");
+
+        //TODO no need to concat strings - use "\nSome text ..." - FIXED
+        System.out.println("\n___ 3 last hour pay employee list ____");
+
+        //TODO create a separate method for printing employees - FIXED
+        HourlyPayEmployee.printLastEmployeeList(hourlyPayEmployee, 3, "Name");
     }
 }
