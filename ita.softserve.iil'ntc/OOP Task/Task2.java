@@ -56,12 +56,10 @@ public class Task2 {
         System.out.println("\n" + "The sorted list of workers who get hourly salary:");
         HourSalaryWorker.printListOfWorkers(listOfHourSalaryWorkers);
 
-
         //The first 5 names from sorted list of workers who get hourly salary.
         System.out.println("\n" + "The first five names of workers who get hourly salary are:");
         //TODO where's the printing method? - FIXED.
         HourSalaryWorker.printPartOfListOfWorkers(listOfHourSalaryWorkers, "name", 1, 5);
-
 
         //The last 3 ids from sorted list of workers who get hourly salary.
         System.out.println("\n" + "The last three ids of workers who get hourly salary are:");
