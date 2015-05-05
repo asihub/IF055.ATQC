@@ -1,5 +1,7 @@
 package ita.softserve.iilntc;
 
+import java.util.List;
+
 public abstract class Worker {
 
     private int id;
