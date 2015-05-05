@@ -97,9 +97,10 @@ public class Staff {
      * @param initType - an initialization type of employee entry. 
      * Might be "PER_HOUR" or "FIXED_RATE"
      * @param fileName - file in root project directory
+     * stored data must be in the same format as initType
      */
-    //TODO load what? rename the method to make it more obvious
-    public void loadFromFile(String fileName, String initType)
+    //FIXED TODO load what? rename the method to make it more obvious FIXED
+    public void loadEmployeesFromFile(String fileName, String initType)
             throws IOException {
 
         List<Employee> tmpEmployees = new ArrayList<Employee>();
