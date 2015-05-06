@@ -112,13 +112,12 @@ public class Staff {
                     break;
 
                 String[] lineArr = line.split(",,,");
-                //TODO initType.equals("PER_HOUR") - this will throw a NullPointerException,
-                //TODO use "PER_HOUR".equals.initType instead
-                if (initType.equals("PER_HOUR")) {
+
+                if ("PER_HOUR".equals(initType)) {
                     tmpEmployees.add(new PerHourEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
                             Double.parseDouble(lineArr[3])));
-                } else if (initType.equals("FIXED_RATE")) {
+                } else if ("FIXED_RATE".equals(initType)) {
                     tmpEmployees.add(new FixedRateEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
                             Double.parseDouble(lineArr[3])));
