@@ -34,7 +34,7 @@ public abstract class EmployeeInfo {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+        //prints info about employee
 	@Override
 	public String toString(){
 		return "#" + id +" " + name +" " + surname + " " + avarageSalary();
