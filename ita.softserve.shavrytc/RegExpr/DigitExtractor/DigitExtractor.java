@@ -16,7 +16,7 @@ public class DigitExtractor {
 	        }
 	        
 	        if (digits.isEmpty()){
-	        	System.out.println("This string does not contain digits");
+	        	System.out.println("This string does not contain any digits");
 	        	}
 	        	else System.out.println( "Found digits:" + digits);
 		}
