@@ -9,10 +9,10 @@ public class HourlyRateEmployee extends EmployeeInfo{
     HourlyRateEmployee(int id, String name, String surname, double rate){
 		super(id, name, surname);
 		this.rate = rate;
-	}
-		
-	double avarageSalary(){
-		return DAYS*HOURS*rate;
-	};
+    }
+    // Returns avarage salary of employee witn per hours rate		
+    double avarageSalary(){
+	return DAYS*HOURS*rate;
+    };
 	
 }
