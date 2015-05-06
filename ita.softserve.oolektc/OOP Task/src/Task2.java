@@ -6,7 +6,7 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        List<Employee> fixedWageEmployees = new ArrayList<>();
+        final List<Employee> fixedWageEmployees = new ArrayList<>();
         fixedWageEmployees.add(new FixedWageEmployee(1, "Bruce", "Allen", 350));
         fixedWageEmployees.add(new FixedWageEmployee(2, "Jessica", "Flores", 255));
         fixedWageEmployees.add(new FixedWageEmployee(3, "Laurena", "Alf", 150));
@@ -18,7 +18,7 @@ public class Task2 {
         fixedWageEmployees.add(new FixedWageEmployee(9, "Beverley", "Burke", 125));
         fixedWageEmployees.add(new FixedWageEmployee(10, "Earl", "Balters", 350));
 
-        List<Employee> hourlyWageEmployees = new ArrayList<>();
+        final List<Employee> hourlyWageEmployees = new ArrayList<>();
         hourlyWageEmployees.add(new HourlyWageEmployee(1, "Dolores", "Sutton", 8.4));
         hourlyWageEmployees.add(new HourlyWageEmployee(2, "Shelley ", "Henry", 8.2));
         hourlyWageEmployees.add(new HourlyWageEmployee(3, "Erik", "Rockwood", 7.9));
@@ -30,7 +30,7 @@ public class Task2 {
         hourlyWageEmployees.add(new HourlyWageEmployee(9, "Robert", "Dixon", 9));
         hourlyWageEmployees.add(new HourlyWageEmployee(10, "Norman", "McRae", 7.3));
 
-        Comparator<Employee> employeeComparator = Comparator.comparing(Employee::getMonthlyWage)
+        final Comparator<Employee> employeeComparator = Comparator.comparing(Employee::getMonthlyWage)
                 .thenComparing(Employee::getLastName);
 
         System.out.println("Fixed wage employee list:");

@@ -2,37 +2,37 @@ import java.util.List;
 
 public abstract class Employee {
 
-    final private int id;
-    final private String firstName;
-    final private String lastName;
     protected double monthlyWage;
+    private final int id;
+    private final String firstName;
+    private final String lastName;
 
-    public Employee(int id, String name, String surname) {
+    public Employee(int id, String name, String lastName) {
         this.id = id;
         this.firstName = name;
-        this.lastName = surname;
+        this.lastName = lastName;
+    }
+
+    public final int getId() {
+        return id;
+    }
+
+    public final String getLastName() {
+        return lastName;
+    }
+
+    public final String getFirstName() {
+        return firstName;
     }
 
     public abstract double getMonthlyWage();
 
     @Override
     public String toString() {
-        StringBuilder employeeInfo = new StringBuilder("");
+        final StringBuilder employeeInfo = new StringBuilder("");
         employeeInfo.append(id).append(" ").append(firstName).append(" ")
                 .append(lastName).append(" ").append(monthlyWage);
         return employeeInfo.toString();
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
     }
 
     public static void printEmployeeList(List<Employee> list) {
@@ -47,8 +47,7 @@ public abstract class Employee {
      * @param field  name of an element field to be printed
      */
     public static void printLastElementsFromList(List<Employee> list, int number, String field) {
-        //TODO field is case sensitive, use toUpperCase() or toLowerCase()
-        switch (field) {
+        switch (field.toLowerCase()) {
             case "id":
                 System.out.println();
                 list.stream().limit(number).forEach(n -> System.out.println(n.getId()));
@@ -74,8 +73,7 @@ public abstract class Employee {
      * @param field  name of an element field to be printed
      */
     public static void printFirstElementsFromList(List<Employee> list, int number, String field) {
-        //TODO field is case sensitive, use toUpperCase() or toLowerCase()
-        switch (field) {
+        switch (field.toLowerCase()) {
             case "id":
                 System.out.println();
                 list.stream().skip(list.size() - number).forEach(n -> System.out.println(n.getId()));
