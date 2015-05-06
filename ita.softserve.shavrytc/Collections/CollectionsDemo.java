@@ -20,7 +20,6 @@ public class CollectionsDemo {
 		
 		System.out.println();
 		
-		
 		Map <Integer, EmployeeInfo> hmap = new HashMap<Integer, EmployeeInfo>(20);
 		
 		hmap.put(1, new EmployeeInfo(5, "Olga", "Olchenko"));
