@@ -9,6 +9,7 @@ public class EmployeeInfo {
 		surname = s;
 	}
 	
+	//Prints info about employee
 	@Override
 	public String toString(){
 		return "#" + id +" " + name +" " + surname;
