@@ -15,4 +15,8 @@ public class HourlySalaryWorker extends Worker {
         return 20.8*8*hourlySalary;
 
     }
+
+    public String getLastName(){
+        return this.lastname;
+    }
 }

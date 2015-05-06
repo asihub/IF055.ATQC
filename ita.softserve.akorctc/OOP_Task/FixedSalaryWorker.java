@@ -15,4 +15,8 @@ public class FixedSalaryWorker extends Worker{
         return fixedSalary;
 
     }
+
+    public String getLastName(){
+        return this.lastname;
+    }
 }
