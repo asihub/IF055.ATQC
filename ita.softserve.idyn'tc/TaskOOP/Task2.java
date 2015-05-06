@@ -1,13 +1,12 @@
 package ita.softserve.idyntc;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
 public class Task2 {
     public static void main(String[] args) {
-
+        //TODO it's a list, so name it appropiate  - Fixed
         List<Employee> fixedSalaryEmployeeList = new ArrayList<Employee>();
         List<Employee> perHourSalaryEmployeeList = new ArrayList<Employee>();
 
@@ -36,23 +35,24 @@ public class Task2 {
         fixedSalaryEmployeeList.sort(new EmployeesComparator());
 
         System.out.println("Ordered list of fixedSalaryEmployeeList:");
-        Employee.outputEmployee(fixedSalaryEmployeeList, 0, 9);
+        Employee.printEmployeeFromRange(fixedSalaryEmployeeList, 0, 9);
 
         System.out.println("First five employees names from ordered list of fixedSalaryEmployeeList:");
-        Employee.outputEmployee(fixedSalaryEmployeeList, 0, 4, "Name");
+        Employee.printEmployeeFromRange(fixedSalaryEmployeeList, 0, 4, "Name");
 
         System.out.println("Last three employee's ID from ordered list of fixedSalaryEmployeeList:");
-        Employee.outputEmployee(fixedSalaryEmployeeList, 7, 9, "ID");
+        Employee.printEmployeeFromRange(fixedSalaryEmployeeList, 7, 9, "ID");
 
         perHourSalaryEmployeeList.sort(new EmployeesComparator());
+
         System.out.println("Ordered list of perHourSalaryEmployeeList");
-        Employee.outputEmployee(perHourSalaryEmployeeList, 0, 9);
+        Employee.printEmployeeFromRange(perHourSalaryEmployeeList, 0, 9);
 
         System.out.println("First five employees names from list of perHourSalaryEmployeeList:");
-        Employee.outputEmployee(perHourSalaryEmployeeList, 0, 4, "Name");
+        Employee.printEmployeeFromRange(perHourSalaryEmployeeList, 0, 4, "Name");
 
         System.out.println("Last three employees ID from list of perHourSalaryEmployeeList:");
-        Employee.outputEmployee(perHourSalaryEmployeeList, 7, 9, "ID");
+        Employee.printEmployeeFromRange(perHourSalaryEmployeeList, 7, 9, "ID");
 
     }
 

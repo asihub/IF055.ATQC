@@ -35,22 +35,22 @@ public abstract class Employee {
      * @param data       kind of data, for eaxample: ID, Name or Surname
      */
 
-    //TODO rename to printEmployeeFromRange() ?
-    public static void outputEmployee(List<Employee> list, int firstIndex, int lastIndex, String data) {
+
+    public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex, String data) {
         try {
-            //TODO what if data is upper or lower case? use toLowerCase() or toUpperCase()
-            switch (data) {
+
+            switch (data.toUpperCase()) {
                 case "ID":
                     for (int i = firstIndex; i <= lastIndex; i++) {
                         System.out.println(list.get(i).id);
                     }
                     break;
-                case "Name":
+                case "NAME":
                     for (int i = firstIndex; i <= lastIndex; i++) {
                         System.out.println(list.get(i).name);
                     }
                     break;
-                case "Surname":
+                case "SURNAME":
                     for (int i = firstIndex; i <= lastIndex; i++) {
                         System.out.println(list.get(i).surname);
                     }
@@ -66,14 +66,13 @@ public abstract class Employee {
     }
 
     /**
-     * this method gets the employee from arraylist
+     * this method gets the employee from arrayliste
      *
      * @param list       choose the list which you'd like
      * @param firstIndex output from first index of lis
      * @param lastIndex  output to lastIndex of this list
      */
-    //TODO printEmployee() is more appropriate
-    public static void outputEmployee(List<Employee> list, int firstIndex, int lastIndex) {
+    public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex) {
         for (int i = firstIndex; i <= lastIndex; i++) {
             System.out.println(list.get(i));
         }
