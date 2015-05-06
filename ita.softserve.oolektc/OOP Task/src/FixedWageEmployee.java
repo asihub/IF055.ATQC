@@ -3,8 +3,8 @@ public class FixedWageEmployee extends Employee {
 
     final private double fixedWage;
 
-    public FixedWageEmployee(int id, String name, String surname, double fixedWage) {
-        super(id, name, surname);
+    public FixedWageEmployee(int id, String name, String lastName, double fixedWage) {
+        super(id, name, lastName);
         this.fixedWage = fixedWage;
         this.monthlyWage = getMonthlyWage();
     }
