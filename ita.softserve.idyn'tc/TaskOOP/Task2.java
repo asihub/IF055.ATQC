@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Task2 {
     public static void main(String[] args) {
-        //TODO it's a list, so name it appropiate  - Fixed
+
         List<Employee> fixedSalaryEmployeeList = new ArrayList<Employee>();
         List<Employee> perHourSalaryEmployeeList = new ArrayList<Employee>();
 
@@ -36,7 +36,6 @@ public class Task2 {
         fixedSalaryEmployeeList.sort(new EmployeesComparator());
 
         System.out.println("Ordered list of fixedSalaryEmployeeList:");
-        //TODO you already have a method for printing, use it or overload and then use it - fixed
         Employee.outputEmployee(fixedSalaryEmployeeList, 0, 9);
 
         System.out.println("First five employees names from ordered list of fixedSalaryEmployeeList:");
@@ -47,7 +46,6 @@ public class Task2 {
 
         perHourSalaryEmployeeList.sort(new EmployeesComparator());
         System.out.println("Ordered list of perHourSalaryEmployeeList");
-        //TODO you already have a method for printing, use it or overload and then use it - fixed
         Employee.outputEmployee(perHourSalaryEmployeeList, 0, 9);
 
         System.out.println("First five employees names from list of perHourSalaryEmployeeList:");

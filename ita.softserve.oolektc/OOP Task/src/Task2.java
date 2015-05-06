@@ -34,31 +34,24 @@ public class Task2 {
                 .thenComparing(Employee::getLastName);
 
         System.out.println("Fixed wage employee list:");
-        //TODO move out to separate print method - FIXED
         Employee.printEmployeeList(fixedWageEmployees);
-        //TODO use "\n" for newline instead - FIXED
+
         System.out.println("\nSorted fixed wage employee list:");
         fixedWageEmployees.sort(employeeComparator);
-        //TODO move out to separate print method - FIXED
+
         Employee.printEmployeeList(fixedWageEmployees);
 
-        //TODO move out to separate print method - FIXED
         Employee.printFirstElementsFromList(fixedWageEmployees, 5, "first name");
-        //TODO move out to separate print method
         Employee.printLastElementsFromList(fixedWageEmployees, 3, "id");
 
-        //TODO use "\n" for newline instead - FIXED
         System.out.println("\nHourly wage employee list:");
         Employee.printEmployeeList(hourlyWageEmployees);
 
-        //TODO use "\n" for newline instead - FIXED
         System.out.println("\nSorted hourly wage employee list:");
         hourlyWageEmployees.sort(employeeComparator);
         Employee.printEmployeeList(hourlyWageEmployees);
 
-        //TODO move out to separate print method - FIXED
         Employee.printFirstElementsFromList(hourlyWageEmployees, 5, "first name");
-        //TODO move out to separate print method - FIXED
         Employee.printLastElementsFromList(hourlyWageEmployees, 3, "id");
     }
 }

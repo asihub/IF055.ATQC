@@ -4,7 +4,6 @@ public abstract class EmployeeInfo {
 	private String surname;
 	private int id;
 
-	//TODO what's n and s? rename them - FIXED
 	EmployeeInfo(int id, String name, String surname ){
 		this.id = id ;
 		this.name = name;

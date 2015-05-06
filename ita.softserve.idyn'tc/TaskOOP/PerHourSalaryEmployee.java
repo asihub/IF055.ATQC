@@ -24,7 +24,7 @@ public class PerHourSalaryEmployee extends Employee {
         if (hourlyRate <= 0) {
             System.out.printf("Error input for per hourly salary employees");
         }
-        //TODO why just not use double?   fixed
+
         return DAYS_QUANTITY * HOURS_QUANTITY * hourlyRate;
     }
 }

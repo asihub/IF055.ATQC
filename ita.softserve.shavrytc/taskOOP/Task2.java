@@ -28,11 +28,9 @@ public static void main(String[] args) {
 		hourlyRateEmployee.add(new HourlyRateEmployee(10, "Oleg", "Yurchenko", 35));
 		
 		System.out.println("-----------Hourly Rated Employee:-----------");
-		//TODO use "\n" for new lines - FIXED
-				
+
 		printList(hourlyRateEmployee);
 
-		//TODO what's fre? - FIXED
 		List <EmployeeInfo> fixedRateEmployee = new ArrayList <EmployeeInfo>(20);
 		
 		fixedRateEmployee.add(new FixedRateEmployee(1, "Olga", "Olshenko", 2000));
@@ -45,52 +43,52 @@ public static void main(String[] args) {
 		fixedRateEmployee.add(new FixedRateEmployee(8, "Ira", "Lyubenko", 4000));
 		fixedRateEmployee.add(new FixedRateEmployee(9, "Stepan", "Vasylechko", 5000));
 		fixedRateEmployee.add(new FixedRateEmployee(10, "Yuriy", "Romanenko", 6000)); 
-		//TODO use "\n" for new lines - FIXED
+		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
 		System.out.println("\n");
 		System.out.println("-----------Fixed Rated Employee:-----------");
 		
-		//TODO what's ei? - FIXED
 		printList(fixedRateEmployee);
-		//TODO use "\n" for new lines - FIXED
+	    //TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
 		System.out.println("\n"); 
 		System.out.println("-----------Fixed Rated Employee after Sorting:-----------");
 		
-		//TODO use Comparator.comparing(), it's less code - FIXED
-		
+
 		Comparator <EmployeeInfo> employeeComparator = Comparator.comparing(EmployeeInfo::avarageSalary)
 				.thenComparing(EmployeeInfo::getSurname);
 						
 		// Sorting Fixed Rate Employee
 		fixedRateEmployee.sort(employeeComparator);
-		//TODO create a separate printing method -FIXED
+
 		printList(fixedRateEmployee);
-			
-		// Sorting Hourly Rate Employee 
+
+		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
 		System.out.println("\n");
 		System.out.println("-----------Hourly Rated Employee after Sorting:-----------");
 			
 		hourlyRateEmployee.sort(employeeComparator);
-		//TODO create a separate printing method
-		//TODO What's f? - FIXED
 		printList(hourlyRateEmployee);
 		
 		System.out.println("\n");
 		System.out.println("===============================================================");
 		System.out.println("----The First 5 Persons And The Last 3 Persons In The List:----");
 		System.out.println("===============================================================");
+
+		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
 		System.out.println("\n");
 		System.out.println("-----------Fixed Rated Employee:-----------");
-		
+		//TODO move out to a separate method
 		for (int i=0; i<=9; i++){
 			
 			if ((i<5)^(i>7)){
 				System.out.println(fixedRateEmployee.get(i));
 			}	
 		}
-		
-		System.out.println("\n");
+
+		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
+    	System.out.println("\n");
 		System.out.println("-----------Hourly Rated Employee:-----------");
-		
+
+		//TODO move out to a separate method
 		for (int i=0; i<=9; i++){
 			
 			if ((i<5)^(i>7)){
@@ -100,7 +98,7 @@ public static void main(String[] args) {
 		}
 		
 	}
-
+	//TODO move out to some *employee or base class
 		public static void printList (List <EmployeeInfo> employeeRate){
 				
 			for (EmployeeInfo employeeInfo: employeeRate){

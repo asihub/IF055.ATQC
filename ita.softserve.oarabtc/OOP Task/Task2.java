@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class Task2 {
 
     public static void main(String[] args) {
-
+        //TODO use more generic references type - List instead of any list implementation
         ArrayList<Employees> fixedPayEmployee = new ArrayList<Employees>();
 
         fixedPayEmployee.add(new FixedPayEmployee(1, "Lyra", "Belacqua", 700));
@@ -19,31 +19,24 @@ public class Task2 {
         fixedPayEmployee.add(new FixedPayEmployee(9, "John", "Faa", 390));
         fixedPayEmployee.add(new FixedPayEmployee(10, "Farder", "Coram", 1200));
 
-        //TODO why two sortings? - FIXED
         Collections.sort(fixedPayEmployee,
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
         );
 
-        //TODO no need to concat strings - use "\nSome text ..." FIXED
         System.out.println("___ Sorted fixed pay employee list ____");
 
-        //TODO what's emp? create a separate method for printing employees - FIXED
         FixedPayEmployee.printEmployeeList(fixedPayEmployee);
 
-
-        //TODO no need to concat strings - use "\nSome text ..." - FIXED
         System.out.println("\n___ 5 first fixed pay employee list ____");
 
-        //TODO create a separate method for printing employees - FIXED
         FixedPayEmployee.printFirstEmployeeList(fixedPayEmployee, 5, "Name");
 
-        //TODO no need to concat strings - use "\nSome text ..." - FIXED
         System.out.println("\n___ 3 last fixed pay employee list ____");
 
-        //TODO create a separate method for printing employees - FIXED
         FixedPayEmployee.printLastEmployeeList(fixedPayEmployee, 3, "Name");
 
+        //TODO use more generic references type - List instead of any list implementation
         ArrayList<Employees> hourlyPayEmployee = new ArrayList<Employees>();
 
         hourlyPayEmployee.add(new HourlyPayEmployee(1, "Anakin", "Skywalker", 9.1));
@@ -57,28 +50,22 @@ public class Task2 {
         hourlyPayEmployee.add(new HourlyPayEmployee(9, "Mace", "Windu", 7.7));
         hourlyPayEmployee.add(new HourlyPayEmployee(10, "Gungan", "Binks", 6.8));
 
-        //TODO why two sortings? - FIXED
         Collections.sort(hourlyPayEmployee,
                 Comparator.comparing((Employees e1) -> e1.payCalc())
                         .thenComparing(e1 -> e1.getSurname())
         );
 
-        //TODO no need to concat strings - use "\nSome text ..." - FIXED
         System.out.println("\n___ Sorted hour pay employee list ____");
 
-        //TODO what's emp? create a separate method for printing employees - FIXED
         HourlyPayEmployee.printEmployeeList(hourlyPayEmployee);
 
-        //TODO no need to concat strings - use "\nSome text ..." - FIXED
         System.out.println("\n___ 5 first hour pay employee list ____");
 
         //TODO create a separate method for printing employees - FIXED
         HourlyPayEmployee.printFirstEmployeeList(hourlyPayEmployee, 5, "Name");
 
-        //TODO no need to concat strings - use "\nSome text ..." - FIXED
         System.out.println("\n___ 3 last hour pay employee list ____");
 
-        //TODO create a separate method for printing employees - FIXED
         HourlyPayEmployee.printLastEmployeeList(hourlyPayEmployee, 3, "Name");
     }
 }

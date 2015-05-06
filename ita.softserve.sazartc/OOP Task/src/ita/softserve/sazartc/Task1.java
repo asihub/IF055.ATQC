@@ -1,8 +1,6 @@
 package ita.softserve.sazartc;
 
 public class Task1 {
-	//FIXED TODO why is this static? FIXED
-	//My fault, I've used them like data fields of class. Removed
 
 	public static void main(String[] args) {
 
@@ -23,8 +21,6 @@ public class Task1 {
 
 		for(FixedRateEmployee employee: fixedRateEmployees) {
 			System.out.println(employee.toString());
-		}	        
-        
+		}
 	}
-
 }

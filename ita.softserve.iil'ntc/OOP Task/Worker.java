@@ -42,10 +42,12 @@ public abstract class Worker {
     abstract public double monthlySalary();
     
     public static void printListOfWorkers(List <Worker> listForPrint){
+        //TODO for each
         for (int i = 0; i < listForPrint.size(); i++) System.out.println(listForPrint.get(i));
     }
-
+    //TODO printRangeFromList() ?
     public static void printPartOfListOfWorkers(List <Worker> listForPrint, String field, int fromNumber, int toNumber) {
+        //TODO switch() !!!
         if (field.equals("id")) {
             for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getId());
         }
@@ -63,7 +65,6 @@ public abstract class Worker {
         }
     }
     
-    //TODO use toString() override - FIXED
     @Override
     public String toString(){
         return "ID " + id + " Name " + name + " Surname " + surname + " Payment " + monthlySalary() + " $";

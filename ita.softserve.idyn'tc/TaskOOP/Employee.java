@@ -35,10 +35,10 @@ public abstract class Employee {
      * @param data       kind of data, for eaxample: ID, Name or Surname
      */
 
-
+    //TODO rename to printEmployeeFromRange() ?
     public static void outputEmployee(List<Employee> list, int firstIndex, int lastIndex, String data) {
         try {
-
+            //TODO what if data is upper or lower case? use toLowerCase() or toUpperCase()
             switch (data) {
                 case "ID":
                     for (int i = firstIndex; i <= lastIndex; i++) {
@@ -72,6 +72,7 @@ public abstract class Employee {
      * @param firstIndex output from first index of lis
      * @param lastIndex  output to lastIndex of this list
      */
+    //TODO printEmployee() is more appropriate
     public static void outputEmployee(List<Employee> list, int firstIndex, int lastIndex) {
         for (int i = firstIndex; i <= lastIndex; i++) {
             System.out.println(list.get(i));

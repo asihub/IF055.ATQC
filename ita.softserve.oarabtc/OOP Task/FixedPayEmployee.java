@@ -10,7 +10,4 @@ public class FixedPayEmployee extends Employees {
     public double payCalc() {
         return fixedPay;
     }
-
-    //TODO use toString() instead of this and add a separate print method - FIXED (method in super class Employees)
-
 }

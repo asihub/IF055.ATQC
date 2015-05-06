@@ -34,13 +34,14 @@ public abstract class Employees {
                 "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.payCalc() + " $"));
 
     }
-
+    //TODO use range as parameters for the method, rename to printRangeFromList()
     public static void printFirstEmployeeList(ArrayList<Employees> PayEmployee, int id, String name) {
         int i = id;
         for (i = 0; i < 5; i++) {System.out.println(PayEmployee.get(i).getName());
         }
     }
 
+    //TODO use range as parameters for the method, rename to printRangeFromList()
     public static void printLastEmployeeList(ArrayList<Employees> PayEmployee, int id, String name) {
         int i = id;
         for (i = 7; i < 10; i++) {System.out.println(PayEmployee.get(i).getName());

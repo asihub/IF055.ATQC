@@ -99,7 +99,6 @@ public class Staff {
      * @param fileName - file in root project directory
      * stored data must be in the same format as initType
      */
-    //FIXED TODO load what? rename the method to make it more obvious FIXED
     public void loadEmployeesFromFile(String fileName, String initType)
             throws IOException {
 
@@ -113,7 +112,8 @@ public class Staff {
                     break;
 
                 String[] lineArr = line.split(",,,");
-
+                //TODO initType.equals("PER_HOUR") - this will throw a NullPointerException,
+                //TODO use "PER_HOUR".equals.initType instead
                 if (initType.equals("PER_HOUR")) {
                     tmpEmployees.add(new PerHourEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],

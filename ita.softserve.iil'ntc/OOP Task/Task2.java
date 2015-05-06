@@ -41,10 +41,12 @@ public class Task2 {
                 .thenComparing(Worker::getSurname));
 
         //Here we are printing sorted list of workers who get fixed salary.
+        //TODO no need for concating a string - use "\nSome text ..."
         System.out.println("\n" + "The sorted list of workers who get fixed salary:");
         FixedSalaryWorker.printListOfWorkers(listOfFixedSalaryWorkers);
 
         //The first 5 names from sorted list of workers who get fixed salary.
+        //TODO no need for concating a string - use "\nSome text ..."
         System.out.println("\n" + "The first five names of workers who get fixed salary are:");
         FixedSalaryWorker.printPartOfListOfWorkers(listOfFixedSalaryWorkers, "name", 1, 5);
 
@@ -53,17 +55,17 @@ public class Task2 {
         FixedSalaryWorker.printPartOfListOfWorkers(listOfFixedSalaryWorkers, "id", 8, 10);
 
         //Here we are printing sorted list of workers who get hourly salary.
+        //TODO no need for concating a string - use "\nSome text ..."
         System.out.println("\n" + "The sorted list of workers who get hourly salary:");
         HourSalaryWorker.printListOfWorkers(listOfHourSalaryWorkers);
 
         //The first 5 names from sorted list of workers who get hourly salary.
+        //TODO no need for concating a string - use "\nSome text ..."
         System.out.println("\n" + "The first five names of workers who get hourly salary are:");
-        //TODO where's the printing method? - FIXED.
         HourSalaryWorker.printPartOfListOfWorkers(listOfHourSalaryWorkers, "name", 1, 5);
 
         //The last 3 ids from sorted list of workers who get hourly salary.
         System.out.println("\n" + "The last three ids of workers who get hourly salary are:");
-        //TODO where's the printing method? - FIXED.
         HourSalaryWorker.printPartOfListOfWorkers(listOfHourSalaryWorkers, "id", 8, 10);
 
     }

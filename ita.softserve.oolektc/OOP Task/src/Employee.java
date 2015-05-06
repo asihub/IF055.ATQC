@@ -15,7 +15,6 @@ public abstract class Employee {
 
     public abstract double getMonthlyWage();
 
-    //TODO use toString() method override instead of this - FIXED
     @Override
     public String toString() {
         StringBuilder employeeInfo = new StringBuilder("");
@@ -48,6 +47,7 @@ public abstract class Employee {
      * @param field  name of an element field to be printed
      */
     public static void printLastElementsFromList(List<Employee> list, int number, String field) {
+        //TODO field is case sensitive, use toUpperCase() or toLowerCase()
         switch (field) {
             case "id":
                 System.out.println();
@@ -74,6 +74,7 @@ public abstract class Employee {
      * @param field  name of an element field to be printed
      */
     public static void printFirstElementsFromList(List<Employee> list, int number, String field) {
+        //TODO field is case sensitive, use toUpperCase() or toLowerCase()
         switch (field) {
             case "id":
                 System.out.println();

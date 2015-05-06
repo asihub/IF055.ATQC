@@ -15,6 +15,4 @@ public class HourlyPayEmployee extends Employees {
         return hourPay = (PAY_DAYS * PAY_HOUR * hourlyPay);
     }
 
-    //TODO use toString() instead of this and add a separate print method - FIXED (method in super class Employees)
-
 }
