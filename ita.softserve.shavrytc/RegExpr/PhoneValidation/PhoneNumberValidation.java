@@ -10,9 +10,6 @@ public class PhoneNumberValidation {
 		Matcher m = pt.matcher(phone_number);
 		return m.matches();
 	}	
-	
-	//[\\(]?\d{3}[\\)]?[\\s.-]?\d{3}[\\s.-]?\d{4}
-	//\\(?d{3}\\)?\\s?\\.-?d{3}\\s\\.-?d{4}
 
 	public static void main(String[] args) {
 				
