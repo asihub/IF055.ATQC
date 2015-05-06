@@ -2,15 +2,27 @@ import java.util.List;
 
 public abstract class Employee {
 
-    final private int id;
-    final private String firstName;
-    final private String lastName;
     protected double monthlyWage;
+    private final int id;
+    private final String firstName;
+    private final String lastName;
 
     public Employee(int id, String name, String lastName) {
         this.id = id;
         this.firstName = name;
         this.lastName = lastName;
+    }
+
+    public final int getId() {
+        return id;
+    }
+
+    public final String getLastName() {
+        return lastName;
+    }
+
+    public final String getFirstName() {
+        return firstName;
     }
 
     public abstract double getMonthlyWage();
@@ -21,18 +33,6 @@ public abstract class Employee {
         employeeInfo.append(id).append(" ").append(firstName).append(" ")
                 .append(lastName).append(" ").append(monthlyWage);
         return employeeInfo.toString();
-    }
-
-    final public String getLastName() {
-        return lastName;
-    }
-
-    final public int getId() {
-        return id;
-    }
-
-    final public String getFirstName() {
-        return firstName;
     }
 
     public static void printEmployeeList(List<Employee> list) {

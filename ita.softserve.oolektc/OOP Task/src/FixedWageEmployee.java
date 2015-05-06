@@ -1,7 +1,7 @@
 
 public class FixedWageEmployee extends Employee {
 
-    final private double fixedWage;
+    private final double fixedWage;
 
     public FixedWageEmployee(int id, String name, String lastName, double fixedWage) {
         super(id, name, lastName);
