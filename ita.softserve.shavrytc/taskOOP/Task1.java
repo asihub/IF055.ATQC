@@ -23,7 +23,6 @@ public class Task1 {
 		System.out.println("Information About Employee:");
       
 		//TODO use for each loops - FIXED
-	
 		for (EmployeeInfo ei: list){
 			System.out.println(ei);
 		}
