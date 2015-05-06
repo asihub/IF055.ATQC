@@ -7,7 +7,7 @@ public class FixedRateEmployee extends EmployeeInfo{
 		super(id, name, surname);
 		this.rate = rate;
 	}
-	//Returns avarage salary of employee
+	//Returns avarage salary of employee with fixed rate
 	double avarageSalary(){
 		return rate;
 	};
