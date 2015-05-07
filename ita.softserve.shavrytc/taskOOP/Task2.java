@@ -9,11 +9,8 @@ public static void main(String[] args) {
 		
 		System.out.println("=============================================");
 		System.out.println("           Information About Employee:");
-		System.out.println("=============================================");
-		//TODO use "\n" for new lines - FIXED
-		System.out.println("\n");
+		System.out.println("=============================================\n");
 
-		//TODO what's hre? - FIXED
 		List <EmployeeInfo> hourlyRateEmployee = new ArrayList <EmployeeInfo>(20);
 		
 		hourlyRateEmployee.add(new HourlyRateEmployee(1, "Ivan", "Ivanenko", 15));
@@ -29,7 +26,7 @@ public static void main(String[] args) {
 		
 		System.out.println("-----------Hourly Rated Employee:-----------");
 
-		printList(hourlyRateEmployee);
+		EmployeeInfo.printList(hourlyRateEmployee);
 
 		List <EmployeeInfo> fixedRateEmployee = new ArrayList <EmployeeInfo>(20);
 		
@@ -43,14 +40,12 @@ public static void main(String[] args) {
 		fixedRateEmployee.add(new FixedRateEmployee(8, "Ira", "Lyubenko", 4000));
 		fixedRateEmployee.add(new FixedRateEmployee(9, "Stepan", "Vasylechko", 5000));
 		fixedRateEmployee.add(new FixedRateEmployee(10, "Yuriy", "Romanenko", 6000)); 
-		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
-		System.out.println("\n");
-		System.out.println("-----------Fixed Rated Employee:-----------");
 		
-		printList(fixedRateEmployee);
-	    //TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
-		System.out.println("\n"); 
-		System.out.println("-----------Fixed Rated Employee after Sorting:-----------");
+		System.out.println("\n-----------Fixed Rated Employee:-----------");
+		
+		EmployeeInfo.printList(fixedRateEmployee);
+	    
+		System.out.println("\n-----------Fixed Rated Employee after Sorting:-----------");
 		
 
 		Comparator <EmployeeInfo> employeeComparator = Comparator.comparing(EmployeeInfo::avarageSalary)
@@ -58,52 +53,27 @@ public static void main(String[] args) {
 						
 		// Sorting Fixed Rate Employee
 		fixedRateEmployee.sort(employeeComparator);
+		EmployeeInfo.printList(fixedRateEmployee);
 
-		printList(fixedRateEmployee);
-
-		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
-		System.out.println("\n");
-		System.out.println("-----------Hourly Rated Employee after Sorting:-----------");
+		System.out.println("\n-----------Hourly Rated Employee after Sorting:-----------");
 			
 		hourlyRateEmployee.sort(employeeComparator);
-		printList(hourlyRateEmployee);
+		EmployeeInfo.printList(hourlyRateEmployee);
 		
-		System.out.println("\n");
+		System.out.println("\n===============================================================");
+		System.out.println("----The First 5 Persons By Name And The Last 3 Persons By Id In The List:----");
 		System.out.println("===============================================================");
-		System.out.println("----The First 5 Persons And The Last 3 Persons In The List:----");
-		System.out.println("===============================================================");
 
-		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
-		System.out.println("\n");
-		System.out.println("-----------Fixed Rated Employee:-----------");
-		//TODO move out to a separate method
-		for (int i=0; i<=9; i++){
-			
-			if ((i<5)^(i>7)){
-				System.out.println(fixedRateEmployee.get(i));
-			}	
-		}
+		System.out.println("\n-----------Fixed Rated Employee:-----------");
+		
+		EmployeeInfo.printInterval(fixedRateEmployee, "Name", 1,5);
+		EmployeeInfo.printInterval(fixedRateEmployee, "Id", 8,10);
+		
+		System.out.println("\n-----------Hourly Rated Employee:-----------");
 
-		//TODO use "\nSome text ... " eg "\n-----------Fixed Rated ..."
-    	System.out.println("\n");
-		System.out.println("-----------Hourly Rated Employee:-----------");
-
-		//TODO move out to a separate method
-		for (int i=0; i<=9; i++){
-			
-			if ((i<5)^(i>7)){
-				System.out.println(hourlyRateEmployee.get(i));
-			}	
-			
-		}
+		EmployeeInfo.printInterval(hourlyRateEmployee, "Name", 1,5);
+		EmployeeInfo.printInterval(hourlyRateEmployee, "Id", 8,10);
 		
 	}
-	//TODO move out to some *employee or base class
-		public static void printList (List <EmployeeInfo> employeeRate){
-				
-			for (EmployeeInfo employeeInfo: employeeRate){
-				System.out.println(employeeInfo);
-	        }
-        }
 
 }
