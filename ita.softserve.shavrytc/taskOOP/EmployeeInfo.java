@@ -1,8 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 
 public abstract class EmployeeInfo {
 	private String name;
 	private String surname;
 	private int id;
+	
+	List <EmployeeInfo> employeeRate = new ArrayList <EmployeeInfo>();
 
 	EmployeeInfo(int id, String name, String surname ){
 		this.id = id ;
@@ -33,13 +38,38 @@ public abstract class EmployeeInfo {
 	public void setId(int id) {
 		this.id = id;
 	}
-        //prints info about employee
+    //prints info about employee
 	@Override
 	public String toString(){
 		return "#" + id +" " + name +" " + surname + " " + avarageSalary();
 	};
 	
 	abstract double avarageSalary();
-
+	
+	public static void printList (List <EmployeeInfo> employeeRate){
+		for (EmployeeInfo employeeInfo: employeeRate){
+			System.out.println(employeeInfo);
+        }
+    }
+	
+	public static void printInterval(List <EmployeeInfo> employeeRate, String str, int arg1, int arg2){
+		switch(str){
+			case "Id": 
+				for(int i=arg1-1; i<arg2; i++){
+				System.out.println(employeeRate.get(i));
+				}
+				break;
+			case "Name": 
+				for(int i=arg1-1; i<arg2; i++){
+				System.out.println(employeeRate.get(i));
+				}
+				break;
+			case "Surname": 
+				for(int i=arg1-1; i<arg2; i++){
+				System.out.println(employeeRate.get(i));
+				}
+				break;
+		}
+	}
 
 }
