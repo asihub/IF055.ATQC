@@ -40,22 +40,34 @@ public abstract class Worker {
     abstract public double monthlySalary();
 
     public static void printListOfWorkers(List<Worker> listForPrint) {
-        for (Worker co_worker : listForPrint) System.out.println(co_worker);
+        listForPrint.forEach(System.out::println);
     }
 
     public static void printRangeFromList(List<Worker> listForPrint, String field, int fromNumber, int toNumber) {
         switch (field) {
             case "id":
-                for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getId());
+                listForPrint.stream()
+                        .limit(toNumber)
+                        .skip(fromNumber - 1)
+                        .forEach(num -> System.out.println(num.getId()));
                 break;
             case "name":
-                for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getName());
+                listForPrint.stream()
+                        .limit(toNumber)
+                        .skip(fromNumber - 1)
+                        .forEach(num -> System.out.println(num.getName()));
                 break;
             case "surname":
-                for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).getSurname());
+                listForPrint.stream()
+                        .limit(toNumber)
+                        .skip(fromNumber - 1)
+                        .forEach(num -> System.out.println(num.getSurname()));
                 break;
             case "salary":
-                for (int i = fromNumber - 1; i < toNumber; i++) System.out.println(listForPrint.get(i).monthlySalary());
+                listForPrint.stream()
+                        .limit(toNumber)
+                        .skip(fromNumber - 1)
+                        .forEach(num -> System.out.println(num.monthlySalary()));
                 break;
             default:
                 System.out.println("Please put correct field (id, name, surname or salary) and try again!");
