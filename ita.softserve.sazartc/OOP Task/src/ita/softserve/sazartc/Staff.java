@@ -13,9 +13,6 @@ import java.util.List;
  */
 public class Staff {
     
-    public static final byte PER_HOUR = 1;
-    public static final byte FIXED_RATE = 2;    
-    
     private List<Employee> employees = new ArrayList<Employee>();
     
     public void addEmployee(Employee employee) {
@@ -102,8 +99,7 @@ public class Staff {
      * @param fileName - file in root project directory
      * stored data must be in the same format as initType
      */
-    //public void loadEmployeesFromFile(String fileName, String initType)
-    public void loadEmployeesFromFile(String fileName, byte initType)
+    public void loadEmployeesFromFile(String fileName, String initType)
             throws IOException {
 
         List<Employee> tmpEmployees = new ArrayList<Employee>();
@@ -117,31 +113,16 @@ public class Staff {
 
                 String[] lineArr = line.split(",,,");
                 
-                switch (initType) {
-                case 1:
+                if ("PER_HOUR".equals(initType)) {
                     tmpEmployees.add(new PerHourEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
                             Double.parseDouble(lineArr[3])));
-                    break;
-                case 2:
+                } else if ("FIXED_RATE".equals(initType)) {
                     tmpEmployees.add(new FixedRateEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
                             Double.parseDouble(lineArr[3])));
-                    break;
-                default:
+                } else
                     throw new IllegalArgumentException();
-                }
-                
-//                if ("PER_HOUR".equals(initType)) {
-//                    tmpEmployees.add(new PerHourEmployee(Integer
-//                            .parseInt(lineArr[0]), lineArr[1], lineArr[2],
-//                            Double.parseDouble(lineArr[3])));
-//                } else if ("FIXED_RATE".equals(initType)) {
-//                    tmpEmployees.add(new FixedRateEmployee(Integer
-//                            .parseInt(lineArr[0]), lineArr[1], lineArr[2],
-//                            Double.parseDouble(lineArr[3])));
-//                } else
-//                    throw new IllegalArgumentException();
             }
 
             this.employees.clear();
