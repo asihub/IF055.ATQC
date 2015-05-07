@@ -49,25 +49,25 @@ public abstract class Worker {
                 listForPrint.stream()
                         .limit(toNumber)
                         .skip(fromNumber - 1)
-                        .forEach(number -> System.out.println(number.getId()));
+                        .forEach(number1 -> System.out.println(number1.getId()));
                 break;
             case "name":
                 listForPrint.stream()
                         .limit(toNumber)
                         .skip(fromNumber - 1)
-                        .forEach(number -> System.out.println(number.getName()));
+                        .forEach(number1 -> System.out.println(number1.getName()));
                 break;
             case "surname":
                 listForPrint.stream()
                         .limit(toNumber)
                         .skip(fromNumber - 1)
-                        .forEach(number -> System.out.println(number.getSurname()));
+                        .forEach(number1 -> System.out.println(number1.getSurname()));
                 break;
             case "salary":
                 listForPrint.stream()
                         .limit(toNumber)
                         .skip(fromNumber - 1)
-                        .forEach(number -> System.out.println(number.monthlySalary()));
+                        .forEach(number1 -> System.out.println(number1.monthlySalary()));
                 break;
             default:
                 System.out.println("Please put correct field (id, name, surname or salary) and try again!");
