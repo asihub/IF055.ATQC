@@ -1,6 +1,3 @@
-import java.util.Comparator;
-import java.util.LinkedList;
-
 public class Task1 {
     public static void main(String[] args) {
 
@@ -16,6 +13,7 @@ public class Task1 {
         coworker[5] = new FixedSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Moro", "Moon", 9000.00);
 
         for (Worker co_worker : coworker) System.out.println(co_worker);
+
 
     }
 }

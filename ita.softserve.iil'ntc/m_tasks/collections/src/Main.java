@@ -1,8 +1,4 @@
-import java.awt.*;
-import java.util.Iterator;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
@@ -28,9 +24,10 @@ public class Main {
         List <FruitsAndVegetablesNomenclature> goodsList = new LinkedList<>();
 
         //Passing objects into list.
-        for (int i = 0; i < goodsStringList.length; i++) {
-            goodsList.add(i, new FruitsAndVegetablesNomenclature(i, goodsStringList[i]));
-        }
+        Arrays.asList(goodsStringList)
+                .forEach(fruit_n_vegetable -> goodsList
+                        .add(new FruitsAndVegetablesNomenclature
+                                (Arrays.asList(goodsStringList).indexOf(fruit_n_vegetable), fruit_n_vegetable)));
 
         //We are printing our list with "for-each" loop.
         System.out.println("Our list looks like following:");
