@@ -12,9 +12,9 @@ import java.util.List;
  * A catalog of Employees' data
  */
 public class Staff {
-
+    
     private List<Employee> employees = new ArrayList<Employee>();
-
+    
     public void addEmployee(Employee employee) {
         employees.add(employee);
     }
@@ -112,7 +112,7 @@ public class Staff {
                     break;
 
                 String[] lineArr = line.split(",,,");
-
+                
                 if ("PER_HOUR".equals(initType)) {
                     tmpEmployees.add(new PerHourEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
