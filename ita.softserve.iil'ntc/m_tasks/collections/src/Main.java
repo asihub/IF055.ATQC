@@ -21,13 +21,19 @@ public class Main {
 
         //List block.
         //We initialize LinkedList of goods.
-        List <FruitsAndVegetablesNomenclature> goodsList = new LinkedList<>();
+        List<FruitsAndVegetablesNomenclature> goodsList = new LinkedList<>();
 
         //Passing objects into list.
+        for (int i = 0; i < goodsStringList.length; i++) {
+            goodsList.add(new FruitsAndVegetablesNomenclature(i, goodsStringList[i]));
+        }
+
+        /*Instead above written method we can use the following way:
         Arrays.asList(goodsStringList)
                 .forEach(fruit_n_vegetable -> goodsList
                         .add(new FruitsAndVegetablesNomenclature
                                 (Arrays.asList(goodsStringList).indexOf(fruit_n_vegetable), fruit_n_vegetable)));
+        */
 
         //We are printing our list with "for-each" loop.
         System.out.println("Our list looks like following:");
@@ -46,7 +52,7 @@ public class Main {
         //Also we are going to change list with iterator.
         Iterator it = goodsList.iterator();
         int forIteration = 0;
-        while(it.hasNext()){
+        while (it.hasNext()) {
             if (goodsList.get(forIteration).lookForObjectName().equals("cucumber")) {
                 it.next();
                 it.remove();
@@ -57,7 +63,7 @@ public class Main {
         }
 
         //We wanna change objects by adding shop name - 'Good Shop'.
-        for (int i=0; i < goodsList.size(); i++) {
+        for (int i = 0; i < goodsList.size(); i++) {
             goodsList.get(i).changeObjectName("'Good Shop': " + goodsList.get(i).lookForObjectName() + ".");
         }
 
@@ -68,17 +74,23 @@ public class Main {
 
         //Map block.
         //Map initialization.
-        Map <Integer, FruitsAndVegetablesNomenclature> goodsMap = new ConcurrentHashMap<>();
+        Map<Integer, FruitsAndVegetablesNomenclature> goodsMap = new ConcurrentHashMap<>();
 
         //We are adding our objects to map.
-        for(int i=0; i < goodsStringList.length; i++){
+        for (int i = 0; i < goodsStringList.length; i++) {
             goodsMap.put(i, new FruitsAndVegetablesNomenclature(i, goodsStringList[i]));
         }
+
+        /*Instead above written method we can use the following way:
+        Arrays.asList(goodsStringList).forEach(n -> goodsMap.
+                put(Arrays.asList(goodsStringList).indexOf(n),
+                        new FruitsAndVegetablesNomenclature(Arrays.asList(goodsStringList).indexOf(n), n)));
+        */
 
         //Printing map.
         System.out.println("Our map looks like following:");
 
-        for(Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
+        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
             System.out.println(map.getKey() + " in map---> " + map.getValue());
         }
 
@@ -89,24 +101,24 @@ public class Main {
         //Deleting object with key "2".
         Integer elementKeyForDeleting = 2;
 
-        for (Iterator <Integer> itt = goodsMap.keySet().iterator(); itt.hasNext();) {
-            if(itt.next().equals(elementKeyForDeleting)) itt.remove();
+        for (Iterator<Integer> itt = goodsMap.keySet().iterator(); itt.hasNext(); ) {
+            if (itt.next().equals(elementKeyForDeleting)) itt.remove();
         }
 
         //Deleting melon.
-        for(Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
+        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
             if (map.getValue().lookForObjectName().equals("melon")) goodsMap.remove(map.getKey());
         }
 
         //Changing name.
-        for(Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
+        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
             if (map.getValue().lookForObjectName().equals("onion")) goodsMap.get(map.getKey()).changeObjectName("bow");
         }
 
         //Map after our changes.
         System.out.println("Our map after changes:");
 
-        for(Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
+        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
             System.out.println(map.getKey() + " in map---> " + map.getValue());
         }
 
