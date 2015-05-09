@@ -39,6 +39,7 @@ public class Staff {
      * or select < 0 for return last n elements      
      */    
     public String toString(int index) {
+        
         int fromIndex;
         int toIndex;
         String title;
@@ -89,7 +90,6 @@ public class Staff {
         } finally {
             if (writer != null) writer.close();
         }
-
     }
 
     /**
@@ -103,15 +103,13 @@ public class Staff {
             throws IOException {
 
         List<Employee> tmpEmployees = new ArrayList<Employee>();
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(fileName));
-            while (true) {
-                String line = reader.readLine();
-                if (line == null)
-                    break;
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            String[] lineArr;
+            
+            while ((line = reader.readLine()) != null) {
 
-                String[] lineArr = line.split(",,,");
+                lineArr = line.split(",,,");
                 
                 if ("PER_HOUR".equals(initType)) {
                     tmpEmployees.add(new PerHourEmployee(Integer
@@ -130,10 +128,7 @@ public class Staff {
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (reader != null) reader.close();
-        }
-
+        } 
     }
 
 }
