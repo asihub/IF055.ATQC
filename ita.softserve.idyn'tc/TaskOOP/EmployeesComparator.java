@@ -16,7 +16,7 @@ public class EmployeesComparator implements Comparator<Employee> {
         if (result != 0) {
             return result;
         } else {
-            return emp1.surname.compareTo(emp2.surname);
+            return emp1.getSurname().compareTo(emp2.getSurname());
         }
 
 

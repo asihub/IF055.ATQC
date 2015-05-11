@@ -5,9 +5,7 @@ public class FixedSalaryEmployee extends Employee {
     private double fixedSalary;
 
     public FixedSalaryEmployee(int id, String name, String surname, int fixedSalary) {
-        super.id = id;
-        super.name = name;
-        super.surname = surname;
+        super(id, name, surname);
         this.fixedSalary = fixedSalary;
     }
 
