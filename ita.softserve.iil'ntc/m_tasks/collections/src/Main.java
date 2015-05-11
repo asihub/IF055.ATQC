@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,21 +25,13 @@ public class Main {
         List<FruitsAndVegetablesNomenclature> goodsList = new LinkedList<>();
 
         //Passing objects into list.
-        for (int i = 0; i < goodsStringList.length; i++) {
-            goodsList.add(new FruitsAndVegetablesNomenclature(i, goodsStringList[i]));
-        }
-
-        /*Instead above written method we can use the following way:
-        Arrays.asList(goodsStringList)
-                .forEach(fruit_n_vegetable -> goodsList
-                        .add(new FruitsAndVegetablesNomenclature
-                                (Arrays.asList(goodsStringList).indexOf(fruit_n_vegetable), fruit_n_vegetable)));
-        */
+        Stream.of(goodsStringList).forEach(n -> goodsList.add
+                (new FruitsAndVegetablesNomenclature(Arrays.asList(goodsStringList).indexOf(n), n)));
 
         //We are printing our list with "for-each" loop.
         System.out.println("Our list looks like following:");
 
-        for (FruitsAndVegetablesNomenclature goods : goodsList) System.out.println(goods);
+        goodsList.forEach(System.out::println);
 
         //Doings with list.
         //Different changes in list.
@@ -63,64 +56,51 @@ public class Main {
         }
 
         //We wanna change objects by adding shop name - 'Good Shop'.
-        for (int i = 0; i < goodsList.size(); i++) {
-            goodsList.get(i).changeObjectName("'Good Shop': " + goodsList.get(i).lookForObjectName() + ".");
-        }
+        goodsList.forEach(n -> n.changeObjectName("'Good Shop': " + n.lookForObjectName() + "."));
 
         //We are printing our list with "for-each" loop.
         System.out.println("After all changes our list looks like following:");
 
-        for (FruitsAndVegetablesNomenclature goods : goodsList) System.out.println(goods);
+        goodsList.forEach(System.out::println);
 
         //Map block.
         //Map initialization.
         Map<Integer, FruitsAndVegetablesNomenclature> goodsMap = new ConcurrentHashMap<>();
 
         //We are adding our objects to map.
-        for (int i = 0; i < goodsStringList.length; i++) {
-            goodsMap.put(i, new FruitsAndVegetablesNomenclature(i, goodsStringList[i]));
-        }
-
-        /*Instead above written method we can use the following way:
-        Arrays.asList(goodsStringList).forEach(n -> goodsMap.
-                put(Arrays.asList(goodsStringList).indexOf(n),
+        Stream.of(goodsStringList).forEach(n -> goodsMap.put
+                (Arrays.asList(goodsStringList).indexOf(n),
                         new FruitsAndVegetablesNomenclature(Arrays.asList(goodsStringList).indexOf(n), n)));
-        */
 
         //Printing map.
         System.out.println("Our map looks like following:");
 
-        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
-            System.out.println(map.getKey() + " in map---> " + map.getValue());
-        }
+        goodsMap.forEach((key, value) -> System.out.println(key + " in map---> " + value));
 
         //Changing map.
         System.out.println("Now we are going to change our map: \n1)delete the second object; \n" +
                 "2)remove melon; \n3)change name from onion to bow.");
 
         //Deleting object with key "2".
-        Integer elementKeyForDeleting = 2;
-
-        for (Iterator<Integer> itt = goodsMap.keySet().iterator(); itt.hasNext(); ) {
-            if (itt.next().equals(elementKeyForDeleting)) itt.remove();
-        }
+        goodsMap.forEach((key, value) -> {
+            if (key == 2) goodsMap.remove(key);
+        });
 
         //Deleting melon.
-        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
-            if (map.getValue().lookForObjectName().equals("melon")) goodsMap.remove(map.getKey());
-        }
+        goodsMap.forEach((key, value) -> {
+            if (value.lookForObjectName().equals("melon")) goodsMap.remove(key);
+        });
 
         //Changing name.
-        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
-            if (map.getValue().lookForObjectName().equals("onion")) goodsMap.get(map.getKey()).changeObjectName("bow");
-        }
+        goodsMap.forEach((key, value) -> {
+            if (value.lookForObjectName().equals("onion")) value.changeObjectName("bow");
+        });
 
         //Map after our changes.
         System.out.println("Our map after changes:");
 
-        for (Map.Entry<Integer, FruitsAndVegetablesNomenclature> map : goodsMap.entrySet()) {
-            System.out.println(map.getKey() + " in map---> " + map.getValue());
-        }
+        goodsMap.forEach((key, value) -> System.out.println(key + " in map---> " + value));
 
     }
 }
+
