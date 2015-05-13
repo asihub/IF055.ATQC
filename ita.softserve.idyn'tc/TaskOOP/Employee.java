@@ -23,9 +23,9 @@ public abstract class Employee {
      * @param data       kind of data, for example: ID, Name or Surname
      */
 
-
     public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex, String data) {
         try {
+            CSVFileWriter csvFileWriter = new CSVFileWriter();
 
             switch (data.toUpperCase()) {
                 case "ID":
@@ -47,7 +47,6 @@ public abstract class Employee {
                     throw new IllegalArgumentException();
             }
 
-
         } catch (IllegalArgumentException e) {
             System.out.println("wrong input parameter");
         }
@@ -63,10 +62,10 @@ public abstract class Employee {
      */
 
     public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex) {
+
         for (int i = firstIndex; i <= lastIndex; i++) {
             System.out.println(list.get(i));
         }
-
     }
 
     public int getId() {
