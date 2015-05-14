@@ -1,3 +1,7 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
 
 import java.io.BufferedReader;
@@ -7,9 +11,17 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by Ihor Dynka on 06.05.2015.
+ * reads Employees from CSV file and sets their in arrayList
  */
 public class CSVFileReader {
+
+    /**
+     * reads PerHourSalaryEmployee and FixedSalaryEmployee from CSV file and sets their in arraylist
+     *
+     * @param employeeList which lists you'd like to sets
+     * @param file         fileName or filePath
+     * @param data         gives the opportunity to choose arrayList. It maust be "perHourSalary" or "fixedSalary"
+     */
 
     public void readFromFile(List<Employee> employeeList, String file, String data) {
 

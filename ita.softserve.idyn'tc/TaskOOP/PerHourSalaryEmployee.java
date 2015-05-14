@@ -1,14 +1,26 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
 
 import java.math.BigDecimal;
 
+/**
+ * initialized perHourSalary employee and calculates their salary
+ */
 public class PerHourSalaryEmployee extends Employee {
 
-    private final double DAYS_QUANTITY = 20.8;
-    private final int HOURS_QUANTITY = 8;
+    private double DAYS_QUANTITY = 20.8;
+    private int HOURS_QUANTITY = 8;
     private double hourlyRate;
 
-
+    /**
+     * @param id
+     * @param name
+     * @param surname
+     * @param hourlyRate
+     */
     public PerHourSalaryEmployee(int id, String name, String surname, double hourlyRate) {
         super(id, name, surname);
         this.hourlyRate = hourlyRate;

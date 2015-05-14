@@ -1,8 +1,16 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
+
+/**
+ * initialized fixedSalaryEmployee and calculates their salary
+ */
 
 public class FixedSalaryEmployee extends Employee {
 
-    private final double fixedSalary;
+    private double fixedSalary;
 
     public FixedSalaryEmployee(int id, String name, String surname, int fixedSalary) {
         super(id, name, surname);

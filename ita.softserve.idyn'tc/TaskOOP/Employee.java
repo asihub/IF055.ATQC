@@ -1,7 +1,14 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
 
 import java.util.List;
 
+/**
+ * initializes new employee and print their console
+ */
 public abstract class Employee {
 
     private final int id;
@@ -15,7 +22,7 @@ public abstract class Employee {
     }
 
     /**
-     * this method gets the employee from arraylist
+     * this method gets the employee from arraylist and outputs their in console
      *
      * @param list       choose the list which you'd like
      * @param firstIndex output from first index of list
@@ -54,7 +61,7 @@ public abstract class Employee {
     }
 
     /**
-     * this method gets the employees from arraylist
+     * this method gets the employees from arraylist and outputs their in console
      *
      * @param list       choose the list which you'd like
      * @param firstIndex output from first index of lis

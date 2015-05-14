@@ -1,9 +1,15 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * sets PerHourSalary Employee and FixedSalary Employee in arrayList and write their in console
+ */
 public class Task1 {
     public static void main(String[] args) {
 

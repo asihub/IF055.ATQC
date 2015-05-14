@@ -1,9 +1,20 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * reads PerHourSalary Employee and FixedSalaryEmployee from CSV file to perHourSalaryEmployeeList and
+ * fixedSalaryEmployeeList
+ * <p/>
+ * sorted these lists by name and salary
+ * <p/>
+ * writes results in CSV files
+ */
 public class Task2 {
     public static void main(String[] args) {
 
@@ -25,7 +36,7 @@ public class Task2 {
         csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 9), "outputData/perHourSalaryOutput.csv");
 // writing in console and file from 0th to 4th names from sorted perHourSalaryList
         Employee.printEmployeeFromRange(perHourSalaryEmployeeList, 0, 4, "name");
-        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 5), "outputData/5NameOfperHourSalaryOutput.csv");
+        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 5), "outputData/5NameOfPerHourSalaryOutput.csv");
 // writing in console and file from 7th to 9th elements from sorted perHourSalaryList
         Employee.printEmployeeFromRange(perHourSalaryEmployeeList, 7, 9, "id");
         csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(7, 10), "outputData/Last3IDofPerHourSalaryOutput.csv");
@@ -39,10 +50,10 @@ public class Task2 {
         csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 9), "outputData/fixedSalaryOutput.csv");
 // writing in console and file from 0th to 4th names from sorted fixedSalaryList
         Employee.printEmployeeFromRange(fixedSalaryEmployeeList, 0, 4, "name");
-        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 5), "outputData/5NameOffixedSalaryOutput.csv");
+        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 5), "outputData/5NameOfFixedSalaryOutput.csv");
 // writing in console and file from 7th to 9th elements from sorted fixedSalaryList
         Employee.printEmployeeFromRange(fixedSalaryEmployeeList, 7, 9, "id");
-        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(7, 10), "outputData/Last3IDoffixedSalaryOutput.csv");
+        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(7, 10), "outputData/Last3IDofFixedSalaryOutput.csv");
 
 
     }
