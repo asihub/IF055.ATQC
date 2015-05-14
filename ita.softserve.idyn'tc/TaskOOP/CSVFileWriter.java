@@ -48,7 +48,7 @@ public class CSVFileWriter {
         return employeeList;
     }
 
-    @SuppressWarnings("UnusedDeclaration")
+
     public List<Employee> writeFile(List<Employee> employeeList, String file, String data) {
         FileWriter fileWriter = null;
 
