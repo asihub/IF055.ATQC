@@ -4,9 +4,9 @@ import java.util.List;
 
 public abstract class Employee {
 
-    private int id;
-    private String name;
-    private String surname;
+    private final int id;
+    private final String name;
+    private final String surname;
 
     public Employee(int id, String name, String surname) {
         this.id = id;

@@ -2,7 +2,7 @@ package ita.softserve.idyntc;
 
 public class FixedSalaryEmployee extends Employee {
 
-    private double fixedSalary;
+    private final double fixedSalary;
 
     public FixedSalaryEmployee(int id, String name, String surname, int fixedSalary) {
         super(id, name, surname);

@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by Ihor Dynka on 08.05.2015.
  */
+
 public class CSVFileWriter {
     private static final String COMMA = ",";
     private static final String NEW_LINE_SEPARATOR = "\n";
@@ -47,6 +48,7 @@ public class CSVFileWriter {
         return employeeList;
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public List<Employee> writeFile(List<Employee> employeeList, String file, String data) {
         FileWriter fileWriter = null;
 

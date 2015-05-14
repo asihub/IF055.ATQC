@@ -18,6 +18,7 @@ public class CSVFileReader {
         String line = "";
         final String SPLIT_BY = ",";
 
+        //noinspection TryWithIdenticalCatches
         try {
 
             bufferedReader = new BufferedReader(new FileReader(file));

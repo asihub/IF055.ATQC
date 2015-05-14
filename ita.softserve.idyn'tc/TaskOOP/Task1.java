@@ -7,7 +7,7 @@ import java.util.List;
 public class Task1 {
     public static void main(String[] args) {
 
-        List<Employee> employeeList = new ArrayList<Employee>(10);
+        List<Employee> employeeList = new ArrayList<>();
 
         employeeList.add(0, new PerHourSalaryEmployee(0, "Ivan", "Ivaniv", 10));
         employeeList.add(1, new PerHourSalaryEmployee(1, "Petro", "Petriv", 8));
