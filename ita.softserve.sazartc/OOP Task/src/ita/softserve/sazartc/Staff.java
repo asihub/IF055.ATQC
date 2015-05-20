@@ -103,9 +103,14 @@ public class Staff {
             throws IOException {
 
         List<Employee> tmpEmployees = new ArrayList<Employee>();
-        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+
+        BufferedReader reader = null;
+        try {
+        //try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) { // for java 1.8
             String line;
             String[] lineArr;
+
+            reader = new BufferedReader(new FileReader(fileName));
             
             while ((line = reader.readLine()) != null) {
 
@@ -114,11 +119,11 @@ public class Staff {
                 if ("PER_HOUR".equals(initType)) {
                     tmpEmployees.add(new PerHourEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
-                            Double.parseDouble(lineArr[3])));
+                            Double.parseDouble(lineArr[3].replaceAll(",","."))));
                 } else if ("FIXED_RATE".equals(initType)) {
                     tmpEmployees.add(new FixedRateEmployee(Integer
                             .parseInt(lineArr[0]), lineArr[1], lineArr[2],
-                            Double.parseDouble(lineArr[3])));
+                            Double.parseDouble(lineArr[3].replaceAll(",","."))));
                 } else
                     throw new IllegalArgumentException();
             }
@@ -128,7 +133,9 @@ public class Staff {
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
-        } 
+        }
+
+        if (reader != null) reader = null;
     }
 
 }
