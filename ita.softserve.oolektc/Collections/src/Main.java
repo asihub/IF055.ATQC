@@ -11,17 +11,15 @@ public class Main {
         Employee employee5 = new Employee(105, "Jack White");
         Employee employee6 = new Employee(106, "Mick Jagger");
 
-        List<Employee> employeeList = new LinkedList<Employee>(){{
-            add(employee1);
-            add(employee2);
-            add(employee3);
-            add(employee4);
-            add(employee5);
-            add(employee6);
-        }};
+        List<Employee> employeeList = new LinkedList<>();
+        employeeList.add(employee1);
+        employeeList.add(employee2);
+        employeeList.add(employee3);
+        employeeList.add(employee4);
+        employeeList.add(employee5);
+        employeeList.add(employee6);
 
         Map<Integer, Employee> employeeMap = new LinkedHashMap<>();
-
         employeeMap.put(employee1.getNumberOfObject(), employee1);
         employeeMap.put(employee2.getNumberOfObject(), employee2);
         employeeMap.put(employee3.getNumberOfObject(), employee3);
@@ -31,34 +29,27 @@ public class Main {
 
         System.out.println("------------------------List---------------------------");
 
-        for (Employee list: employeeList){
-            System.out.println(list);
-        }
+        employeeList.forEach(System.out::println);
 
         ListIterator<Employee> iterator = employeeList.listIterator();
 
-        while (iterator.hasNext()){
-
-            if (iterator.next().equals(employee5)){
+        while (iterator.hasNext()) {
+            if (iterator.next().equals(employee5)) {
                 iterator.remove();
-            } else if (iterator.previousIndex() == 4){
+            } else if (iterator.previousIndex() == 4) {
                 iterator.add(new Employee(107, "David Mitchell"));
-            } else if (iterator.nextIndex() == 1){
+            } else if (iterator.nextIndex() == 1) {
                 iterator.set(new Employee(109, "Jamie XX"));
             }
         }
 
-        System.out.println();
-        System.out.println("-------------------Modified List----------------------");
+        System.out.println("\n-------------------Modified List----------------------");
 
-        for (Employee list: employeeList){
-            System.out.println(list);
-        }
+        employeeList.forEach(System.out::println);
 
-        System.out.println();
-        System.out.println("-------------------------Map--------------------------");
+        System.out.println("\n-------------------------Map--------------------------");
 
-        for(Map.Entry<Integer, Employee> entry: employeeMap.entrySet()) {
+        for (Map.Entry<Integer, Employee> entry : employeeMap.entrySet()) {
             int key = entry.getKey();
             Employee value = entry.getValue();
 
@@ -70,16 +61,13 @@ public class Main {
         employeeMap.put(employee7.getNumberOfObject(), employee7);
         employeeMap.remove(6);
 
-        System.out.println();
-        System.out.println("-------------------Modified Map----------------------");
+        System.out.println("\n-------------------Modified Map----------------------");
 
-        for(Map.Entry<Integer, Employee> entry: employeeMap.entrySet()) {
+        for (Map.Entry<Integer, Employee> entry : employeeMap.entrySet()) {
             int key = entry.getKey();
             Employee value = entry.getValue();
 
             System.out.println("Map key: " + key + "     " + value);
         }
-
     }
-
 }

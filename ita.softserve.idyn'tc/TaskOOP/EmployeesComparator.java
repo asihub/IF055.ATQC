@@ -1,10 +1,17 @@
+/*
+* Copyright (C) 2015 TaskOOP Project by Ihor Dynka
+ */
+
 package ita.softserve.idyntc;
 
 import java.util.Comparator;
 
+/**
+ * compares employees
+ */
 public class EmployeesComparator implements Comparator<Employee> {
     /**
-     * Method that helps to compare employees for their ordering
+     * helps to compare employees for their salary. If their salary are equals that it compares for their names
      *
      * @param emp1 employee1
      * @param emp2 employee2
@@ -16,7 +23,7 @@ public class EmployeesComparator implements Comparator<Employee> {
         if (result != 0) {
             return result;
         } else {
-            return emp1.surname.compareTo(emp2.surname);
+            return emp1.getSurname().compareTo(emp2.getSurname());
         }
 
 

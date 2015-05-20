@@ -10,22 +10,22 @@ public class NumberExtractor {
 
     public static void main(String[] args) {
 
-        System.out.println(extractNumbers(stringWithNumbers));
-        System.out.println(extractNumbers(stringWithoutNumbers));
+        System.out.println(extractNumbersFrom(stringWithNumbers));
+        System.out.println(extractNumbersFrom(stringWithoutNumbers));
 
     }
 
-    public static List extractNumbers(String string) {
-        Pattern pattern = Pattern.compile("\\d*\\.?\\d+");
-        Matcher matcher = pattern.matcher(string);
+    public static List extractNumbersFrom(String string) {
+        final Pattern pattern = Pattern.compile("\\d*\\.?\\d+");
+        final Matcher matcher = pattern.matcher(string);
 
-        List<String> listOfNumbers = new ArrayList<>();
+        final List<String> listOfNumbers = new ArrayList<>();
 
         while (matcher.find()) {
             listOfNumbers.add(matcher.group());
         }
 
-        if (listOfNumbers.isEmpty()){
+        if (listOfNumbers.isEmpty()) {
             return null;
         } else {
             return listOfNumbers;

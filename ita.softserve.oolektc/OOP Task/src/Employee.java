@@ -29,10 +29,7 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        final StringBuilder employeeInfo = new StringBuilder("");
-        employeeInfo.append(id).append(" ").append(firstName).append(" ")
-                .append(lastName).append(" ").append(monthlyWage);
-        return employeeInfo.toString();
+        return "" + id + " " + firstName + " " + lastName + " " + monthlyWage;
     }
 
     public static void printEmployeeList(List<Employee> list) {
