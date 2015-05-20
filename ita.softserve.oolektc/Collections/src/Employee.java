@@ -1,10 +1,11 @@
 
 public class Employee {
+    
     private static int count = 0;
 
-    private int id;
-    private String name;
-    private int numberOfObject;
+    private final int id;
+    private final String name;
+    private final int numberOfObject;
 
     public Employee(int id, String name) {
         this.id = id;
@@ -19,6 +20,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee id: " + id +  "  name: " + name;
+        return "Employee id: " + id + "  name: " + name;
     }
 }
