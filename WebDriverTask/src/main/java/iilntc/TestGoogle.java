@@ -11,6 +11,6 @@ public class TestGoogle {
 
     @Test
     public void testGoogleSite(){
-        Assert.assertTrue(2 == 2);
+        Assert.assertTrue(1 == 2);
     }
 }
