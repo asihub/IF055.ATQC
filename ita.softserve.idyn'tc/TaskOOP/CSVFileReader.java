@@ -1,7 +1,6 @@
 /*
 * Copyright (C) 2015 TaskOOP Project by Ihor Dynka
  */
-
 package ita.softserve.idyntc;
 
 import java.io.BufferedReader;
@@ -9,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
+
 
 /**
  * reads Employees from CSV file and sets their in arrayList

@@ -15,12 +15,6 @@ public class PerHourSalaryEmployee extends Employee {
     private int HOURS_QUANTITY = 8;
     private double hourlyRate;
 
-    /**
-     * @param id
-     * @param name
-     * @param surname
-     * @param hourlyRate
-     */
     public PerHourSalaryEmployee(int id, String name, String surname, double hourlyRate) {
         super(id, name, surname);
         this.hourlyRate = hourlyRate;

@@ -8,7 +8,7 @@ package ita.softserve.idyntc;
  * initialized fixedSalaryEmployee and calculates their salary
  */
 
-public class FixedSalaryEmployee extends Employee {
+public class FixedSalaryEmployee extends ita.softserve.idyntc.Employee {
 
     private double fixedSalary;
 
