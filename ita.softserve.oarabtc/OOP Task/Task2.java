@@ -6,7 +6,7 @@ import java.util.List;
 public class Task2 {
 
     public static void main(String[] args) {
-        //TODO use more generic references type - List instead of any list implementation - FIXED
+        
         List<Employees> fixedPayEmployee = new ArrayList<Employees>();
 
         fixedPayEmployee.add(new FixedPayEmployee(0, "Lyra", "Belacqua", 700));
@@ -36,7 +36,7 @@ public class Task2 {
 
         FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 7, 10, "Name");
 
-        //TODO use more generic references type - List instead of any list implementation - FIXED
+        
         List<Employees> hourlyPayEmployee = new ArrayList<Employees>();
 
         hourlyPayEmployee.add(new HourlyPayEmployee(0, "Anakin", "Skywalker", 9.1));

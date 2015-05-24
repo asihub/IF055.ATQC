@@ -35,7 +35,7 @@ public abstract class Employees {
                 "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.payCalc() + " $"));
 
     }
-    //TODO use range as parameters for the method, rename to printRangeFromList() - FIXED
+    
     public static void printRangeFromListEmployee(List<Employees> PayEmployee, int id, int k, String name) {
         // k - is list parameters
         int i = id;
