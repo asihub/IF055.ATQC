@@ -48,7 +48,7 @@ public class GoogleTest {
 
         try {
             final File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File("c:\\screenshot.png"));
+            FileUtils.copyFile(scrFile, new File("src\\temp\\screenshot.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
