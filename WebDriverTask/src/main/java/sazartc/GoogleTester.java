@@ -62,7 +62,7 @@ public class GoogleTester {
             if (!firstLink.getText().contains("funny picture"))
                     log.warn("firstLink doesn't contains the 'funny picture' substring");
         } catch (NoSuchElementException nsee) {
-            System.out.println("Something wrong with firstLink: " + nsee.getMessage());
+            log.warn("Something wrong with firstLink: " + nsee.getMessage());
         }
 
         // Click on the Pictures button
