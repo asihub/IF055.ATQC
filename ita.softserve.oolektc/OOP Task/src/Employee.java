@@ -29,7 +29,7 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        return "" + id + " " + firstName + " " + lastName + " " + monthlyWage;
+        return id + " " + firstName + " " + lastName + " " + monthlyWage;
     }
 
     public static void printEmployeeList(List<Employee> list) {
@@ -43,7 +43,7 @@ public abstract class Employee {
      * @param number number of elements to be printed
      * @param field  name of an element field to be printed
      */
-    public static void printLastElementsFromList(List<Employee> list, int number, String field) {
+    public static void printFirstElementsFromList(List<Employee> list, int number, String field) {
         switch (field.toLowerCase()) {
             case "id":
                 System.out.println();
@@ -69,7 +69,7 @@ public abstract class Employee {
      * @param number number of elements to be printed
      * @param field  name of an element field to be printed
      */
-    public static void printFirstElementsFromList(List<Employee> list, int number, String field) {
+    public static void printLastElementsFromList(List<Employee> list, int number, String field) {
         switch (field.toLowerCase()) {
             case "id":
                 System.out.println();
