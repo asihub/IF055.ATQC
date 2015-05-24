@@ -18,11 +18,7 @@ public class NumberCheck {
             numbers.add(matcher.group());
         }
 
-        String[] extractedNumbers = new String[numbers.size()];
-        extractedNumbers = numbers.toArray(extractedNumbers);
-
-        String result = Arrays.toString(extractedNumbers);
-        System.out.println(result);
+        System.out.println(numbers);
 
     }
 }
