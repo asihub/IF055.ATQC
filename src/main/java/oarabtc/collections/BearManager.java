@@ -1,14 +1,17 @@
+package oarabtc.collections;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
  * Created by Olia on 03.05.2015.
  */
 
+//TODO rename
 public class BearManager {
 
     public void print() {System.out.println("_________  Bear list _________");}
-
-  private void bearView(Bear bigBear){
+    //TODO rename
+    private void bearView(Bear bigBear){
 
             System.out.println("Here are our bears: " + bigBear);
     }
@@ -17,7 +20,7 @@ public class BearManager {
 
         System.out.println("Here are our and new bears: " + bigBearChange);
     }
-
+    //TODO refactor
     public BearManager() {
         print();
         List<Bear> bears = new ArrayList<Bear>();

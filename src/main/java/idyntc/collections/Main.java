@@ -5,6 +5,7 @@ import java.util.*;
 /**
  * Created by Ihor Dynka on 02.05.2015.
  */
+//TODO rename
 public class Main {
     public static void main(String[] args) {
 
@@ -22,6 +23,7 @@ public class Main {
         studentsList.add(student4);
         studentsList.add(student5);
 //output list of students
+        //TODO remove spaces, use "\t"
         System.out.println("           List of students");
 
         for (Students students : studentsList) {
@@ -55,6 +57,7 @@ public class Main {
         studentsMap.put(studentsMap.size() + 1, student4);
 
 //output the map of student
+        //TODO remove spaces, use "\t"
         System.out.println("          Map of students:");
         for (Map.Entry entry : studentsMap.entrySet()) {
             System.out.println(entry.getValue());
@@ -64,6 +67,8 @@ public class Main {
         studentsMap.remove(1);
         studentsMap.put(studentsMap.size() + 1, student5);
 //output modified map of students
+
+        //TODO remove spaces, use "\t"
         System.out.println("           Modified map of student:");
         for (Map.Entry entry : studentsMap.entrySet()) {
             System.out.println(entry.getValue());

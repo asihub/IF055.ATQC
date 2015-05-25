@@ -10,6 +10,7 @@ public class HourlyPayEmployee extends Employees {
     }
 
     public double hourPay;
+    //TODO provide getters\setters
     final double PAY_DAYS = 20.8;
     final int PAY_HOUR = 8;
 

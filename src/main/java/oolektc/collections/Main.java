@@ -2,6 +2,7 @@ package oolektc.collections;
 
 import java.util.*;
 
+//TODO rename
 public class Main {
 
     public static void main(String[] args) {

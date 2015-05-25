@@ -48,6 +48,7 @@ public class GoogleTest implements Locators {
         Assert.assertTrue(element.getText().toLowerCase().contains("funny picture"));
 
         driver.findElement(By.xpath(GOOGLE_IMAGES_LOCATOR)).click();
+        //TODO pre-test configuration must be in before test method
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         List<WebElement> elementsList = driver.findElements(By.cssSelector(FUNNY_PICTURES_LOCATOR));

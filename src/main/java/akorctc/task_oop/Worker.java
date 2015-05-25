@@ -45,7 +45,7 @@ public abstract class Worker {
         return name;
     }
 
-
+    //TODO method is unused, remove or use it
     public static void printList(List<Worker> fixedSalaryWorker, int i, String id) {
     }
 

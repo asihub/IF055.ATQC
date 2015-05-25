@@ -32,6 +32,7 @@ public abstract class Employee {
 
     public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex, String data) {
         try {
+            //TODO not used - remove or use
             CSVFileWriter csvFileWriter = new CSVFileWriter();
 
             switch (data.toUpperCase()) {

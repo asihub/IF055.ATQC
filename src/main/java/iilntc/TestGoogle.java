@@ -3,11 +3,10 @@ package iilntc;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -22,6 +21,7 @@ public class TestGoogle {
 
     @BeforeTest
     public void getDriver(){
+        //TODO rename
         maDriver = new FirefoxDriver();
         maDriver.navigate().to("https://google.com.ua");
         maDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

@@ -28,6 +28,7 @@ public class PerHourSalaryEmployee extends Employee {
     @Override
     public double getSalary() {
 
+        //TODO what if the method never get's called? the FixedSalaryEmployee object will be invalid
         if (hourlyRate <= 0) {
             System.out.printf("Error input for per hourly salary employees");
         }

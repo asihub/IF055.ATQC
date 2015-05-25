@@ -1,5 +1,6 @@
 package iilntc.collections;
 
+//TODO rename
 public class FruitsAndVegetablesNomenclature {
 
     private int code;
@@ -9,7 +10,7 @@ public class FruitsAndVegetablesNomenclature {
         this.code = code;
         this.name = name;
     }
-
+    //TODO use or remove, rename to setCode()
     protected void changeObjectCode(int code) {
         this.code = code;
     }
@@ -18,6 +19,7 @@ public class FruitsAndVegetablesNomenclature {
         this.name = name;
     }
 
+    //TODO use or remove, rename to getCode()
     protected int lookForObjectCode() {
         return this.code;
     }

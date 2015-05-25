@@ -3,7 +3,7 @@ package oolektc.collections;
 import oolektc.task_oop.Employee;
 
 public class HourlyWageEmployee extends Employee {
-
+    //TODO provide getters\setters
     private static final double WORK_DAYS = 20.8;
     private static final double WORK_HOURS = 8;
     private final double hourlyWage;

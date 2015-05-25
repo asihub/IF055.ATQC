@@ -10,6 +10,7 @@ public class HourSalaryWorker extends Worker {
 
     @Override
     public double monthlySalary() {
+        //TODO move out to class fields, provide getters/setters
         double hours = 8.00;
         double averageDays = 20.80;
         return paymentPerHour * hours * averageDays;

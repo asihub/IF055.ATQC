@@ -36,7 +36,7 @@ public abstract class Employees {
                 "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.payCalc() + " $"));
 
     }
-    
+    //TODO remove unused
     public static void printRangeFromListEmployee(List<Employees> PayEmployee, int id, int k, String name) {
         // k - is list parameters
         int i = id;

@@ -19,6 +19,7 @@ public class withRegexStringAnalysis {
         LinkedList <String> listOfNumbers = new LinkedList<>();
 
         Pattern reTemplate = Pattern.compile("\\d*\\.?\\d+");
+        //TODO what's putGivenString?
         Matcher putGivenString = reTemplate.matcher(givenString);
 
         while (putGivenString.find()){

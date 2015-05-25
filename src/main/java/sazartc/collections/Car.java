@@ -1,4 +1,4 @@
-package ita.softserve.collections;
+package sazartc.collections;
 
 import java.util.TreeSet;
 

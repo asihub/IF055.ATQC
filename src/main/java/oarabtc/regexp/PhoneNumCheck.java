@@ -1,4 +1,4 @@
-/**
+package oarabtc.regexp; /**
  * Created by Olia on 03.05.2015.
  */
 

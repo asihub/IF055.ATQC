@@ -5,7 +5,7 @@ package sazartc.task_oop;
  * worked hours
  */
 public class PerHourEmployee extends Employee {
-
+    //TODO provide getters\setters
     final private double AVG_DAYS_COUNT = 20.8; // avarage count of worked days
     final private int HOURS_PER_DAY = 8;        // count of hours in worked day
 

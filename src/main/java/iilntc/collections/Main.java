@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
+//TODO rename
 public class Main {
     public static void main(String[] args) {
 
@@ -15,6 +16,7 @@ public class Main {
                 "tomato, cucumber, broccoli, eggplant, etc.";
 
         //We are preparing our list for next manipulations.
+        //TODO method chaining?
         standardFruitsAndVegetablesList = standardFruitsAndVegetablesList.toLowerCase();
         standardFruitsAndVegetablesList = standardFruitsAndVegetablesList.replaceAll(",", "");
         standardFruitsAndVegetablesList = standardFruitsAndVegetablesList.replace("etc.", "");

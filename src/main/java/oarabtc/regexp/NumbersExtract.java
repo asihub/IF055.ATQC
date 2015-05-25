@@ -1,16 +1,18 @@
-/**
+package oarabtc.regexp; /**
  * Created by Olia on 03.05.2015.
  */
 
 import java.util.ArrayList;
 import java.util.regex.*;
-
+//TODO rename
 public class NumbersExtract {
 
+    //TODO rename
     public static ArrayList<String> textCheck(String text) {
 
         Pattern textPattern = Pattern.compile("\\d*\\.?\\d+");
         Matcher textMatcher = textPattern.matcher(text);
+        //TODO rename
         boolean resText = textMatcher.find();
 
         ArrayList<String> textResult = new ArrayList<>();

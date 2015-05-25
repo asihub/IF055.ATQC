@@ -1,3 +1,5 @@
+package oarabtc.collections;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -5,10 +7,11 @@ import java.util.Map;
 /**
  * Created by Olia on 03.05.2015.
  */
+//TODO rename
 public class BearMapManager {
 
     public void print() {System.out.println("_________ Map bear list _________");}
-
+    //TODO refactor
     public BearMapManager() {
         print();
 

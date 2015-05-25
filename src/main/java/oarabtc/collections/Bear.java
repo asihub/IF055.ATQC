@@ -1,3 +1,5 @@
+package oarabtc.collections;
+
 /**
  * Created by Olia on 03.05.2015.
  */

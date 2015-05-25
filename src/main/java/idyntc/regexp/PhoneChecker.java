@@ -18,6 +18,7 @@ public class PhoneChecker {
         phoneNumbers.add(4,"123 456 7899");
         phoneNumbers.add(5,"1234567899");
 
+        //TODO code convention
         for (int i=0;i<phoneNumbers.size();i++) {
             System.out.println(phoneValidator(phoneNumbers.get(i)));
         }
@@ -28,6 +29,7 @@ public class PhoneChecker {
      * @param phoneNumbers - examples of correct phone number
      * @return true or false
      */
+    //TODO code convention
     public static boolean phoneValidator(String phoneNumbers){
         Pattern pattern = Pattern.compile("(\\(?\\d{3}\\)?)(\\.?\\-?\\s?\\d{3}\\.?\\-?\\s?)(\\d{4})");
         Matcher matcher = pattern.matcher(phoneNumbers);

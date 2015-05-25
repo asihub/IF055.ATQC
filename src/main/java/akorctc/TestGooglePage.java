@@ -38,6 +38,7 @@ public class TestGooglePage {
         // finding first link
         driver.findElement(By.cssSelector(".r>a"));
 
+        //TODO use Asserts, not if() condition
         //finding text "Funny picture"
         if (driver.getPageSource().contains("Funny picture")) {
             System.out.println("Text is present");
@@ -88,6 +89,7 @@ public class TestGooglePage {
         // finding first link
         driver.findElement(By.cssSelector(".r>a"));
 
+        //TODO use Asserts, not if() condition
         //finding text "Funny kitten picture"
         if (driver.getPageSource().contains("xxx")) {
             System.out.println("Text2 is present");

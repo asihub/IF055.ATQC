@@ -66,6 +66,7 @@ public class Students {
      * @return true or false
      */
     @Override
+    //TODO code convention
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Students)) return false;

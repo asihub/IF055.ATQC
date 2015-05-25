@@ -27,7 +27,7 @@ public class Task2 {
 
         CSVFileReader csvFileReader = new CSVFileReader();
         CSVFileWriter csvFileWriter = new CSVFileWriter();
-
+        //TODO a lot of code & comments, refactor
 // reading from file
         csvFileReader.readFromFile(perHourSalaryEmployeeList, perHourSalaryFile, "perHourSalary");
 // sorting this list

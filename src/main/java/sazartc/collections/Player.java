@@ -1,4 +1,4 @@
-package ita.softserve.collections;
+package sazartc.collections;
 
 public class Player {
 
