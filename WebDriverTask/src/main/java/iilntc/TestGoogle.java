@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -22,9 +21,7 @@ public class TestGoogle {
 
     @BeforeTest
     public void getDriver(){
-        System.out.println("catch me---------------->");
         maDriver = new FirefoxDriver();
-        System.out.println("fuck me---------------->");
         maDriver.navigate().to("https://google.com.ua");
         maDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         maDriver.manage().window().maximize();
@@ -47,7 +44,7 @@ public class TestGoogle {
         maDriver.findElement(By.cssSelector("div[id='hplogo'][style^=background]"));
 
         //Logo deleting
-        JavascriptExecutor js = (JavascriptExecutor) maDriver;
+        js = (JavascriptExecutor) maDriver;
         //js.executeScript("hplogo.setAttribute('style', '');", "document.getElementById('hplogo')");
         System.out.println(js.executeScript("hplogo.getAttribute('style');", "document.getElementById('hplogo')"));
 
