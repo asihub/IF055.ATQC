@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -45,8 +46,7 @@ public class TestGoogle {
 
         //Logo deleting
         js = (JavascriptExecutor) maDriver;
-        //js.executeScript("hplogo.setAttribute('style', '');", "document.getElementById('hplogo')");
-        System.out.println(js.executeScript("hplogo.getAttribute('style');", "document.getElementById('hplogo')"));
+        js.executeScript("hplogo.setAttribute('style', '');", "document.getElementById('hplogo')");
 
         //org.openqa.selenium.NoSuchElementException
         //maDriver.findElement(By.cssSelector("div[id='hplogo'][style^=background]"));
@@ -66,4 +66,5 @@ public class TestGoogle {
         //maDriver.quit();
     }
 }
+
 
