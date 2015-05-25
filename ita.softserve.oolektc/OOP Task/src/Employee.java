@@ -43,17 +43,17 @@ public abstract class Employee {
      * @param number number of elements to be printed
      * @param field  name of an element field to be printed
      */
-    public static void printFirstElementsFromList(List<Employee> list, int number, String field) {
-        switch (field.toLowerCase()) {
-            case "id":
+    public static void printFirstElementsFromList(List<Employee> list, int number, Field field) {
+        switch (field) {
+            case ID:
                 System.out.println();
                 list.stream().limit(number).forEach(n -> System.out.println(n.getId()));
                 break;
-            case "first name":
+            case FIRST_NAME:
                 System.out.println();
                 list.stream().limit(number).forEach(n -> System.out.println(n.getFirstName()));
                 break;
-            case "last name":
+            case LAST_NAME:
                 System.out.println();
                 list.stream().limit(number).forEach(n -> System.out.println(n.getLastName()));
                 break;
@@ -69,17 +69,17 @@ public abstract class Employee {
      * @param number number of elements to be printed
      * @param field  name of an element field to be printed
      */
-    public static void printLastElementsFromList(List<Employee> list, int number, String field) {
-        switch (field.toLowerCase()) {
-            case "id":
+    public static void printLastElementsFromList(List<Employee> list, int number, Field field) {
+        switch (field) {
+            case ID:
                 System.out.println();
                 list.stream().skip(list.size() - number).forEach(n -> System.out.println(n.getId()));
                 break;
-            case "first name":
+            case FIRST_NAME:
                 System.out.println();
                 list.stream().skip(list.size() - number).forEach(n -> System.out.println(n.getFirstName()));
                 break;
-            case "last name":
+            case LAST_NAME:
                 System.out.println();
                 list.stream().skip(list.size() - number).forEach(n -> System.out.println(n.getLastName()));
                 break;

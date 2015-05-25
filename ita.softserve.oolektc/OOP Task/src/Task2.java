@@ -41,8 +41,8 @@ public class Task2 {
 
         Employee.printEmployeeList(fixedWageEmployees);
 
-        Employee.printFirstElementsFromList(fixedWageEmployees, 5, "first name");
-        Employee.printLastElementsFromList(fixedWageEmployees, 3, "id");
+        Employee.printFirstElementsFromList(fixedWageEmployees, 5, Field.FIRST_NAME);
+        Employee.printLastElementsFromList(fixedWageEmployees, 3, Field.ID);
 
         System.out.println("\nHourly wage employee list:");
         Employee.printEmployeeList(hourlyWageEmployees);
@@ -51,7 +51,7 @@ public class Task2 {
         hourlyWageEmployees.sort(employeeComparator);
         Employee.printEmployeeList(hourlyWageEmployees);
 
-        Employee.printFirstElementsFromList(hourlyWageEmployees, 5, "first name");
-        Employee.printLastElementsFromList(hourlyWageEmployees, 3, "id");
+        Employee.printFirstElementsFromList(hourlyWageEmployees, 5, Field.FIRST_NAME);
+        Employee.printLastElementsFromList(hourlyWageEmployees, 3, Field.ID);
     }
 }
