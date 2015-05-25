@@ -30,7 +30,7 @@ public class GoogleTester {
 
         log.info("--- Tests started --->");
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 
@@ -60,7 +60,7 @@ public class GoogleTester {
         try {
             WebElement firstLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/li[1]/div/h3/a"));
             if (!firstLink.getText().contains("funny picture"))    {}
-                    log.warn("firstLink doesn't contains the 'funny picture' substring");
+                    log.warn("firstLink doesn't contain the 'funny picture' substring");
         } catch (NoSuchElementException nsee) {
             log.warn("Something wrong with firstLink: " + nsee.getMessage());
         }
@@ -109,7 +109,7 @@ public class GoogleTester {
         try {
             WebElement firstLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/li[1]/div/h3/a"));
             if (!firstLink.getText().contains("funny kitten picture"))
-                log.warn("firstLink doesn't contains the 'funny kitten picture' substring");
+                log.warn("firstLink doesn't contain the 'funny kitten picture' substring");
             ((JavascriptExecutor)driver).executeScript("arguments[0].style.color='red'", firstLink);
             Assert.assertEquals(Color.fromString("red"), Color.fromString(firstLink.getCssValue("color")),
                     "Color of the firstLink must be RED");
@@ -118,7 +118,7 @@ public class GoogleTester {
             System.out.println("Something wrong with firstLink: " + nsee.getMessage());
         }
 
-        Thread.sleep(1000);
+
 
     }
 
