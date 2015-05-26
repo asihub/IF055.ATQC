@@ -28,7 +28,7 @@ public class TestGoogle {
     }
 
     @Test
-    public void testGoogleSite() {
+    public void testGoogleSite() throws Exception {
         driver.findElement(By.id("lst-ib")).sendKeys("funny picture");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a[contains(text(), 'funny picture')]"));
