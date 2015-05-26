@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * This class is used to test https://google.com.ua.
  */
-
 public class TestGoogle {
     private WebDriver driver;
     private JavascriptExecutor js;
@@ -77,7 +76,6 @@ public class TestGoogle {
                 driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a")));
         driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a[@style = 'color: red;']"));
     }
-
 }
 
 
