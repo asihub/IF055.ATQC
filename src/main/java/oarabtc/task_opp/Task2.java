@@ -8,7 +8,7 @@ import java.util.List;
 public class Task2 {
 
     public static void main(String[] args) {
-        
+
         List<Employees> fixedPayEmployee = new ArrayList<Employees>();
 
         fixedPayEmployee.add(new FixedPayEmployee(0, "Lyra", "Belacqua", 700));
@@ -33,12 +33,12 @@ public class Task2 {
 
         System.out.println("\n___ 5 first fixed pay employee list ____");
 
-        FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 0, 5, "Name");
+        FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 0, 5);
         System.out.println("\n___ 3 last fixed pay employee list ____");
 
-        FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 7, 10, "Name");
+        FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 7, 10);
 
-        
+
         List<Employees> hourlyPayEmployee = new ArrayList<Employees>();
 
         hourlyPayEmployee.add(new HourlyPayEmployee(0, "Anakin", "Skywalker", 9.1));
@@ -63,10 +63,10 @@ public class Task2 {
 
         System.out.println("\n___ 5 first hour pay employee list ____");
 
-        HourlyPayEmployee.printRangeFromListEmployee(hourlyPayEmployee, 0, 5, "Name");
+        HourlyPayEmployee.printRangeFromListEmployee(hourlyPayEmployee, 0, 5);
 
         System.out.println("\n___ 3 last hour pay employee list ____");
 
-        HourlyPayEmployee.printRangeFromListEmployee(hourlyPayEmployee, 7, 10, "Name");
+        HourlyPayEmployee.printRangeFromListEmployee(hourlyPayEmployee, 7, 10);
     }
 }

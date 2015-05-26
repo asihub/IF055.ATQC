@@ -13,6 +13,8 @@ public class Task1 {
         employeeses[3] = new HourlyPayEmployee(2, "QuiGon", "Jinn", 4.1);
         employeeses[4] = new HourlyPayEmployee(3, "Padme", "Amidala", 7.0);
 
-        for (Employees employees : employeeses) { System.out.println(employees);}
+        for (Employees employees : employeeses) {
+            System.out.println(employees);
+        }
     }
 }
