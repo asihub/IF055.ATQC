@@ -18,11 +18,11 @@ public class FruitsAndVegetables {
         this.name = name;
     }
 
-    protected int getCodeCode() {
+    protected int getCode() {
         return this.code;
     }
 
-    protected String getNameName() {
+    protected String getName() {
         return this.name;
     }
 

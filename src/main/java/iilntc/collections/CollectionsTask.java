@@ -25,11 +25,11 @@ public class CollectionsTask {
 
         //List block.
         //We initialize LinkedList of goods.
-        List<FruitsAndVegetablesNomenclature> goodsList = new LinkedList<>();
+        List<FruitsAndVegetables> goodsList = new LinkedList<>();
 
         //Passing objects into list.
         Stream.of(goodsStringList).forEach(n -> goodsList.add
-                (new FruitsAndVegetablesNomenclature(Arrays.asList(goodsStringList).indexOf(n), n)));
+                (new FruitsAndVegetables(Arrays.asList(goodsStringList).indexOf(n), n)));
 
         //We are printing our list with "for-each" loop.
         System.out.println("Our list looks like following:");
@@ -42,14 +42,14 @@ public class CollectionsTask {
                 "2)remove cucumber; \n3)add shop's name - 'Good Shop'.");
 
         //Adding element.
-        goodsList.add(new FruitsAndVegetablesNomenclature(1016, "unknown vegetable"));
-        goodsList.add(15, new FruitsAndVegetablesNomenclature(1111, "unknown fruit"));
+        goodsList.add(new FruitsAndVegetables(1016, "unknown vegetable"));
+        goodsList.add(15, new FruitsAndVegetables(1111, "unknown fruit"));
 
         //Also we are going to change list with iterator.
         Iterator it = goodsList.iterator();
         int forIteration = 0;
         while (it.hasNext()) {
-            if (goodsList.get(forIteration).lookForObjectName().equals("cucumber")) {
+            if (goodsList.get(forIteration).getName().equals("cucumber")) {
                 it.next();
                 it.remove();
             } else {
@@ -59,7 +59,7 @@ public class CollectionsTask {
         }
 
         //We wanna change objects by adding shop name - 'Good Shop'.
-        goodsList.forEach(n -> n.changeObjectName("'Good Shop': " + n.lookForObjectName() + "."));
+        goodsList.forEach(n -> n.setName("'Good Shop': " + n.getName() + "."));
 
         //We are printing our list with "for-each" loop.
         System.out.println("After all changes our list looks like following:");
@@ -68,12 +68,12 @@ public class CollectionsTask {
 
         //Map block.
         //Map initialization.
-        Map<Integer, FruitsAndVegetablesNomenclature> goodsMap = new ConcurrentHashMap<>();
+        Map<Integer, FruitsAndVegetables> goodsMap = new ConcurrentHashMap<>();
 
         //We are adding our objects to map.
         Stream.of(goodsStringList).forEach(n -> goodsMap.put
                 (Arrays.asList(goodsStringList).indexOf(n),
-                        new FruitsAndVegetablesNomenclature(Arrays.asList(goodsStringList).indexOf(n), n)));
+                        new FruitsAndVegetables(Arrays.asList(goodsStringList).indexOf(n), n)));
 
         //Printing map.
         System.out.println("Our map looks like following:");
@@ -91,12 +91,12 @@ public class CollectionsTask {
 
         //Deleting melon.
         goodsMap.forEach((key, value) -> {
-            if (value.lookForObjectName().equals("melon")) goodsMap.remove(key);
+            if (value.getName().equals("melon")) goodsMap.remove(key);
         });
 
         //Changing name.
         goodsMap.forEach((key, value) -> {
-            if (value.lookForObjectName().equals("onion")) value.changeObjectName("bow");
+            if (value.getName().equals("onion")) value.setName("bow");
         });
 
         //Map after our changes.
