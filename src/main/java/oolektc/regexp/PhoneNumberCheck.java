@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class PhoneNumberCheck {
 
-    public static boolean isPhoneNumberValid(String phoneNumber){
+    private static boolean isPhoneNumberValid(String phoneNumber){
         final Pattern pattern = Pattern.compile("\\(?\\d{3}\\)?((\\s?\\d{3}\\s?)|(\\.?\\d{3}\\.?)|(\\-?\\d{3}\\-?))\\d{4}");
         final Matcher matcher = pattern.matcher(phoneNumber);
         return matcher.matches();
