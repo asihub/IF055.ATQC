@@ -37,10 +37,10 @@ public class GoogleTest implements Locators {
         driver = new FirefoxDriver();
         driver.get(GOOGLE_URL);
         driver.manage().window().maximize();
-
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @Test(priority = 0)
+    @Test
     public void testImages() {
         doSearch("funny picture");
 
@@ -48,19 +48,18 @@ public class GoogleTest implements Locators {
         Assert.assertTrue(element.getText().toLowerCase().contains("funny picture"));
 
         driver.findElement(By.xpath(GOOGLE_IMAGES_LOCATOR)).click();
-        //TODO pre-test configuration must be in before test method
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+       
         List<WebElement> elementsList = driver.findElements(By.cssSelector(FUNNY_PICTURES_LOCATOR));
 
         if (elementsList.size() >= 5) {
             doScreenShots();
         }
+        driver.findElement(By.cssSelector(BACK_TO_HOME_PAGE_LOGO_LOCATOR)).click();
     }
 
-    @Test (priority = 1)
-    public void testLogo() {
-        driver.findElement(By.cssSelector(BACK_TO_HOME_PAGE_LOGO_LOCATOR)).click();
+    @Test 
+    public void testGoogleLogo() {
+        
         element = driver.findElement(By.cssSelector(GOOGLE_LOGO_LOCATOR));
         Assert.assertTrue(element.isDisplayed());
 
@@ -72,7 +71,7 @@ public class GoogleTest implements Locators {
     }
 
 
-    @Test (priority = 2)
+    @Test 
     public void testKittenImages() {
         doSearch("funny kitten picture");
 
@@ -80,7 +79,7 @@ public class GoogleTest implements Locators {
         Assert.assertTrue(element.getText().toLowerCase().contains("funny kitten picture"));
     }
 
-    @Test (priority = 3)
+    @Test (dependsOnMethods = "testKittenImages")
     public void testColorLink() {
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         javaScript = (JavascriptExecutor) driver;
