@@ -17,6 +17,30 @@ abstract public class Employee implements Comparable<Employee> {
         this.salaryBase = salaryBase;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSalaryBase() {
+        return salaryBase;
+    }
+
+    public void setSalaryBase(double salaryBase) {
+        this.salaryBase = salaryBase;
+    }
+
     abstract public double calculateSalary();
 
     @Override
@@ -41,5 +65,6 @@ abstract public class Employee implements Comparable<Employee> {
             }
         }
     }
+
 
 }
