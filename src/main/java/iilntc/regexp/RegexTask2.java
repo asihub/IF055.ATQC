@@ -10,11 +10,11 @@ public class RegexTask2 {
 
         String givenString = "Hello 2222.2222.15 digital World7&5, >0 .3??,2.0";
         System.out.println("List of numbers " +
-                ((extractListOfNumbers(givenString)==null)? "is empty." :
-                        "has next numbers: " + extractListOfNumbers(givenString)));
+                ((extractListOfPhoneNumbers(givenString)==null)? "is empty." :
+                        "has next numbers: " + extractListOfPhoneNumbers(givenString)));
     }
 
-    public static LinkedList extractListOfNumbers(String givenString){
+    public static LinkedList extractListOfPhoneNumbers(String givenString){
 
         LinkedList <String> listOfNumbers = new LinkedList<>();
 
