@@ -19,11 +19,11 @@ public class withRegexStringAnalysis {
         LinkedList <String> listOfNumbers = new LinkedList<>();
 
         Pattern reTemplate = Pattern.compile("\\d*\\.?\\d+");
-        //TODO what's putGivenString?
-        Matcher putGivenString = reTemplate.matcher(givenString);
 
-        while (putGivenString.find()){
-            listOfNumbers.add(putGivenString.group());
+        Matcher matcher = reTemplate.matcher(givenString);
+
+        while (matcher.find()){
+            listOfNumbers.add(matcher.group());
         }
         if (listOfNumbers.isEmpty()){
             return null;

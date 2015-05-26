@@ -4,8 +4,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Stream;
 
-//TODO rename
-public class Main {
+public class collectionsTask {
     public static void main(String[] args) {
 
         //Verbi gratia we have standard list of fruits & vegetables which is downloaded from Internet.
