@@ -2,8 +2,7 @@ package oolektc.collections;
 
 import java.util.*;
 
-//TODO rename
-public class Main {
+public class CollectionsTask {
 
     public static void main(String[] args) {
 
@@ -52,12 +51,7 @@ public class Main {
 
         System.out.println("\n-------------------------Map--------------------------");
 
-        for (Map.Entry<Integer, Employee> entry : employeeMap.entrySet()) {
-            int key = entry.getKey();
-            Employee value = entry.getValue();
-
-            System.out.println("Map key: " + key + "     " + value);
-        }
+        employeeMap.forEach((key, value) -> System.out.println("Map key: " + key + "\t\t" + value));
 
         Employee employee7 = new Employee(110, "Liam Gallagher");
 
@@ -66,11 +60,6 @@ public class Main {
 
         System.out.println("\n-------------------Modified Map----------------------");
 
-        for (Map.Entry<Integer, Employee> entry : employeeMap.entrySet()) {
-            int key = entry.getKey();
-            Employee value = entry.getValue();
-
-            System.out.println("Map key: " + key + "     " + value);
-        }
+        employeeMap.forEach((key, value) -> System.out.println("Map key: " + key + "\t\t" + value));
     }
 }

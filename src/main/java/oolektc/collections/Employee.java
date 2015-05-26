@@ -1,8 +1,7 @@
 package oolektc.collections;
 
 public class Employee {
-    //TODO count of what?
-    private static int count = 0;
+    private static int countOfObjects = 0;
 
     private final int id;
     private final String name;
@@ -11,9 +10,7 @@ public class Employee {
     public Employee(int id, String name) {
         this.id = id;
         this.name = name;
-        //TODO refactor
-        count++;
-        numberOfObject = count;
+        numberOfObject = countOfObjects++;
     }
 
     public int getNumberOfObject() {
