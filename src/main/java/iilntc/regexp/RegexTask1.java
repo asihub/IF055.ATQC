@@ -5,7 +5,7 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PhoneBookCheckingClass {
+public class RegexTask1 {
 
     public static void main (String [] args) {
 

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class withRegexStringAnalysis {
+public class RegexTask2 {
 
     public static void main (String [] args) {
 
