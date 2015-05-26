@@ -22,16 +22,16 @@ public class Main {
         studentsList.add(student3);
         studentsList.add(student4);
         studentsList.add(student5);
+        
 //output list of students
-        //TODO remove spaces, use "\t"
-        System.out.println("           List of students");
+        System.out.println("\tList of students");
 
         for (Students students : studentsList) {
             System.out.println(students);
         }
 
-
         ListIterator<Students> iterator = studentsList.listIterator();
+        
 //modyfing list of student(adding, removing and changing elements)
         while (iterator.hasNext()) {
             if (iterator.next().getGroup().equals("ATQC-08-09")) {
@@ -43,8 +43,9 @@ public class Main {
             }
         }
         studentsList.set(3, new Students("Mike", "Matusov", "ATQC-08-09"));
+        
 //output modified list of students
-        System.out.println("           Modified list of students");
+        System.out.println("/tModified list of students");
         for (Students students : studentsList) {
             System.out.println(students);
         }
@@ -57,23 +58,21 @@ public class Main {
         studentsMap.put(studentsMap.size() + 1, student4);
 
 //output the map of student
-        //TODO remove spaces, use "\t"
-        System.out.println("          Map of students:");
+        System.out.println("/tMap of students:");
         for (Map.Entry entry : studentsMap.entrySet()) {
             System.out.println(entry.getValue());
         }
+        
 //modifing elements of mapStudents(adding, removing and changing elements)
         studentsMap.get(1).setGroup("WebUI-08-09");
         studentsMap.remove(1);
         studentsMap.put(studentsMap.size() + 1, student5);
-//output modified map of students
-
-        //TODO remove spaces, use "\t"
-        System.out.println("           Modified map of student:");
+        
+//output modified map of students        
+        System.out.println("\tModified map of student:");
         for (Map.Entry entry : studentsMap.entrySet()) {
             System.out.println(entry.getValue());
         }
-
 
     }
 }
