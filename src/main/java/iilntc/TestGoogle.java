@@ -2,7 +2,6 @@ package iilntc;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -32,6 +31,11 @@ public class TestGoogle {
         driver.manage().window().maximize();
     }
 
+    @AfterTest
+    public void closeDriver() {
+        driver.quit();
+    }
+
     @Test
     public void testGoogleSite() throws Exception {
         driver.findElement(By.id("lst-ib")).sendKeys("funny picture");
@@ -59,13 +63,6 @@ public class TestGoogle {
         js.executeScript("arguments[0].style.color = 'red'", driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a")));
 
         driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a[@style = 'color: red;']"));
-
-
-    }
-
-    @AfterTest
-    public void closeDriver() {
-        //driver.quit();
     }
 }
 
