@@ -7,17 +7,17 @@ import java.util.regex.Pattern;
 
 public class NumberExtractor {
 
-    public static String stringWithNumbers = "Lorem 2.15 ipsum 5,3,45 dolor 5,7 sit amet,3rd consectetur adipiscing 15th";
-    public static String stringWithoutNumbers = "Lorem ipsum dolor sit amet,consectetur adipiscing";
+    private final static String STRING_WITH_NUMBERS = "Lorem 2.15 ipsum 5,3,45 dolor 5,7 sit amet,3rd consectetur adipiscing 15th";
+    private final static String STRING_WITHOUT_NUMBERS = "Lorem ipsum dolor sit amet,consectetur adipiscing";
 
     public static void main(String[] args) {
 
-        System.out.println(extractNumbersFrom(stringWithNumbers));
-        System.out.println(extractNumbersFrom(stringWithoutNumbers));
+        System.out.println(extractNumbersFrom(STRING_WITH_NUMBERS));
+        System.out.println(extractNumbersFrom(STRING_WITHOUT_NUMBERS));
 
     }
 
-    public static List extractNumbersFrom(String string) {
+    private static List extractNumbersFrom(String string) {
         final Pattern pattern = Pattern.compile("\\d*\\.?\\d+");
         final Matcher matcher = pattern.matcher(string);
 

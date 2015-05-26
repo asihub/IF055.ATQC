@@ -2,14 +2,14 @@ package oolektc.task_oop;
 
 public class HourlyWageEmployee extends Employee {
     private double numberOfWorkdays;
-    private double numberOfWorkhours;
+    private double numberOfWorkHours;
     private double hourlyWage;
 
     public HourlyWageEmployee(int id, String name, String lastName, double hourlyWage, double numberOfWorkdays, double numberOfWorkhours) {
         super(id, name, lastName);
         this.hourlyWage = hourlyWage;
         this.numberOfWorkdays = numberOfWorkdays;
-        this.numberOfWorkhours = numberOfWorkhours;
+        this.numberOfWorkHours = numberOfWorkhours;
         this.monthlyWage = getMonthlyWage();
     }
 
@@ -21,12 +21,12 @@ public class HourlyWageEmployee extends Employee {
         this.numberOfWorkdays = numberOfWorkdays;
     }
 
-    public double getNumberOfWorkhours() {
-        return numberOfWorkhours;
+    public double getNumberOfWorkHours() {
+        return numberOfWorkHours;
     }
 
-    public void setNumberOfWorkhours(double numberOfWorkhours) {
-        this.numberOfWorkhours = numberOfWorkhours;
+    public void setNumberOfWorkHours(double numberOfWorkHours) {
+        this.numberOfWorkHours = numberOfWorkHours;
     }
 
     public double getHourlyWage() {
@@ -39,7 +39,7 @@ public class HourlyWageEmployee extends Employee {
 
     @Override
     public double getMonthlyWage() {
-        return numberOfWorkdays * numberOfWorkhours * hourlyWage;
+        return numberOfWorkdays * numberOfWorkHours * hourlyWage;
     }
 }
 
