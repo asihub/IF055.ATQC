@@ -66,17 +66,25 @@ public class Students {
      * @return true or false
      */
     @Override
-    //TODO code convention
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Students)) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Students)) {
+            return false;
+        }
+        
         Students students = (Students) o;
 
-        if (!group.equals(students.group)) return false;
-        if (!name.equals(students.name)) return false;
-        if (!surname.equals(students.surname)) return false;
-
+        if (!group.equals(students.group)) { 
+            return false;
+        }
+        if (!name.equals(students.name)) {
+            return false;
+        }
+        if (!surname.equals(students.surname)) {
+            return false;
+        }
         return true;
     }
 
