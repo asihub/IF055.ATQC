@@ -21,61 +21,6 @@ public abstract class Employee {
         this.surname = surname;
     }
 
-    /**
-     * this method gets the employee from arraylist and outputs their in console
-     *
-     * @param list       choose the list which you'd like
-     * @param firstIndex output from first index of list
-     * @param lastIndex  output to lastIndex of this list
-     * @param data       kind of data, for example: ID, Name or Surname
-     */
-
-    public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex, String data) {
-        try {
-            //TODO not used - remove or use
-            CSVFileWriter csvFileWriter = new CSVFileWriter();
-
-            switch (data.toUpperCase()) {
-                case "ID":
-                    for (int i = firstIndex; i <= lastIndex; i++) {
-                        System.out.println(list.get(i).id);
-                    }
-                    break;
-                case "NAME":
-                    for (int i = firstIndex; i <= lastIndex; i++) {
-                        System.out.println(list.get(i).name);
-                    }
-                    break;
-                case "SURNAME":
-                    for (int i = firstIndex; i <= lastIndex; i++) {
-                        System.out.println(list.get(i).surname);
-                    }
-                    break;
-                default:
-                    throw new IllegalArgumentException();
-            }
-
-        } catch (IllegalArgumentException e) {
-            System.out.println("wrong input parameter");
-        }
-
-    }
-
-    /**
-     * this method gets the employees from arraylist and outputs their in console
-     *
-     * @param list       choose the list which you'd like
-     * @param firstIndex output from first index of lis
-     * @param lastIndex  output to lastIndex of this list
-     */
-
-    public static void printEmployeeFromRange(List<Employee> list, int firstIndex, int lastIndex) {
-
-        for (int i = firstIndex; i <= lastIndex; i++) {
-            System.out.println(list.get(i));
-        }
-    }
-
     public int getId() {
         return id;
     }
