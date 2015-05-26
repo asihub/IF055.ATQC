@@ -59,8 +59,9 @@ public class GoogleTester {
         // Check first link containing "funny picture" substring
         try {
             WebElement firstLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/li[1]/div/h3/a"));
-            if (!firstLink.getText().contains("funny picture"))    {}
-                    log.warn("firstLink doesn't contain the 'funny picture' substring");
+            if (!firstLink.getText().contains("funny picture")) {
+                log.warn("firstLink doesn't contain the 'funny picture' substring");
+            }
         } catch (NoSuchElementException nsee) {
             log.warn("Something wrong with firstLink: " + nsee.getMessage());
         }
@@ -75,10 +76,10 @@ public class GoogleTester {
 
         // Check pictures count
         List<WebElement> pictures = driver.findElements(By.xpath(".//*[@id='rg_s']/div[@class='rg_di rg_el']/a/img"));
-        if ( pictures.size() < 5 ) Assert.fail("Pictures count must be at least 5");
+        if (pictures.size() < 5) Assert.fail("Pictures count must be at least 5");
 
         // ...and do a screenshot
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile, new File("screenshot.png"));
 
         // Back to the Google Home
@@ -88,7 +89,7 @@ public class GoogleTester {
         // Check and hide logo
         try {
             WebElement logo = driver.findElement(By.xpath(".//*[@id='hplogo']"));
-            ((JavascriptExecutor)driver).executeScript("arguments[0].style.visibility='hidden'", logo);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'", logo);
             if (logo.isDisplayed()) Assert.fail("Logo must be unvisible now");
         } catch (NoSuchElementException nsee) {
             Assert.fail("Something wrong with logo: " + nsee.getMessage());
@@ -110,7 +111,7 @@ public class GoogleTester {
             WebElement firstLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/li[1]/div/h3/a"));
             if (!firstLink.getText().contains("funny kitten picture"))
                 log.warn("firstLink doesn't contain the 'funny kitten picture' substring");
-            ((JavascriptExecutor)driver).executeScript("arguments[0].style.color='red'", firstLink);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.color='red'", firstLink);
             Assert.assertEquals(Color.fromString("red"), Color.fromString(firstLink.getCssValue("color")),
                     "Color of the firstLink must be RED");
 
@@ -119,11 +120,7 @@ public class GoogleTester {
         }
 
 
-
     }
-
-
-
 
 
 }
