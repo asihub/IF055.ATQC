@@ -14,12 +14,9 @@ public class CollectionsTask {
                 "cauliflower, chive, fennel, garlic, ginger, onion, leek, mushroom, parsnip, potato, shallot, " +
                 "tomato, cucumber, broccoli, eggplant, etc.";
 
-        //We are preparing our list for next manipulations.
-        standardFruitsAndVegetablesList = standardFruitsAndVegetablesList
-                .toLowerCase().replaceAll(",", "").replace("etc.", "");
-
         //We do an array of fruits and vegetables to use them for objects initialization.
-        String[] goodsStringList = standardFruitsAndVegetablesList.split("\\s+");
+        String[] goodsStringList = standardFruitsAndVegetablesList
+                .toLowerCase().replaceAll(",", "").replace("etc.", "").split("\\s+");
 
         //List block.
         //We initialize LinkedList of goods.
