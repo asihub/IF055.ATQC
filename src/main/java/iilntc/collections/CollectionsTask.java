@@ -15,10 +15,8 @@ public class CollectionsTask {
                 "tomato, cucumber, broccoli, eggplant, etc.";
 
         //We are preparing our list for next manipulations.
-        //TODO method chaining?
-        standardFruitsAndVegetablesList = standardFruitsAndVegetablesList.toLowerCase();
-        standardFruitsAndVegetablesList = standardFruitsAndVegetablesList.replaceAll(",", "");
-        standardFruitsAndVegetablesList = standardFruitsAndVegetablesList.replace("etc.", "");
+        standardFruitsAndVegetablesList = standardFruitsAndVegetablesList
+                .toLowerCase().replaceAll(",", "").replace("etc.", "");
 
         //We do an array of fruits and vegetables to use them for objects initialization.
         String[] goodsStringList = standardFruitsAndVegetablesList.split("\\s+");
