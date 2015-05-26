@@ -11,9 +11,11 @@ public abstract class Employees {
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public String getSurname() {
         return surname;
     }
@@ -36,11 +38,12 @@ public abstract class Employees {
                 "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.payCalc() + " $"));
 
     }
-    //TODO remove unused
-    public static void printRangeFromListEmployee(List<Employees> PayEmployee, int id, int k, String name) {
+
+    public static void printRangeFromListEmployee(List<Employees> PayEmployee, int id, int k) {
         // k - is list parameters
         int i = id;
-        for (i = id; i < k; i++) {System.out.println(PayEmployee.get(i).getName());
+        for (i = id; i < k; i++) {
+            System.out.println(PayEmployee.get(i).getName());
         }
     }
 }
