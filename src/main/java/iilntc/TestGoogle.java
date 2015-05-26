@@ -76,6 +76,7 @@ public class TestGoogle {
                 driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a")));
         driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a[@style = 'color: red;']"));
     }
+
 }
 
 
