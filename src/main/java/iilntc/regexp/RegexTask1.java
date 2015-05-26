@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class RegexTask1 {
 
-    public static void main (String [] args) {
+    public static void main(String[] args) {
 
         TreeMap<Integer, String> myPhoneBook = new TreeMap<>();
         myPhoneBook.put(1, "123?123?7777");

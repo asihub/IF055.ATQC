@@ -2,6 +2,7 @@ package iilntc;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -15,12 +16,16 @@ import java.util.concurrent.TimeUnit;
  * Created by Ihor Ilnytskyi on 21.05.2015.
  */
 
+/**
+ * This class is used to test https://google.com.ua.
+ */
+
 public class TestGoogle {
     private WebDriver driver;
     private JavascriptExecutor js;
 
     @BeforeTest
-    public void getDriver(){
+    public void getDriver() {
         driver = new FirefoxDriver();
         driver.navigate().to("https://google.com.ua");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -45,23 +50,21 @@ public class TestGoogle {
 
         //Logo deleting
         js = (JavascriptExecutor) driver;
-        js.executeScript("hplogo.setAttribute('style', '');", "document.getElementById('hplogo')");
-
-        //org.openqa.selenium.NoSuchElementException
-        //driver.findElement(By.cssSelector("div[id='hplogo'][style^=background]"));
+        js.executeScript("document.getElementById('hplogo').style.display = 'none';");
+        Assert.assertFalse(driver.findElement(By.cssSelector("div[id='hplogo']")).isDisplayed());
 
         driver.findElement(By.id("lst-ib")).sendKeys("funny kitten picture");
         driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a")).getText().toLowerCase().equals("funny kitten picture");
 
-        //JavascriptExecutor jss = (JavascriptExecutor) driver;
-        //jss.executeScript("r.setAttribute('style', '');", "document.querySelectorAll('h3.r')");
+        js.executeScript("arguments[0].style.color = 'red'", driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a")));
 
-
+        driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a[@style = 'color: red;']"));
 
 
     }
+
     @AfterTest
-    public void closeDriver(){
+    public void closeDriver() {
         //driver.quit();
     }
 }

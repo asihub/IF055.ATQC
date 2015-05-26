@@ -6,28 +6,28 @@ import java.util.regex.Pattern;
 
 public class RegexTask2 {
 
-    public static void main (String [] args) {
+    public static void main(String[] args) {
 
         String givenString = "Hello 2222.2222.15 digital World7&5, >0 .3??,2.0";
         System.out.println("List of numbers " +
-                ((extractListOfPhoneNumbers(givenString)==null)? "is empty." :
+                ((extractListOfPhoneNumbers(givenString) == null) ? "is empty." :
                         "has next numbers: " + extractListOfPhoneNumbers(givenString)));
     }
 
-    public static LinkedList extractListOfPhoneNumbers(String givenString){
+    public static LinkedList extractListOfPhoneNumbers(String givenString) {
 
-        LinkedList <String> listOfNumbers = new LinkedList<>();
+        LinkedList<String> listOfNumbers = new LinkedList<>();
 
         Pattern reTemplate = Pattern.compile("\\d*\\.?\\d+");
 
         Matcher matcher = reTemplate.matcher(givenString);
 
-        while (matcher.find()){
+        while (matcher.find()) {
             listOfNumbers.add(matcher.group());
         }
-        if (listOfNumbers.isEmpty()){
+        if (listOfNumbers.isEmpty()) {
             return null;
-        }else{
+        } else {
             return listOfNumbers;
         }
 
