@@ -4,16 +4,16 @@ package oarabtc.regexp; /**
 
 import java.util.ArrayList;
 import java.util.regex.*;
-//TODO rename
-public class NumbersExtract {
 
-    //TODO rename
-    public static ArrayList<String> textCheck(String text) {
+
+public class NumbersInTextCheck {
+
+
+    public static ArrayList<String> numbersInTextCheck(String text) {
 
         Pattern textPattern = Pattern.compile("\\d*\\.?\\d+");
         Matcher textMatcher = textPattern.matcher(text);
-        //TODO rename
-        boolean resText = textMatcher.find();
+
 
         ArrayList<String> textResult = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class NumbersExtract {
         String text1 = "2 Carrots (3.14 high) have fun 4ever times, even at 11 p.m.";
         String text2 = "Broccoli seriously men, don't have fun";
 
-        System.out.println("Numbers of text #1: " + textCheck(text1));
-        System.out.println("Numbers of text #2: " + textCheck(text2));
+        System.out.println("Numbers of text #1: " + numbersInTextCheck(text1));
+        System.out.println("Numbers of text #2: " + numbersInTextCheck(text2));
     }
 }

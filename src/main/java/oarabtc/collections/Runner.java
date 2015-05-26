@@ -8,9 +8,9 @@ package oarabtc.collections;
 public class Runner {
     //TODO what is that code doing?
     public static void main(String[] args) {
-      new BearManager();
-      System.out.println();
-      new BearMapManager();
+        new ArrayListOfBears();
+        System.out.println();
+        new MapOfBears();
 
     }
 
