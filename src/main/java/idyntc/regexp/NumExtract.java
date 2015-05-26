@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//TODO rename
-public class NumExtract {
+public class NumberExtractor {
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile("\\d*\\.?\\d+");
         Matcher matcher = pattern.matcher("Hello 2.15 digital World 5,3");
