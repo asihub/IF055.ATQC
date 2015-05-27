@@ -47,7 +47,7 @@ public class Students {
     /**
      * method that helps to output more correctly
      *
-     * @return
+     * @return correct srtring
      */
     @Override
     public String toString() {
@@ -73,10 +73,10 @@ public class Students {
         if (!(o instanceof Students)) {
             return false;
         }
-        
+
         Students students = (Students) o;
 
-        if (!group.equals(students.group)) { 
+        if (!group.equals(students.group)) {
             return false;
         }
         if (!name.equals(students.name)) {

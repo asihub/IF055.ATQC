@@ -19,6 +19,7 @@ public abstract class Employee {
         this.id = id;
         this.name = name;
         this.surname = surname;
+
     }
 
     public int getId() {
@@ -33,6 +34,7 @@ public abstract class Employee {
         return surname;
     }
 
+
     public abstract double getSalary();
 
     /**
@@ -42,12 +44,12 @@ public abstract class Employee {
      */
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", salary='" + getSalary() + '\'' +
-                '}';
+        return "{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + ", surname='" + surname + '\''
+                + ", salary='" + getSalary() + '\''
+                + '}';
     }
 
 }
