@@ -5,8 +5,7 @@ import java.util.*;
 /**
  * Created by Ihor Dynka on 02.05.2015.
  */
-//TODO rename
-public class Main {
+public class CollectionsTask {
     public static void main(String[] args) {
 
         Students student1 = new Students("Danilo", "Chico", "ATQC-08-09");
@@ -45,7 +44,7 @@ public class Main {
         studentsList.set(3, new Students("Mike", "Matusov", "ATQC-08-09"));
         
 //output modified list of students
-        System.out.println("/tModified list of students");
+        System.out.println("\tModified list of students");
         for (Students students : studentsList) {
             System.out.println(students);
         }
@@ -58,7 +57,7 @@ public class Main {
         studentsMap.put(studentsMap.size() + 1, student4);
 
 //output the map of student
-        System.out.println("/tMap of students:");
+        System.out.println("\tMap of students:");
         for (Map.Entry entry : studentsMap.entrySet()) {
             System.out.println(entry.getValue());
         }
