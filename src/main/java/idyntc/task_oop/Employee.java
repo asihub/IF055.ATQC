@@ -19,6 +19,7 @@ public abstract class Employee {
         this.id = id;
         this.name = name;
         this.surname = surname;
+
     }
 
     public int getId() {
@@ -32,6 +33,7 @@ public abstract class Employee {
     public String getSurname() {
         return surname;
     }
+
 
     public abstract double getSalary();
 
