@@ -42,12 +42,12 @@ public abstract class Employee {
      */
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", salary='" + getSalary() + '\'' +
-                '}';
+        return "{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + ", surname='" + surname + '\''
+                + ", salary='" + getSalary() + '\''
+                + '}';
     }
 
 }

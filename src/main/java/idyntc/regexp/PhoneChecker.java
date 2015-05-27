@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 
 public class PhoneChecker {
     public static void main(String[] args) {
-        ;
         String reg_exp_pattern = "(\\(?\\d{3}\\)?)(\\.?\\-?\\s?\\d{3}\\.?\\-?\\s?)(\\d{4})";
         List<String> phoneNumbers = new ArrayList<String>();
 
@@ -28,8 +27,8 @@ public class PhoneChecker {
     /**
      * this method validates phone numbers using pattern
      *
-     * @param phoneNumbers - examples of correct phone number
-     * @param reg_exp_pattern  -
+     * @param phoneNumbers    - examples of correct phone number
+     * @param reg_exp_pattern -
      * @return true or false
      */
 

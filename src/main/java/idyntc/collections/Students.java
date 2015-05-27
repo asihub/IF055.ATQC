@@ -47,7 +47,7 @@ public class Students {
     /**
      * method that helps to output more correctly
      *
-     * @return
+     * @return correct srtring
      */
     @Override
     public String toString() {

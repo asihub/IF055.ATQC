@@ -10,12 +10,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static idyntc.Locators.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class GoogleTest implements Locators {
+public class GoogleTest {
 
     private WebDriver driver;
     private WebElement element;

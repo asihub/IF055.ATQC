@@ -27,7 +27,6 @@ public class Task2 {
 
         CSVFileReader csvFileReader = new CSVFileReader();
         CSVFileWriter csvFileWriter = new CSVFileWriter();
-        
 
         csvFileReader.readFromFile(perHourSalaryEmployeeList, perHourSalaryFile, "perHourSalary");
 
