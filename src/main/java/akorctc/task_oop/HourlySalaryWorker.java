@@ -3,6 +3,8 @@ package akorctc.task_oop;
 public class HourlySalaryWorker extends Worker {
 
     private double hourlySalary;
+    private double hourSal = 20.8;
+    private int hours = 8;
 
     public HourlySalaryWorker(int id, String name, String lastname, double hourlySalary) {
         super(id, name, lastname);
@@ -13,12 +15,11 @@ public class HourlySalaryWorker extends Worker {
 
     @Override
     public double getMonthlyIncome() {
-        //TODO move numbers out to a class field and provide getters\setters
-        return 20.8*8*hourlySalary;
+        return hourSal * hours * hourlySalary;
 
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return this.lastname;
     }
 }

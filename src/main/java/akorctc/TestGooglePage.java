@@ -38,13 +38,9 @@ public class TestGooglePage {
         // finding first link
         driver.findElement(By.cssSelector(".r>a"));
 
-        //TODO use Asserts, not if() condition
-        //finding text "Funny picture"
-        if (driver.getPageSource().contains("Funny picture")) {
-            System.out.println("Text is present");
-        } else {
-            System.out.println("Text is absent");
-        }
+        //fixed
+        Assert.assertTrue(driver.findElement(By.xpath("(.//*[@class='srg']//a)[1]"))
+                .getText().contains("funny picture"));
 
         //button Images
         driver.findElement(By.xpath(".//*[@id='hdtb-msb']/div[2]/a")).click();
@@ -73,8 +69,8 @@ public class TestGooglePage {
         // javacsript that hidden logo
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'",
 
-        //verify that logo isn't displayed
-        driver.findElement(By.id("hplogo")));
+                //verify that logo isn't displayed
+                driver.findElement(By.id("hplogo")));
 
         //verify that logo is displayed
         Assert.assertFalse(driver.findElement(By.id("hplogo")).isDisplayed());
@@ -89,15 +85,7 @@ public class TestGooglePage {
         // finding first link
         driver.findElement(By.cssSelector(".r>a"));
 
-        //TODO use Asserts, not if() condition
-        //finding text "Funny kitten picture"
-        if (driver.getPageSource().contains("xxx")) {
-            System.out.println("Text2 is present");
-        } else {
-            System.out.println("Text2 is absent");
-        }
-
-        driver.findElement(By.cssSelector(".r>a"));
+        //fixed
         driver.findElement(By.className("lsb")).click();
         Assert.assertTrue(driver.findElement(By.xpath("(.//*[@class='srg']//a)[1]"))
                 .getText().toLowerCase().contains("funny kitten picture"));

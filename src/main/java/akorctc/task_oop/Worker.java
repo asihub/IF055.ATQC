@@ -27,13 +27,14 @@ public abstract class Worker {
     public static void printList(List<Worker> fixedSalaryWorker) {
         fixedSalaryWorker.forEach(System.out::println);
     }
-    public String getLastName(){
+
+    public String getLastName() {
         return this.lastname;
     }
 
     @Override
-    public String toString(){
-         return this.id + "; " + this.name + " " + this.lastname + ": " + this.monthlyIncome;
+    public String toString() {
+        return this.id + "; " + this.name + " " + this.lastname + ": " + this.monthlyIncome;
 
     }
 
@@ -43,10 +44,6 @@ public abstract class Worker {
 
     public String getName() {
         return name;
-    }
-
-    //TODO method is unused, remove or use it
-    public static void printList(List<Worker> fixedSalaryWorker, int i, String id) {
     }
 
     /* Method for Three name from Worker list
@@ -73,8 +70,6 @@ public abstract class Worker {
                 System.out.println("Error");
         }
     }
-
-
 
     /* Method for Five id from Worker list
      * list - name of the list

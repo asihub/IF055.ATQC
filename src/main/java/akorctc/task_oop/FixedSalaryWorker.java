@@ -1,6 +1,6 @@
 package akorctc.task_oop;
 
-public class FixedSalaryWorker extends Worker{
+public class FixedSalaryWorker extends Worker {
 
     private double fixedSalary;
 
@@ -16,7 +16,7 @@ public class FixedSalaryWorker extends Worker{
 
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return this.lastname;
     }
 }
