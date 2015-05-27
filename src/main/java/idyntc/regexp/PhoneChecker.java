@@ -8,8 +8,8 @@ import java.util.regex.Pattern;
 
 public class PhoneChecker {
     public static void main(String[] args) {
-
-
+        ;
+        String reg_exp_pattern = "(\\(?\\d{3}\\)?)(\\.?\\-?\\s?\\d{3}\\.?\\-?\\s?)(\\d{4})";
         List<String> phoneNumbers = new ArrayList<String>();
 
         phoneNumbers.add(0, "(123) 456 7899");
@@ -21,7 +21,7 @@ public class PhoneChecker {
 
 
         for (int i = 0; i < phoneNumbers.size(); i++) {
-            System.out.println(phoneValidator(phoneNumbers.get(i)));
+            System.out.println(phoneValidate(phoneNumbers.get(i), reg_exp_pattern));
         }
     }
 
@@ -29,11 +29,12 @@ public class PhoneChecker {
      * this method validates phone numbers using pattern
      *
      * @param phoneNumbers - examples of correct phone number
+     * @param reg_exp_pattern  -
      * @return true or false
      */
-    //TODO code convention
-    public static boolean phoneValidator(String phoneNumbers) {
-        Pattern pattern = Pattern.compile("(\\(?\\d{3}\\)?)(\\.?\\-?\\s?\\d{3}\\.?\\-?\\s?)(\\d{4})");
+
+    public static boolean phoneValidate(String phoneNumbers, String reg_exp_pattern) {
+        Pattern pattern = Pattern.compile(reg_exp_pattern);
         Matcher matcher = pattern.matcher(phoneNumbers);
         return matcher.matches();
     }

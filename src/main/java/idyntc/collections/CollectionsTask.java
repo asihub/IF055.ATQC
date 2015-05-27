@@ -7,7 +7,6 @@ import java.util.*;
  */
 public class CollectionsTask {
     public static void main(String[] args) {
-
         Students student1 = new Students("Danilo", "Chico", "ATQC-08-09");
         Students student2 = new Students("Tim", "Tyson", "MQC-08-09");
         Students student3 = new Students("Ruby", "Ho", "WebUI-08-09");
@@ -21,7 +20,7 @@ public class CollectionsTask {
         studentsList.add(student3);
         studentsList.add(student4);
         studentsList.add(student5);
-        
+
 //output list of students
         System.out.println("\tList of students");
 
@@ -30,7 +29,7 @@ public class CollectionsTask {
         }
 
         ListIterator<Students> iterator = studentsList.listIterator();
-        
+
 //modyfing list of student(adding, removing and changing elements)
         while (iterator.hasNext()) {
             if (iterator.next().getGroup().equals("ATQC-08-09")) {
@@ -42,7 +41,7 @@ public class CollectionsTask {
             }
         }
         studentsList.set(3, new Students("Mike", "Matusov", "ATQC-08-09"));
-        
+
 //output modified list of students
         System.out.println("\tModified list of students");
         for (Students students : studentsList) {
@@ -61,12 +60,12 @@ public class CollectionsTask {
         for (Map.Entry entry : studentsMap.entrySet()) {
             System.out.println(entry.getValue());
         }
-        
+
 //modifing elements of mapStudents(adding, removing and changing elements)
         studentsMap.get(1).setGroup("WebUI-08-09");
         studentsMap.remove(1);
         studentsMap.put(studentsMap.size() + 1, student5);
-        
+
 //output modified map of students        
         System.out.println("\tModified map of student:");
         for (Map.Entry entry : studentsMap.entrySet()) {

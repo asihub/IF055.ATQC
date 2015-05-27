@@ -73,10 +73,10 @@ public class Students {
         if (!(o instanceof Students)) {
             return false;
         }
-        
+
         Students students = (Students) o;
 
-        if (!group.equals(students.group)) { 
+        if (!group.equals(students.group)) {
             return false;
         }
         if (!name.equals(students.name)) {
