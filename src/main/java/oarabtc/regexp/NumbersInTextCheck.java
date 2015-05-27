@@ -1,7 +1,3 @@
-package oarabtc.regexp; /**
- * Created by Olia on 03.05.2015.
- */
-
 import java.util.ArrayList;
 import java.util.regex.*;
 

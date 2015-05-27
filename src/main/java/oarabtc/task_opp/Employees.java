@@ -1,5 +1,3 @@
-package oarabtc.task_opp;
-
 import java.util.List;
 
 public abstract class Employees {

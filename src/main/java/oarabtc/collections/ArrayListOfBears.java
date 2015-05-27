@@ -1,31 +1,14 @@
-package oarabtc.collections;
-
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by Olia on 03.05.2015.
- */
 
 
 public class ArrayListOfBears {
 
-    public void print() {
-        System.out.println("_________  Bear list _________");
+    public static void print() {
+        System.out.println("_________  Bear ArrayList _________");
     }
 
-    private void bearListPrint(Bear bigBear) {
-
-        System.out.println("Here are our bears: " + bigBear);
-    }
-
-    private void bearViewChange(Bear bigBearChange) {
-
-        System.out.println("Here are our and new bears: " + bigBearChange);
-    }
-
-    //TODO refactor
-    public ArrayListOfBears() {
+    public static void createArrayListOfBears() {
         print();
         List<Bear> bears = new ArrayList<Bear>();
         bears.add(new Bear("Johnny", 5));
@@ -36,9 +19,16 @@ public class ArrayListOfBears {
         for (Bear bigBear : bears) {
             bearListPrint(bigBear);
         }
+    }
 
-        System.out.println();
+    private static void bearListPrint(Bear bigBear) {
 
+        System.out.println("Here are our bears: " + bigBear);
+    }
+
+    public static void setChangeOfBears() {
+
+        List<Bear> bears = new ArrayList<Bear>();
         bears.add(new Bear("Arthur", 12));
         bears.add(new Bear("Frank", 4));
         bears.set(1, new Bear("Clare", bears.get(1).getSize()));
@@ -46,8 +36,10 @@ public class ArrayListOfBears {
         for (Bear bigBearChange : bears) {
             bearViewChange(bigBearChange);
         }
-
     }
 
+    private static void bearViewChange(Bear bigBearChange) {
 
+        System.out.println("Here are our and new bears: " + bigBearChange);
+    }
 }
