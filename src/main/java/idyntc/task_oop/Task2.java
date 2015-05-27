@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class Task2 {
     public static void main(String[] args) {
-        String filePath = "src\main\java\idyntc\task_oop\";
+        String filePath = "src\\main\\java\\idyntc\\task_oop\\";
         String perHourSalaryFile = filePath + "inputData\\perHourSalaryInput.csv";
         String fixedSalaryFile = filePath + "inputData\\fixedSalaryInput.csv";
 
