@@ -1,4 +1,4 @@
-package sazartc.google_test;
+package sazartc.google_test.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,10 +6,11 @@ import sazartc.google_test.page_objects.GoogleHomePage;
 import sazartc.google_test.page_objects.SearchResultsPage;
 import sazartc.google_test.page_objects.SearchedPicturesPage;
 
-/**
- * Created by i07016 on 28.05.2015.
- */
-public class GoogleTestsExecutor extends GoogleTestsWrapper {
+/*
+* Google Search Test
+*/
+
+public class GoogleSearchTest extends GoogleTestsWrapper {
 
     private final String GOOGLE_HOME_URL = "http://google.com.ua";
 
@@ -22,7 +23,7 @@ public class GoogleTestsExecutor extends GoogleTestsWrapper {
 
         // Search "funny picture" and check results
         SearchResultsPage searchResultsPage = googleHomePage.searchExecute("funny picture");
-        log.info("searchResultsPage.checkFirstLinkContainsText :"
+        log.info("searchResultsPage.checkFirstLinkContainsText: "
                 + searchResultsPage.checkFirstLinkContainsText("funny picture"));
 
         // Check count od pictures and do screenshot
@@ -39,7 +40,7 @@ public class GoogleTestsExecutor extends GoogleTestsWrapper {
         log.info("searchResultsPage.checkFirstLinkContainsText: "
                 + searchResultsPage.checkFirstLinkContainsText("funny kitten picture"));
         // Change first link's color
-        log.info("searchResultsPage.setFirstLinkColorAndCheck(\"magenta\")"
+        log.info("searchResultsPage.setFirstLinkColorAndCheck(\"magenta\"): "
                 + searchResultsPage.setFirstLinkColorAndCheck("magenta"));
     }
 }

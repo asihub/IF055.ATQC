@@ -1,4 +1,4 @@
-package sazartc.google_test;
+package sazartc.google_test.tests;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Google Search testing class
  */
+@Deprecated
 public class GoogleTester {
 
     private WebDriver driver;

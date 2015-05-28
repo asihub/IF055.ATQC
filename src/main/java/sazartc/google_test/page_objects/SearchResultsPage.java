@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
 
-/**
- * Created by i07016 on 28.05.2015.
+/*
+ * PageObject class for Google Search Results
  */
 public class SearchResultsPage extends PageObjectBase{
     private WebElement firstLink;
@@ -17,12 +17,12 @@ public class SearchResultsPage extends PageObjectBase{
     }
 
     public boolean checkFirstLinkContainsText(String searchText) {
-        firstLink = driver.findElement(By.xpath(".//*[@id='rso']/div[2]/li[1]/div/h3/a"));
+        firstLink = driver.findElement(By.xpath(properties.getProperty("FIRST_LINK")));
         return (firstLink.getText().contains("funny picture"));
     }
 
     public SearchedPicturesPage pictureButtonClick() {
-        driver.findElement(By.xpath(".//*[@id='hdtb-msb']/div[2]/a")).click();
+        driver.findElement(By.xpath(properties.getProperty("PICTURE_BUTTON"))).click();
         return new SearchedPicturesPage(driver);
     }
 

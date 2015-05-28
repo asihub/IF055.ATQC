@@ -1,4 +1,4 @@
-package sazartc.google_test;
+package sazartc.google_test.tests;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by i07016 on 28.05.2015.
+ * Wrapper for tests. Initializes and releases resources
  */
 public abstract class GoogleTestsWrapper {
     protected WebDriver driver;

@@ -7,8 +7,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by i07016 on 28.05.2015.
+/*
+ * PageObject class for Google Searched Pictures
  */
 public class SearchedPicturesPage extends PageObjectBase {
 
@@ -19,7 +19,7 @@ public class SearchedPicturesPage extends PageObjectBase {
     }
 
     public boolean checkPicturesCountIsNotLessThan(int minimalPicturesCount) {
-        pictures = driver.findElements(By.xpath(".//*[@id='rg_s']/div[@class='rg_di rg_el']/a/img"));
+        pictures = driver.findElements(By.xpath(properties.getProperty("PICTURES")));
         return (pictures.size() >= minimalPicturesCount);
     }
 
@@ -29,7 +29,7 @@ public class SearchedPicturesPage extends PageObjectBase {
     }
 
     public GoogleHomePage getGoogleHomePage() {
-        driver.findElement(By.id("logo")).click();
+        driver.findElement(By.id(properties.getProperty("HEAD_LOGO"))).click();
         return new GoogleHomePage(driver);
     }
 }
