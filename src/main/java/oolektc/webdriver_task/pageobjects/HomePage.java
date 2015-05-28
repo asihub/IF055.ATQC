@@ -4,11 +4,11 @@ import static oolektc.webdriver_task.locators.Locators.*;
 
 import org.openqa.selenium.WebDriver;
 
-public final class HomePage extends BasePage {
+public final class GoogleHomePage extends BasePage {
 
-    private static final HomePage HOME_PAGE = new HomePage();
+    private static final GoogleHomePage HOME_PAGE = new GoogleHomePage();
 
-    public static HomePage getHomePage(WebDriver driver) {
+    public static GoogleHomePage getHomePage(WebDriver driver) {
         BasePage.driver = driver;
         return HOME_PAGE;
     }
