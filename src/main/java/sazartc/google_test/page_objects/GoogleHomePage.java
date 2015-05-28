@@ -2,8 +2,8 @@ package sazartc.google_test.page_objects;
 
 import org.openqa.selenium.*;
 
-/**
- * Created by i07016 on 28.05.2015.
+/*
+ * PageObject class for Google Home
  */
 public class GoogleHomePage extends PageObjectBase {
 
@@ -15,13 +15,13 @@ public class GoogleHomePage extends PageObjectBase {
     }
 
     public boolean setLogoUnvisibleAndCheck() {
-        logo = driver.findElement(By.xpath(".//*[@id='logo']/img"));
+        logo = driver.findElement(By.xpath(properties.getProperty("HOMEPAGE_LOGO")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'", logo);
         return logo.isDisplayed();
     }
 
     public SearchResultsPage searchExecute(String searchText) {
-        searchInput = driver.findElement(By.name("q"));
+        searchInput = driver.findElement(By.name(properties.getProperty("SEARCH_INPUT")));
         searchInput.sendKeys(searchText);
         searchInput.sendKeys(Keys.RETURN);
         return new SearchResultsPage(driver);

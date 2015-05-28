@@ -6,7 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public final class HomePage extends BasePage {
-
     private static final HomePage HOME_PAGE = new HomePage();
 
     public static HomePage getHomePage(WebDriver driver) {
