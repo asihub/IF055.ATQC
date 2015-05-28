@@ -1,16 +1,14 @@
-package idyntc;
+package idyntc.webdriver_task;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static idyntc.Locators.*;
+import static idyntc.webdriver_task.Locators.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +30,7 @@ public class GoogleTest {
             e.printStackTrace();
         }
     }
-    public void doSearch(String someText){
+    public void Search(String someText){
         driver.findElement(By.name(GOOGLE_SEARCH_LOCATOR)).sendKeys(someText);
     }
 
@@ -45,8 +43,8 @@ public class GoogleTest {
     }
 
     @Test
-    public void testImages() {
-        doSearch("funny picture");
+    public void testSearchImages() {
+        Search("funny picture");
 
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         Assert.assertTrue(element.getText().toLowerCase().contains("funny picture"));
@@ -62,7 +60,7 @@ public class GoogleTest {
     }
 
     @Test 
-    public void testGoogleLogo() {
+    public void testHideGoogleLogo() {
         
         element = driver.findElement(By.cssSelector(GOOGLE_LOGO_LOCATOR));
         Assert.assertTrue(element.isDisplayed());
@@ -76,15 +74,15 @@ public class GoogleTest {
 
 
     @Test 
-    public void testKittenImages() {
-        doSearch("funny kitten picture");
+    public void testSearchKittenImages() {
+        Search("funny kitten picture");
 
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         Assert.assertTrue(element.getText().toLowerCase().contains("funny kitten picture"));
     }
 
-    @Test (dependsOnMethods = "testKittenImages")
-    public void testColorLink() {
+    @Test (dependsOnMethods = "testSearchKittenImages")
+    public void testChangeColorLink() {
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         javaScript = (JavascriptExecutor) driver;
         String colorLink = (String)javaScript.executeScript(CHANGE_LINK_COLOR_SCRIPT);

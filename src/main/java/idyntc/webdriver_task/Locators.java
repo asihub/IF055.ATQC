@@ -1,10 +1,10 @@
-package idyntc;
+package idyntc.webdriver_task;
 
 /**
  * Created by Ihor Dynka on 08.05.2015.
  */
 public class Locators {
-    public static final String SCREENSHOT_FILE_PATH = "src\\main\\java\\screenshots\\Screenshot.png";
+    public static final String SCREENSHOT_FILE_PATH = "src\\main\\java\\idyntc\\webdriver_task\\Screenshot.png";
 
     public static final String GOOGLE_URL = "http://www.google.com";
     public static final String GOOGLE_SEARCH_LOCATOR = "q";
