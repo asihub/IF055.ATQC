@@ -24,7 +24,7 @@ public class ImagePage extends PageObjectPage{
         return driver.findElements(By.cssSelector(FUNNY_PICTURES_LOCATOR));
     }
 
-    public void doScreenshot() {
+    public void doScreenShots (){
         try {
             File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(sourceFile, new File(SCREENSHOT_FILE_PATH));
