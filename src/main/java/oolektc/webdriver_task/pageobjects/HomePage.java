@@ -16,6 +16,7 @@ public final class HomePage extends BasePage {
     public SearchResultPage doSearchFor(String searchTerm) {
         driver.findElement(SEARCH_FIELD).clear();
         driver.findElement(SEARCH_FIELD).sendKeys(searchTerm);
+        driver.findElement(SEARCH_FIELD).sendKeys(Keys.ENTER);
         return SearchResultPage.getSearchResultPage(driver);
     }
 }
