@@ -14,7 +14,7 @@ public class GoogleTestsExecutor extends GoogleTestsWrapper {
     private final String GOOGLE_HOME_URL = "http://google.com.ua";
 
     @Test
-    public void testUntitled() throws Exception {
+    public void testGoogleSearch() throws Exception {
 
         driver.get(GOOGLE_HOME_URL);
 
@@ -32,7 +32,7 @@ public class GoogleTestsExecutor extends GoogleTestsWrapper {
 
         // Hide logo at home page
         googleHomePage = searchedPicturesPage.getGoogleHomePage();
-        log.info(googleHomePage.setLogoUnvisibleAndCheck());
+        log.info("googleHomePage.setLogoUnvisibleAndCheck(): " + googleHomePage.setLogoUnvisibleAndCheck());
 
         // Search "funny picture" and check results
         searchResultsPage = googleHomePage.searchExecute("funny kitten picture");
