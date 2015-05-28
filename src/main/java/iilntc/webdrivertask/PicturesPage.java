@@ -1,7 +1,11 @@
 package iilntc.webdrivertask;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by true on 28.05.2015.
@@ -13,7 +17,9 @@ public class PicturesPage {
         this.driver = driver;
     }
 
-    public Integer picturesPageSize(){
+    public Integer picturesPageSize() throws IOException {
+        FileUtils.copyFile(((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.FILE), new File("c:\\screenshoot.png"));
         return driver.findElements(By.cssSelector("img")).size();
     }
 }

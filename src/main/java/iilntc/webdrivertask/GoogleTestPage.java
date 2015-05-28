@@ -7,6 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -28,7 +29,7 @@ public class GoogleTestPage {
     }
 
     @Test
-    public void testSearch() {
+    public void testSearch() throws IOException {
         HomePage home1 = new HomePage(driver);
         ResultPage result = home1.search("funny picture");
         Assert.assertTrue(result.getFirstLink().contains("funny picture"));
