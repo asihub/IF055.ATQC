@@ -2,7 +2,7 @@ package oolektc.webdriver_task.locators;
 
 import org.openqa.selenium.By;
 
-public class Locators {
+public final class Locators {
 
     public static final By SEARCH_FIELD = By.id("lst-ib");
     public static final By LOGO = By.id("hplogo");

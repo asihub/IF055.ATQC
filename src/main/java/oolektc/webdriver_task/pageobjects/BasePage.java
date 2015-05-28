@@ -11,6 +11,9 @@ public class BasePage {
     public static final String URL = "https://www.google.com/";
     protected static WebDriver driver;
 
+    public BasePage() {
+    }
+
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
     }
