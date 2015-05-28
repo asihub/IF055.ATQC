@@ -21,14 +21,14 @@ public class SearchResultsPage extends PageObjectBase{
         return (firstLink.getText().contains("funny picture"));
     }
 
-    public SearchResultsPage pictureButtonClick() {
+    public SearchedPicturesPage pictureButtonClick() {
         driver.findElement(By.xpath(".//*[@id='hdtb-msb']/div[2]/a")).click();
-        return new SearchResultsPage(driver);
+        return new SearchedPicturesPage(driver);
     }
 
-    public boolean setFirstLinkColorAndCheck(Color color) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.color='red'", firstLink);
-        return color.toString().equals(Color.fromString(firstLink.getCssValue("color")));
+    public boolean setFirstLinkColorAndCheck(String color) {
+        ((JavascriptExecutor) driver).executeScript(String.format("arguments[0].style.color='%s'", color), firstLink);
+        return Color.fromString(color).equals(Color.fromString(firstLink.getCssValue("color")));
     }
 
 }

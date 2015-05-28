@@ -18,9 +18,9 @@ public class SearchedPicturesPage extends PageObjectBase {
         super(driver);
     }
 
-    public boolean checkPicturesCount() {
+    public boolean checkPicturesCountIsNotLessThan(int minimalPicturesCount) {
         pictures = driver.findElements(By.xpath(".//*[@id='rg_s']/div[@class='rg_di rg_el']/a/img"));
-        return (pictures.size() >= 5);
+        return (pictures.size() >= minimalPicturesCount);
     }
 
     public void doScreenShot() throws IOException {
