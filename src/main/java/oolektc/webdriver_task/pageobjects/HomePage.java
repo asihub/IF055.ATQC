@@ -2,13 +2,14 @@ package oolektc.webdriver_task.pageobjects;
 
 import static oolektc.webdriver_task.locators.Locators.*;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-public final class GoogleHomePage extends BasePage {
+public final class HomePage extends BasePage {
 
-    private static final GoogleHomePage HOME_PAGE = new GoogleHomePage();
+    private static final HomePage HOME_PAGE = new HomePage();
 
-    public static GoogleHomePage getHomePage(WebDriver driver) {
+    public static HomePage getHomePage(WebDriver driver) {
         BasePage.driver = driver;
         return HOME_PAGE;
     }
