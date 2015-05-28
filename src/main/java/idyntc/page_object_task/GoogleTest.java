@@ -15,7 +15,7 @@ public class GoogleTest extends TestRunner{
     List<WebElement> imagesList;
     @Test
     public void testSearchImages(){
-        GoogleHomePage googleHomePage = new GoogleHomePage(driver);
+        HomePage googleHomePage = new HomePage(driver);
         ResultPage resultPage = googleHomePage.search("funny picture");
         assertTrue(resultPage
                 .getFirstLink()
@@ -34,7 +34,7 @@ public class GoogleTest extends TestRunner{
 
     @Test
     public void testHideGoogleLogo(){
-        GoogleHomePage googleHomePage = new GoogleHomePage(driver);
+        HomePage googleHomePage = new HomePage(driver);
         assertTrue(googleHomePage.getGoogleLogo().isDisplayed());
         googleHomePage.hideLogo();
         assertFalse(googleHomePage.getGoogleLogo().isDisplayed());
@@ -43,7 +43,7 @@ public class GoogleTest extends TestRunner{
     
     @Test
     public void testSearchKittenImages(){
-        GoogleHomePage googleHomePage = new GoogleHomePage(driver);
+        HomePage googleHomePage = new HomePage(driver);
         ResultPage resultPage = googleHomePage.search("funny kitten picture");
         assertTrue(resultPage
                 .getFirstLink()

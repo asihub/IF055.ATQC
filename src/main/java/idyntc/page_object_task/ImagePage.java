@@ -34,8 +34,8 @@ public class ImagePage extends PageObjectPage{
         }
     }
 
-    public GoogleHomePage ComeBackToHomePage() {
+    public HomePage ComeBackToHomePage() {
         driver.findElement(By.cssSelector(BACK_TO_HOME_PAGE_LOGO_LOCATOR)).click();
-        return new GoogleHomePage(driver);
+        return new HomePage(driver);
     }
 }

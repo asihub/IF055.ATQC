@@ -10,9 +10,9 @@ import static idyntc.webdriver_task.Locators.*;
 /**
  * Created by Ihor-Dynka on 28.05.2015.
  */
-public class GoogleHomePage extends PageObjectPage {
+public class HomePage extends PageObjectPage {
 
-    public GoogleHomePage(WebDriver driver) {
+    public HomePage(WebDriver driver) {
         super(driver);
     }
 
