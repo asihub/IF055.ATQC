@@ -30,6 +30,7 @@ public class GoogleTestPage {
 
     @Test
     public void testSearch() throws IOException {
+        //TODO what's home1 ?
         HomePage home1 = new HomePage(driver);
         ResultPage result = home1.search("funny picture");
         Assert.assertTrue(result.getFirstLink().contains("funny picture"));
@@ -37,8 +38,10 @@ public class GoogleTestPage {
         Assert.assertTrue(pictures.picturesPageSize() >= 5);
         driver.navigate().back();
         driver.navigate().back();
+        //TODO what's home1 ?
         HomePage home2 = new HomePage(driver);
         Assert.assertFalse(home2.hideAndVerifyGoogleLogo());
+        //TODO what's result ?
         ResultPage result2 = home2.search("funny kitten picture");
         Assert.assertTrue(result2.getFirstLink().contains("funny kitten picture"));
         Assert.assertTrue(result2.changeFirstLinkColourAndVerifyIt());

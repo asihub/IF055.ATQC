@@ -1,11 +1,12 @@
 package oolektc.webdriver_task.pageobjects;
 
-import static oolektc.webdriver_task.locators.Locators.*;
-
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
+import static oolektc.webdriver_task.locators.Locators.SEARCH_FIELD;
+
 public final class HomePage extends BasePage {
+    //TODO overcomplication because of static webdriver
     private static final HomePage HOME_PAGE = new HomePage();
 
     public static HomePage getHomePage(WebDriver driver) {

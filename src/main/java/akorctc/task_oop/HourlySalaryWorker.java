@@ -3,6 +3,7 @@ package akorctc.task_oop;
 public class HourlySalaryWorker extends Worker {
 
     private double hourlySalary;
+    //TODO what's hourSal?
     private double hourSal = 20.8;
     private int hours = 8;
 

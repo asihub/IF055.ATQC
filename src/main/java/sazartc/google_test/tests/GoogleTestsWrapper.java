@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Wrapper for tests. Initializes and releases resources
  */
+//TODO this is a runner class, rename
 public abstract class GoogleTestsWrapper {
     protected WebDriver driver;
     protected static final Logger log = Logger.getLogger(GoogleTester.class);

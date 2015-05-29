@@ -7,7 +7,7 @@ public class Car {
     private String name;
     private int year;
     private String color;
-
+    //TODO use interfaces
     private TreeSet<String> colors = new TreeSet<String>();
 
     // Set of usable colors for cars.

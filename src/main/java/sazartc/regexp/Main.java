@@ -27,6 +27,7 @@ public class Main {
         }
 
         // Numbers extractor checking
+        //TODO what's numstrings?
         ArrayList<NumbersExtractor> numStrings
                 = new ArrayList<NumbersExtractor>();
         numStrings.add(new NumbersExtractor("Hello 2.15 digital World 5,3"));
@@ -35,7 +36,7 @@ public class Main {
 
         System.out.println("Numbers extractor checking:");
         List<String> groups = new ArrayList<String>();
-
+        //TODO what's num_string?
         for (NumbersExtractor num_string : numStrings) {
 
             groups = num_string.check();

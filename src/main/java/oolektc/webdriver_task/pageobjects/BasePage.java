@@ -7,8 +7,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class BasePage {
-
+    //TODO move to the test class/method or somewhere else
     public static final String URL = "https://www.google.com/";
+    //TODO avoid using static webdriver
     protected static WebDriver driver;
 
     public BasePage() {
@@ -17,7 +18,7 @@ public class BasePage {
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
     }
-
+    //TODO screenshot must be placed to /src/main/resources
     public final void takeScreenshot(String path, String fileName) {
         try {
             final File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -28,6 +29,7 @@ public class BasePage {
     }
 
     public final HomePage navigateToHomePage() {
+        //TODO this is a pre setup action, move out
         driver.get(URL);
         return HomePage.getHomePage(driver);
     }

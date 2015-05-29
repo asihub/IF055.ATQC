@@ -20,11 +20,12 @@ public class ResultPage extends PageObjectPage{
         return driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
     }
 
+    //TODO rename
     public ImagePage goToImages() {
         driver.findElement(By.xpath(GOOGLE_IMAGES_LOCATOR)).click();
         return new ImagePage(driver);
     }
-
+    //TODO make method versatile, use locator as a parameter
     public void changeColorLink() {
         ((JavascriptExecutor) driver).executeScript(CHANGE_LINK_COLOR_SCRIPT);
 

@@ -20,6 +20,7 @@ public final class ImagesPage extends BasePage {
     public List<WebElement> getListOfImages(int numberOfImages) {
         return driver
                 .findElements
+                        //TODO move out locators, use String.format()
                         (By.xpath("(.//*[@id='rg_s']//img)[position() >=1 and position() <=" + numberOfImages + "]"));
     }
 }

@@ -18,13 +18,13 @@ public class ResultPage {
     public String getFirstLink() {
         return driver.findElement(By.xpath("//li[1]/div[@class='rc']/h3/a")).getText().toLowerCase();
     }
-
+    //TODO rename
     public PicturesPage getPicturesPage() {
         //(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='hdtb-msb']/div[2]/a")));
         driver.findElement(By.xpath("//*[@id='hdtb-msb']/div[2]/a")).click();
         return new PicturesPage(driver);
     }
-
+    //TODO rename, make it versatile
     public Boolean changeFirstLinkColourAndVerifyIt(){
             js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.color = 'red'",

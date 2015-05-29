@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
+//TODO refactor
 public class BearArrayListHelper {
 
     public static void print() {
@@ -25,7 +25,7 @@ public class BearArrayListHelper {
 
         System.out.println("Here are our bears: " + bear);
     }
-
+    //TODO rename to changeBearsList()
     public static void setChangeOfBears() {
 
         List<Bear> bears = new ArrayList<Bear>();

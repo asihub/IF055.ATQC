@@ -1,3 +1,4 @@
+//TODO this whole packare fails to compile, please fix
 public class Bear {
     private String name;
     private int size;

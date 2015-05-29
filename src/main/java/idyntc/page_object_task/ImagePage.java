@@ -23,7 +23,7 @@ public class ImagePage extends PageObjectPage{
     public List<WebElement> getImagesList() {
         return driver.findElements(By.cssSelector(FUNNY_PICTURES_LOCATOR));
     }
-
+    ///TODO make methods versatile, use file name as a parameter
     public void doScreenShots (){
         try {
             File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -33,7 +33,7 @@ public class ImagePage extends PageObjectPage{
             e.printStackTrace();
         }
     }
-
+    //TODO code convention, rename to clickGoogleLogo() or something
     public HomePage ComeBackToHomePage() {
         driver.findElement(By.cssSelector(BACK_TO_HOME_PAGE_LOGO_LOCATOR)).click();
         return new HomePage(driver);

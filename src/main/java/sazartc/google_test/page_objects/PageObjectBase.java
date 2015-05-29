@@ -8,6 +8,7 @@ import java.util.Properties;
 public abstract class PageObjectBase {
     protected WebDriver driver;
     final protected Properties properties = new Properties();
+    //TODO set property file name elsewhere
     final private String LOCATORS_FILE_NAME = "locators.prop";
 
     public PageObjectBase(WebDriver driver) {

@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class RegexTask1 {
 
     public static void main(String[] args) {
-
+        //TODO use interfaces
         TreeMap<Integer, String> myPhoneBook = new TreeMap<>();
         myPhoneBook.put(1, "123?123?7777");
         myPhoneBook.put(2, "(123) 456.7899");

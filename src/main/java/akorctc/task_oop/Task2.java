@@ -51,7 +51,7 @@ public class Task2 {
         System.out.println("_______________________________ ");
         System.out.println("Fixed Salary Worker (three id's):");
         Worker.printLastId(fixedSalaryWorker, 3, "id");
-
+        //TODO no unnecessary new lines
 
     }
 

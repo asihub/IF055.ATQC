@@ -1,26 +1,27 @@
 package oolektc.webdriver_task.tests;
 
-import static oolektc.webdriver_task.locators.Locators.*;
-
 import oolektc.webdriver_task.pageobjects.BasePage;
 import oolektc.webdriver_task.pageobjects.HomePage;
 import oolektc.webdriver_task.pageobjects.ImagesPage;
 import oolektc.webdriver_task.pageobjects.SearchResultPage;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import static oolektc.webdriver_task.locators.Locators.FIRST_RESULT_LINK;
+import static oolektc.webdriver_task.locators.Locators.LOGO;
 
 public class GoogleTest {
 
     private WebDriver driver;
-
+    //TODO why not use runner class?
     @BeforeClass
     public void setUp() {
         driver = new FirefoxDriver();

@@ -5,6 +5,7 @@ import java.util.*;
 /**
  * Created by Ihor Dynka on 02.05.2015.
  */
+//TODO reformat comments
 public class CollectionsTask {
     public static void main(String[] args) {
         Students student1 = new Students("Danilo", "Chico", "ATQC-08-09");

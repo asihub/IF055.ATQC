@@ -4,13 +4,13 @@ import java.util.regex.*;
 
 public class NumbersInTextCheck {
 
-
+    //TODO rename verfyTextNumbers() etc
     public static ArrayList<String> numbersInTextCheck(String text) {
 
         Pattern textPattern = Pattern.compile("\\d*\\.?\\d+");
         Matcher textMatcher = textPattern.matcher(text);
 
-
+        //TODO use interfaces
         ArrayList<String> textResult = new ArrayList<>();
 
         while (textMatcher.find()) {

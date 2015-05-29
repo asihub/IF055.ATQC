@@ -7,7 +7,9 @@ import java.util.regex.Pattern;
 
 public class NumberExtractor {
     public static void main(String[] args) {
+        //TODO what's that?
         String reg_exp_pattern = "\\d*\\.?\\d+";
+
         Pattern pattern = Pattern.compile(reg_exp_pattern);
         Matcher matcher = pattern.matcher("Hello 2.15 digital World 5,3");
 

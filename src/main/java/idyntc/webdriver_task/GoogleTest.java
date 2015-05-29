@@ -8,13 +8,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static idyntc.webdriver_task.Locators.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static idyntc.webdriver_task.Locators.*;
+//TODO remove the screenshot
 public class GoogleTest {
 
     private WebDriver driver;
@@ -30,6 +30,7 @@ public class GoogleTest {
             e.printStackTrace();
         }
     }
+    //TODO code convention
     public void Search(String someText){
         driver.findElement(By.name(GOOGLE_SEARCH_LOCATOR)).sendKeys(someText);
     }
@@ -45,14 +46,14 @@ public class GoogleTest {
     @Test
     public void testSearchImages() {
         Search("funny picture");
-
+        //TODO what element?
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         Assert.assertTrue(element.getText().toLowerCase().contains("funny picture"));
 
         driver.findElement(By.xpath(GOOGLE_IMAGES_LOCATOR)).click();
        
         List<WebElement> elementsList = driver.findElements(By.cssSelector(FUNNY_PICTURES_LOCATOR));
-
+        //TODO use assert
         if (elementsList.size() >= 5) {
             doScreenShots();
         }
@@ -61,7 +62,7 @@ public class GoogleTest {
 
     @Test 
     public void testHideGoogleLogo() {
-        
+        //TODO what element?
         element = driver.findElement(By.cssSelector(GOOGLE_LOGO_LOCATOR));
         Assert.assertTrue(element.isDisplayed());
 
@@ -76,13 +77,14 @@ public class GoogleTest {
     @Test 
     public void testSearchKittenImages() {
         Search("funny kitten picture");
-
+        //TODO what element?
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         Assert.assertTrue(element.getText().toLowerCase().contains("funny kitten picture"));
     }
 
     @Test (dependsOnMethods = "testSearchKittenImages")
     public void testChangeColorLink() {
+        //TODO what element?
         element = driver.findElement(By.cssSelector(FUNNY_PICTURE_LINK_LOCATOR));
         javaScript = (JavascriptExecutor) driver;
         String colorLink = (String)javaScript.executeScript(CHANGE_LINK_COLOR_SCRIPT);

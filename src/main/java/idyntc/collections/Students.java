@@ -8,6 +8,7 @@ public class Students {
     private String surname;
     private String group;
 
+    //TODO that's not a javadoc
     /*
     constructor, that initialized the parameters of new students
      */
@@ -51,6 +52,7 @@ public class Students {
      */
     @Override
     public String toString() {
+        //TODO what's sb?
         final StringBuilder sb = new StringBuilder("Students{");
         sb.append("name='").append(name).append('\'');
         sb.append(", surname='").append(surname).append('\'');
@@ -66,6 +68,7 @@ public class Students {
      * @return true or false
      */
     @Override
+    //TODO what's o?
     public boolean equals(Object o) {
         if (this == o) {
             return true;

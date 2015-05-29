@@ -16,8 +16,9 @@ public class PicturesPage {
     public PicturesPage(WebDriver driver){
         this.driver = driver;
     }
-
+    //TODO rename, one method - one action
     public Integer picturesPageSize() throws IOException {
+        //TODO screenshot must be placed to /src/main/resources
         FileUtils.copyFile(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.FILE), new File("c:\\screenshoot.png"));
         return driver.findElements(By.cssSelector("img")).size();

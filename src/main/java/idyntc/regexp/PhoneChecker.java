@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 public class PhoneChecker {
     public static void main(String[] args) {
+        //TODO what's that?
         String reg_exp_pattern = "(\\(?\\d{3}\\)?)(\\.?\\-?\\s?\\d{3}\\.?\\-?\\s?)(\\d{4})";
         List<String> phoneNumbers = new ArrayList<String>();
 
@@ -32,7 +33,9 @@ public class PhoneChecker {
      * @return true or false
      */
 
-    public static boolean phoneValidate(String phoneNumbers, String reg_exp_pattern) {
+    public static boolean phoneValidate(String phoneNumbers,
+                                        //TODO what's that?
+                                        String reg_exp_pattern) {
         Pattern pattern = Pattern.compile(reg_exp_pattern);
         Matcher matcher = pattern.matcher(phoneNumbers);
         return matcher.matches();

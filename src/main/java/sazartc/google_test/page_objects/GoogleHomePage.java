@@ -19,7 +19,7 @@ public class GoogleHomePage extends PageObjectBase {
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'", logo);
         return logo.isDisplayed();
     }
-
+    //TODO doSearch(), searchFor() etc
     public SearchResultsPage searchExecute(String searchText) {
         searchInput = driver.findElement(By.name(properties.getProperty("SEARCH_INPUT")));
         searchInput.sendKeys(searchText);
