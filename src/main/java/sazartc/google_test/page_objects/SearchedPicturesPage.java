@@ -17,19 +17,18 @@ public class SearchedPicturesPage extends PageObjectBase {
     public SearchedPicturesPage(WebDriver driver) {
         super(driver);
     }
-    //TODO assertions only in test classes, in test methods
-    public boolean checkPicturesCountIsNotLessThan(int minimalPicturesCount) {
+
+    public int getPicturesCount() {
         pictures = driver.findElements(By.xpath(properties.getProperty("PICTURES")));
-        return (pictures.size() >= minimalPicturesCount);
+        return pictures.size();
     }
-    //TODO make it versatile, use file name as a parameter
-    //TODO screenshot must be placed to /src/main/resources
-    public void doScreenShot() throws IOException {
+
+    public void doScreenShot(String screenShotFileName) throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("screenshot.png"));
+        FileUtils.copyFile(scrFile, new File(screenShotFileName));
     }
-    //TODO rename, clickBlaBla() etc
-    public GoogleHomePage getGoogleHomePage() {
+
+    public GoogleHomePage clickHeadLogo() {
         driver.findElement(By.id(properties.getProperty("HEAD_LOGO"))).click();
         return new GoogleHomePage(driver);
     }

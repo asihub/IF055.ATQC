@@ -5,14 +5,17 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 import java.util.Properties;
 
+/*
+ * Base Page Object class for Pages
+ */
+
 public abstract class PageObjectBase {
     protected WebDriver driver;
     final protected Properties properties = new Properties();
-    //TODO set property file name elsewhere
-    final private String LOCATORS_FILE_NAME = "locators.prop";
 
     public PageObjectBase(WebDriver driver) {
         this.driver = driver;
+        final String LOCATORS_FILE_NAME = "locators.prop";
 
         try {
             properties.load(getClass().

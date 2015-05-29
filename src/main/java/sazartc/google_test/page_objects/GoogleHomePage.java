@@ -12,16 +12,19 @@ public class GoogleHomePage extends PageObjectBase {
 
     public GoogleHomePage(WebDriver driver) {
         super(driver);
+        logo = driver.findElement(By.xpath(properties.getProperty("HOMEPAGE_LOGO")));
+        searchInput = driver.findElement(By.name(properties.getProperty("SEARCH_INPUT")));
     }
 
-    public boolean setLogoUnvisibleAndCheck() {
-        logo = driver.findElement(By.xpath(properties.getProperty("HOMEPAGE_LOGO")));
+    public void setLogoUnvisible() {
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'", logo);
+    }
+
+    public boolean isLogoDisplayed() {
         return logo.isDisplayed();
     }
-    //TODO doSearch(), searchFor() etc
-    public SearchResultsPage searchExecute(String searchText) {
-        searchInput = driver.findElement(By.name(properties.getProperty("SEARCH_INPUT")));
+
+    public SearchResultsPage searchFor(String searchText) {
         searchInput.sendKeys(searchText);
         searchInput.sendKeys(Keys.RETURN);
         return new SearchResultsPage(driver);
