@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 
-public class MapOfBears {
+public class BearMapHelper {
 
     public static void print() {
         System.out.println("\n_________ Map bear list _________");
