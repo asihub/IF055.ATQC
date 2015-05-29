@@ -5,33 +5,27 @@ import org.openqa.selenium.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class BasePage {
-    //TODO move to the test class/method or somewhere else
-    public static final String URL = "https://www.google.com/";
-    //TODO avoid using static webdriver
-    protected static WebDriver driver;
 
-    public BasePage() {
-    }
+    protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
-        BasePage.driver = driver;
+        this.driver = driver;
     }
-    //TODO screenshot must be placed to /src/main/resources
-    public final void takeScreenshot(String path, String fileName) {
+
+    public final List<WebElement> getListOfElements(By element) {
+        return driver.findElements(element);
+    }
+
+    public final void takeScreenshot(String fileName) {
         try {
             final File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File(path + fileName));
+            FileUtils.copyFile(scrFile, new File("src//main//resources/" + fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public final HomePage navigateToHomePage() {
-        //TODO this is a pre setup action, move out
-        driver.get(URL);
-        return HomePage.getHomePage(driver);
     }
 
     public final void hideElement(WebElement element) {

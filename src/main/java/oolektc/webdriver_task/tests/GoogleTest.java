@@ -1,70 +1,61 @@
 package oolektc.webdriver_task.tests;
 
-import oolektc.webdriver_task.pageobjects.BasePage;
 import oolektc.webdriver_task.pageobjects.HomePage;
 import oolektc.webdriver_task.pageobjects.ImagesPage;
 import oolektc.webdriver_task.pageobjects.SearchResultPage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-import static oolektc.webdriver_task.locators.Locators.FIRST_RESULT_LINK;
-import static oolektc.webdriver_task.locators.Locators.LOGO;
+import static oolektc.webdriver_task.locators.Locators.*;
 
-public class GoogleTest {
 
-    private WebDriver driver;
-    //TODO why not use runner class?
-    @BeforeClass
-    public void setUp() {
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get(BasePage.URL);
-    }
+public class GoogleTest extends TestRunner {
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+    private static final String URL = "https://www.google.com/";
 
     @Test
     public void googleImagesTest() {
+        driver.get(URL);
+        HomePage homepage = new HomePage(driver);
 
-        HomePage homepage = HomePage.getHomePage(driver);
         SearchResultPage searchResultPage = homepage.doSearchFor("funny picture");
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
-                .getText()
-                .contains("funny picture"));
+                        .getText()
+                        .contains("funny picture"),
+                "Link does not contain 'funny picture text'");
 
-        final ImagesPage imagePage = searchResultPage.navigateToImagesPage();
-        final List<WebElement> listOfImages = imagePage.getListOfImages(5);
-        listOfImages.forEach(element -> Assert.assertTrue(element.isDisplayed()));
+        final ImagesPage imagePage = searchResultPage.clickImagesTab();
+        final List<WebElement> listOfImages = imagePage.getListOfElements(IMAGES_PAGE_IMAGE);
+        listOfImages
+                .stream()
+                .limit(5)
+                .forEach(element -> Assert.assertTrue(element.isDisplayed(),
+                        "Images are not displayed"));
 
-        imagePage.takeScreenshot("c:\\", "screenshot.png");
+        imagePage.takeScreenshot("screenshot.png");
 
-        homepage = imagePage.navigateToHomePage();
-        Assert.assertTrue(driver.findElement(LOGO).isDisplayed());
+        homepage = imagePage.clickOnGoogleLogo();
+        Assert.assertTrue(driver.findElement(LOGO).isDisplayed(),
+                "Google logo is not displayed");
         homepage.hideElement(driver.findElement(LOGO));
-        Assert.assertFalse(driver.findElement(LOGO).isDisplayed());
+        Assert.assertFalse(driver.findElement(LOGO).isDisplayed(),
+                "Google logo is not hidden");
 
         searchResultPage = homepage.doSearchFor("funny kitten picture");
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
-                .getText()
-                .toLowerCase()
-                .contains("funny kitten picture"));
+                        .getText()
+                        .toLowerCase()
+                        .contains("funny kitten picture"),
+                "Link does not contain 'funny kitten picture' text");
 
         searchResultPage.changeElementColor(driver.findElement(FIRST_RESULT_LINK), "'rgb(52, 221, 221)'");
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
-                .getAttribute("style")
-                .equals("color: rgb(52, 221, 221);"));
+                        .getAttribute("style")
+                        .equals("color: rgb(52, 221, 221);"),
+                "First link color in not changed");
 
     }
 }

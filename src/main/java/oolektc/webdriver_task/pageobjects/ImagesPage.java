@@ -1,10 +1,8 @@
 package oolektc.webdriver_task.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
+import static oolektc.webdriver_task.locators.Locators.*;
 
 public final class ImagesPage extends BasePage {
 
@@ -12,15 +10,8 @@ public final class ImagesPage extends BasePage {
         super(driver);
     }
 
-    /**
-     * Returns a list of first n images from images page
-     *
-     * @param numberOfImages number of image elements to be added to the list
-     */
-    public List<WebElement> getListOfImages(int numberOfImages) {
-        return driver
-                .findElements
-                        //TODO move out locators, use String.format()
-                        (By.xpath("(.//*[@id='rg_s']//img)[position() >=1 and position() <=" + numberOfImages + "]"));
+    public final HomePage clickOnGoogleLogo() {
+        driver.findElement(HEADER_GOOGLE_LOGO).click();
+        return new HomePage(driver);
     }
 }
