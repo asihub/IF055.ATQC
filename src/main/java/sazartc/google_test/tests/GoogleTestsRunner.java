@@ -9,12 +9,11 @@ import org.testng.annotations.BeforeTest;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Wrapper for tests. Initializes and releases resources
+ * Runner for tests. Initializes and releases resources
  */
-//TODO this is a runner class, rename
-public abstract class GoogleTestsWrapper {
+public abstract class GoogleTestsRunner {
     protected WebDriver driver;
-    protected static final Logger log = Logger.getLogger(GoogleTester.class);
+    protected static final Logger log = Logger.getLogger(GoogleTestsRunner.class);
 
     @BeforeTest
     public void setUp() {
@@ -27,9 +26,8 @@ public abstract class GoogleTestsWrapper {
 
     @AfterTest
     public void tearDown() throws Exception {
-        Thread.sleep(3000);
-        //driver.quit();
         log.info("<--- Tests finished ---");
+        //driver.quit();
     }
 }
 

@@ -1,4 +1,4 @@
-package sazartc.collections;
+package sazartc.collections.base_classes;
 
 public class Player {
 

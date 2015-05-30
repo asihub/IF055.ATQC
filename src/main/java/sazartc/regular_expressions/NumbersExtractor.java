@@ -1,10 +1,11 @@
-package sazartc.regexp;
+package sazartc.regular_expressions;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Deprecated
 public class NumbersExtractor {
 
     private String inputString;

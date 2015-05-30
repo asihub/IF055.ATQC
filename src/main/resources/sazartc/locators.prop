@@ -8,4 +8,4 @@ PICTURE_BUTTON=.//*[@id='hdtb-msb']/div[2]/a
 
 # Google Searched Pictures Page
 PICTURES=.//*[@id='rg_s']/div[@class='rg_di rg_el']/a/img
-HEAD_LOGO=logo
+HEADER_LOGO=logo

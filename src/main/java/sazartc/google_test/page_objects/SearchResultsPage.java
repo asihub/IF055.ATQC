@@ -4,32 +4,36 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.Color;
 
 /*
  * PageObject class for Google Search Results
  */
-public class SearchResultsPage extends PageObjectBase{
+public class SearchResultsPage extends PageObjectBase {
+
     private WebElement firstLink;
+    private WebElement pictureButton;
 
     public SearchResultsPage(WebDriver driver) {
         super(driver);
+        firstLink = driver.findElement(By.xpath(locators.getProperty("FIRST_LINK")));
+        pictureButton = driver.findElement(By.xpath(locators.getProperty("PICTURE_BUTTON")));
     }
-    //TODO assertions only in test classes, in test methods
-    public boolean checkFirstLinkContainsText(String searchText) {
-        firstLink = driver.findElement(By.xpath(properties.getProperty("FIRST_LINK")));
-        return (firstLink.getText().contains("funny picture"));
+
+    public String getFirstLinkText() {
+        return firstLink.getText();
     }
-    //TODO clickPictureButton();
-    public SearchedPicturesPage pictureButtonClick() {
-        driver.findElement(By.xpath(properties.getProperty("PICTURE_BUTTON"))).click();
+
+    public SearchedPicturesPage clickPictureButton() {
+        pictureButton.click();
         return new SearchedPicturesPage(driver);
     }
 
-    //TODO assertions only in test classes, in test methods
-    public boolean setFirstLinkColorAndCheck(String color) {
+    public void setFirstLinkColor(String color) {
         ((JavascriptExecutor) driver).executeScript(String.format("arguments[0].style.color='%s'", color), firstLink);
-        return Color.fromString(color).equals(Color.fromString(firstLink.getCssValue("color")));
+    }
+
+    public String getFirstLinkColor() {
+        return firstLink.getCssValue("color");
     }
 
 }
