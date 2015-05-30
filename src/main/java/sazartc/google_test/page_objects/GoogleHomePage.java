@@ -12,7 +12,7 @@ public class GoogleHomePage extends PageObjectBase {
 
     public GoogleHomePage(WebDriver driver) {
         super(driver);
-        logo = driver.findElement(By.xpath(locators.getProperty("HOMEPAGE_LOGO")));
+        logo = driver.findElement(By.id(locators.getProperty("HOMEPAGE_LOGO")));
         searchInput = driver.findElement(By.name(locators.getProperty("SEARCH_INPUT")));
     }
 
