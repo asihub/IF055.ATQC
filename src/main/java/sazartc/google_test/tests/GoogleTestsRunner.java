@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  */
 public abstract class GoogleTestsRunner {
     protected WebDriver driver;
-    protected static final Logger log = Logger.getLogger(GoogleTester.class);
+    protected static final Logger log = Logger.getLogger(GoogleTestsRunner.class);
 
     @BeforeTest
     public void setUp() {
@@ -26,9 +26,8 @@ public abstract class GoogleTestsRunner {
 
     @AfterTest
     public void tearDown() throws Exception {
-        Thread.sleep(3000);
-        //driver.quit();
         log.info("<--- Tests finished ---");
+        //driver.quit();
     }
 }
 

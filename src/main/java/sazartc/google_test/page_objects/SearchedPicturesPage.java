@@ -19,7 +19,7 @@ public class SearchedPicturesPage extends PageObjectBase {
     }
 
     public int getPicturesCount() {
-        pictures = driver.findElements(By.xpath(properties.getProperty("PICTURES")));
+        pictures = driver.findElements(By.xpath(locators.getProperty("PICTURES")));
         return pictures.size();
     }
 
@@ -28,8 +28,8 @@ public class SearchedPicturesPage extends PageObjectBase {
         FileUtils.copyFile(scrFile, new File(screenShotFileName));
     }
 
-    public GoogleHomePage clickHeadLogo() {
-        driver.findElement(By.id(properties.getProperty("HEAD_LOGO"))).click();
+    public GoogleHomePage clickHeaderLogo() {
+        driver.findElement(By.id(locators.getProperty("HEADER_LOGO"))).click();
         return new GoogleHomePage(driver);
     }
 }

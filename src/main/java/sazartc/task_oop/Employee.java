@@ -1,7 +1,7 @@
 package sazartc.task_oop;
 
 /**
- * Abstract class described Emplyee' properties
+ * Abstract class described Employee' properties
  */
 //TODO move out txt files to /src/main/resources
 abstract public class Employee implements Comparable<Employee> {
@@ -32,14 +32,6 @@ abstract public class Employee implements Comparable<Employee> {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public double getSalaryBase() {
-        return salaryBase;
-    }
-
-    public void setSalaryBase(double salaryBase) {
-        this.salaryBase = salaryBase;
     }
 
     abstract public double calculateSalary();

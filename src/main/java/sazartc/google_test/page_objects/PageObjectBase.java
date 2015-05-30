@@ -11,16 +11,16 @@ import java.util.Properties;
 
 public abstract class PageObjectBase {
     protected WebDriver driver;
-    final protected Properties properties = new Properties();
+    final protected Properties locators = new Properties();
 
     public PageObjectBase(WebDriver driver) {
         this.driver = driver;
-        final String LOCATORS_FILE_NAME = "locators.prop";
+        final String LOCATORS_FILE_NAME = "sazartc/locators.prop";
 
         try {
-            properties.load(getClass().
-                    getClassLoader().
-                    getResourceAsStream(LOCATORS_FILE_NAME));
+            locators.load(getClass()
+                    .getClassLoader()
+                    .getResourceAsStream(LOCATORS_FILE_NAME));
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }

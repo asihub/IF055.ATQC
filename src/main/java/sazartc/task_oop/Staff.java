@@ -102,16 +102,12 @@ public class Staff {
     public void loadEmployeesFromFile(String fileName, String initType)
             throws IOException {
 
-        List<Employee> tmpEmployees = new ArrayList<Employee>();
+        List<Employee> tmpEmployees = new ArrayList<>();
 
-        BufferedReader reader = null;
-        try {
-        //try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) { // for java 1.8
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             String[] lineArr;
 
-            reader = new BufferedReader(new FileReader(fileName));
-            
             while ((line = reader.readLine()) != null) {
 
                 lineArr = line.split(",,,");
@@ -135,7 +131,6 @@ public class Staff {
             System.out.println(e.getMessage());
         }
 
-        if (reader != null) reader = null;
     }
 
 }

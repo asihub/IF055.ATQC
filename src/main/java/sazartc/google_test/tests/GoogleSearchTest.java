@@ -15,7 +15,7 @@ public class GoogleSearchTest extends GoogleTestsRunner {
 
     private final String GOOGLE_HOME_URL = "http://google.com.ua";
     private final int MINIMAL_PICTURES_COUNT = 5;
-    private final String SCREENSHOT_FULL_FILENAME = "src\\main\\resources\\screenshot.png";
+    private final String SCREENSHOT_FULL_FILENAME = "src\\main\\resources\\sazartc\\screenshot.png";
     private final String FIRST_LINK_COLOR = "magenta";
 
     private final String[] SEARCHED_TEXT_ARRAY = {
@@ -29,7 +29,7 @@ public class GoogleSearchTest extends GoogleTestsRunner {
         driver.get(GOOGLE_HOME_URL);
         GoogleHomePage googleHomePage = new GoogleHomePage(driver);
 
-        // Search "funny picture" and check results
+        // Search and check results
         SearchResultsPage searchResultsPage = googleHomePage.searchFor(SEARCHED_TEXT_ARRAY[0]);
         if (!searchResultsPage.getFirstLinkText().contains(SEARCHED_TEXT_ARRAY[0])) {
             log.warn("First link in search result doen't contain text: " + SEARCHED_TEXT_ARRAY[0]);
@@ -41,11 +41,11 @@ public class GoogleSearchTest extends GoogleTestsRunner {
         searchedPicturesPage.doScreenShot(SCREENSHOT_FULL_FILENAME);
 
         // Hide logo at home page
-        googleHomePage = searchedPicturesPage.clickHeadLogo();
+        googleHomePage = searchedPicturesPage.clickHeaderLogo();
         googleHomePage.setLogoUnvisible();
-        Assert.assertTrue(googleHomePage.isLogoDisplayed());
+        Assert.assertFalse(googleHomePage.isLogoDisplayed());
 
-        // Search "funny kitten picture" and check results
+        // Search and check results
         searchResultsPage = googleHomePage.searchFor(SEARCHED_TEXT_ARRAY[1]);
         if (!searchResultsPage.getFirstLinkText().contains(SEARCHED_TEXT_ARRAY[1])) {
             log.warn("First link in search result doen't contain text: " + SEARCHED_TEXT_ARRAY[1]);

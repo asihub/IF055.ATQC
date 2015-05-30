@@ -12,8 +12,8 @@ public class GoogleHomePage extends PageObjectBase {
 
     public GoogleHomePage(WebDriver driver) {
         super(driver);
-        logo = driver.findElement(By.xpath(properties.getProperty("HOMEPAGE_LOGO")));
-        searchInput = driver.findElement(By.name(properties.getProperty("SEARCH_INPUT")));
+        logo = driver.findElement(By.xpath(locators.getProperty("HOMEPAGE_LOGO")));
+        searchInput = driver.findElement(By.name(locators.getProperty("SEARCH_INPUT")));
     }
 
     public void setLogoUnvisible() {

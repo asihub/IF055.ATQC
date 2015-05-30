@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.Color;
 
 /*
  * PageObject class for Google Search Results
@@ -16,8 +15,8 @@ public class SearchResultsPage extends PageObjectBase {
 
     public SearchResultsPage(WebDriver driver) {
         super(driver);
-        firstLink = driver.findElement(By.xpath(properties.getProperty("FIRST_LINK")));
-        pictureButton = driver.findElement(By.xpath(properties.getProperty("PICTURE_BUTTON")));
+        firstLink = driver.findElement(By.xpath(locators.getProperty("FIRST_LINK")));
+        pictureButton = driver.findElement(By.xpath(locators.getProperty("PICTURE_BUTTON")));
     }
 
     public String getFirstLinkText() {
