@@ -11,10 +11,10 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by true on 29.05.2015.
  */
-public class TestRunner extends Shortcuts{
+public class TestRunner extends Shortcuts {
     protected WebDriver driver;
 
-    protected TestRunner(){
+    protected TestRunner() {
     }
 
     @BeforeClass
