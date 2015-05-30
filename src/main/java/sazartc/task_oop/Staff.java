@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Staff {
     
-    private List<Employee> employees = new ArrayList<Employee>();
+    private List<Employee> employees = new ArrayList<>();
     
     public void addEmployee(Employee employee) {
         employees.add(employee);

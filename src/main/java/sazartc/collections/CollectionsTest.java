@@ -10,8 +10,8 @@ public class CollectionsTest {
 
     public static void main(String[] args) {
 
-        final String CARS_CSV_FILENAME = "src\\main\\java\\sazartc\\collections\\resources\\cars.csv";
-        final String PLAYERS_CSV_FILENAME = "src\\main\\java\\sazartc\\collections\\resources\\players.csv";
+        final String CARS_CSV_FILENAME = "src\\main\\resources\\sazartc\\collections\\cars.csv";
+        final String PLAYERS_CSV_FILENAME = "src\\main\\resources\\sazartc\\collections\\players.csv";
         final String CSV_DELIMITER = "\\|";
 
         Garage garage = new Garage();

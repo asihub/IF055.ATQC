@@ -3,7 +3,7 @@ package sazartc.task_oop;
 /**
  * Abstract class described Employee' properties
  */
-//TODO move out txt files to /src/main/resources
+
 abstract public class Employee implements Comparable<Employee> {
 
     protected int id;

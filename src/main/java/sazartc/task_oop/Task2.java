@@ -7,10 +7,10 @@ public class Task2 {
     public static void main(String[] args) throws IOException {
 
         final String PER_HOUR_STAFF_FILENAME =
-                "src\\main\\java\\sazartc\\task_oop\\resources\\PerHourStaff.txt";
+                "src\\main\\resources\\sazartc\\task_oop\\PerHourStaff.txt";
 
         final String FIXED_RATE_STAFF_FILENAME =
-                "src\\main\\java\\sazartc\\task_oop\\resources\\FixedRateStaff.txt";
+                "src\\main\\resources\\sazartc\\task_oop\\FixedRateStaff.txt";
 
         Staff perHourStaff = new Staff();
         perHourStaff.loadEmployeesFromFile(PER_HOUR_STAFF_FILENAME, "PER_HOUR");

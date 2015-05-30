@@ -15,7 +15,7 @@ public abstract class PageObjectBase {
 
     public PageObjectBase(WebDriver driver) {
         this.driver = driver;
-        final String LOCATORS_FILE_NAME = "sazartc/locators.prop";
+        final String LOCATORS_FILE_NAME = "sazartc\\google_test\\locators.prop";
 
         try {
             locators.load(getClass()

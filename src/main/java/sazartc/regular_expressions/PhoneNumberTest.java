@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class PhoneNumberTest {
     public static void main(String[] args) {
-        final String PHONE_NUMBERS_FILENAME = "src\\main\\java\\sazartc\\regexp\\resources\\phoneNumbers.csv";
+        final String PHONE_NUMBERS_FILENAME = "src\\main\\resources\\sazartc\\regular_expressions\\\\phoneNumbers.csv";
         final String PHONE_NUMBER_PATTERN =
                 "((\\d{3})|(\\(\\d{3}\\)))((\\d{3})|(\\.\\d{3}\\.)|(\\-\\d{3}\\-)|(\\s\\d{3}\\s))(\\d{4})";
 
