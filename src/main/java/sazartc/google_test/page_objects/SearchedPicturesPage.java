@@ -13,13 +13,15 @@ import java.util.List;
 public class SearchedPicturesPage extends PageObjectBase {
 
     private List<WebElement> pictures;
+    private WebElement headerLogo;
 
     public SearchedPicturesPage(WebDriver driver) {
         super(driver);
+        pictures = driver.findElements(By.xpath(locators.getProperty("PICTURES")));
+        headerLogo = driver.findElement(By.id(locators.getProperty("HEADER_LOGO")));
     }
 
     public int getPicturesCount() {
-        pictures = driver.findElements(By.xpath(locators.getProperty("PICTURES")));
         return pictures.size();
     }
 
@@ -29,7 +31,7 @@ public class SearchedPicturesPage extends PageObjectBase {
     }
 
     public GoogleHomePage clickHeaderLogo() {
-        driver.findElement(By.id(locators.getProperty("HEADER_LOGO"))).click();
+        headerLogo.click();
         return new GoogleHomePage(driver);
     }
 }

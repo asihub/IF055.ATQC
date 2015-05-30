@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Enum Singleton Class CsvReader for reaeding string data
+ * Enum Singleton Class CsvReader for reading string data
  * from csv files
  */
 public enum CsvReader {
