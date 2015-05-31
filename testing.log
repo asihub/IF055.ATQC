@@ -1,2 +1,0 @@
-05-31-2015 14:23:35 INFO  [execchain.RetryExec] I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://127.0.0.1:7055: The target server failed to respond
-05-31-2015 14:23:35 INFO  [execchain.RetryExec] Retrying request to {}->http://127.0.0.1:7055
