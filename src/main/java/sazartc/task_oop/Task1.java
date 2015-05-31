@@ -1,5 +1,6 @@
 package sazartc.task_oop;
 
+@Deprecated
 public class Task1 {
 
 	public static void main(String[] args) {

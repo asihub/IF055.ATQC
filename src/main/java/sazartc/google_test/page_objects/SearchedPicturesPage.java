@@ -13,24 +13,25 @@ import java.util.List;
 public class SearchedPicturesPage extends PageObjectBase {
 
     private List<WebElement> pictures;
+    private WebElement headerLogo;
 
     public SearchedPicturesPage(WebDriver driver) {
         super(driver);
+        pictures = driver.findElements(By.xpath(locators.getProperty("PICTURES")));
+        headerLogo = driver.findElement(By.id(locators.getProperty("HEADER_LOGO")));
     }
-    //TODO assertions only in test classes, in test methods
-    public boolean checkPicturesCountIsNotLessThan(int minimalPicturesCount) {
-        pictures = driver.findElements(By.xpath(properties.getProperty("PICTURES")));
-        return (pictures.size() >= minimalPicturesCount);
+
+    public int getPicturesCount() {
+        return pictures.size();
     }
-    //TODO make it versatile, use file name as a parameter
-    //TODO screenshot must be placed to /src/main/resources
-    public void doScreenShot() throws IOException {
+
+    public void doScreenShot(String screenShotFileName) throws IOException {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("screenshot.png"));
+        FileUtils.copyFile(scrFile, new File(screenShotFileName));
     }
-    //TODO rename, clickBlaBla() etc
-    public GoogleHomePage getGoogleHomePage() {
-        driver.findElement(By.id(properties.getProperty("HEAD_LOGO"))).click();
+
+    public GoogleHomePage clickHeaderLogo() {
+        headerLogo.click();
         return new GoogleHomePage(driver);
     }
 }
