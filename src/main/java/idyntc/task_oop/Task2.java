@@ -32,8 +32,8 @@ public class Task2 {
         perHourSalaryEmployeeList.sort(new EmployeesComparator());
 
         csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 9), filePath + "outputData/perHourSalaryOutput.csv");
-        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 5), filePath + "outputData/5NameOfPerHourSalaryOutput.csv");
-        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(7, 10), filePath + "outputData/Last3IDofPerHourSalaryOutput.csv");
+        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 4), filePath + "outputData/5NameOfPerHourSalaryOutput.csv");
+        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(7, 9), filePath + "outputData/Last3IDofPerHourSalaryOutput.csv");
 
         csvFileReader.readFromFile(fixedSalaryEmployeeList, fixedSalaryFile, "fixedSalary");
 
@@ -41,11 +41,9 @@ public class Task2 {
 
         csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 9), filePath + "outputData/fixedSalaryOutput.csv");
 
-        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 5), filePath + "outputData/5NameOfFixedSalaryOutput.csv");
+        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 4), filePath + "outputData/5NameOfFixedSalaryOutput.csv");
 
-        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(7, 10), filePath + "outputData/Last3IDofFixedSalaryOutput.csv");
-
-
+        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(7, 9), filePath + "outputData/Last3IDofFixedSalaryOutput.csv");
     }
 
 }
