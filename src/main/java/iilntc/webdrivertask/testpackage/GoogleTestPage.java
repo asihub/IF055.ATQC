@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+import static iilntc.webdrivertask.shortcutspackage.Shortcuts.*;
+
 /**
  * Created by true on 28.05.2015.
  */
