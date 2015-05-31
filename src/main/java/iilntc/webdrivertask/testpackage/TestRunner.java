@@ -1,6 +1,5 @@
 package iilntc.webdrivertask.testpackage;
 
-import iilntc.webdrivertask.shortcutspackage.Shortcuts;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -11,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by true on 29.05.2015.
  */
-public class TestRunner extends Shortcuts {
+public class TestRunner {
     protected WebDriver driver;
 
     protected TestRunner() {

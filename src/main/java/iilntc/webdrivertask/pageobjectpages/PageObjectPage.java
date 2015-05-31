@@ -1,17 +1,18 @@
 package iilntc.webdrivertask.pageobjectpages;
 
-import iilntc.webdrivertask.shortcutspackage.Shortcuts;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 
 import java.io.File;
 import java.io.IOException;
 
+import static iilntc.webdrivertask.shortcutspackage.Shortcuts.FILE_PLACE;
+
 /**
  * Created by true on 29.05.2015.
  */
 
-public class PageObjectPage extends Shortcuts {
+public class PageObjectPage {
 
     protected WebDriver driver;
     protected JavascriptExecutor js;
@@ -34,9 +35,7 @@ public class PageObjectPage extends Shortcuts {
         return driver.findElement(by).isDisplayed();
     }
 
-    //TODO rename, one method - one action
     public void takeScreenshot() throws IOException {
-        //TODO screenshot must be placed to /src/main/resources
         FileUtils.copyFile(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.FILE), new File(FILE_PLACE));
     }

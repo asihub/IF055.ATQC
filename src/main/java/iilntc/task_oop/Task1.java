@@ -6,7 +6,7 @@ public class Task1 {
         int keyForIdGenerator = 1;
         Worker coworker[] = new Worker[6];
 
-        coworker[0] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "John", "Thompson", 50.00);
+        coworker[0] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "John", "Thompson", 50.00, 22, 9);
         coworker[1] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Sarah", "Loich", 60.00);
         coworker[2] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Tomas", "Gordon", 61.00);
 
@@ -16,6 +16,6 @@ public class Task1 {
 
         for (Worker co_worker : coworker) System.out.println(co_worker);
 
-
     }
+
 }
