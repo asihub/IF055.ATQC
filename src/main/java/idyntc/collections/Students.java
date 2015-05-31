@@ -1,3 +1,7 @@
+/*
+* Copyright (C) 2015 CollectionsTask Project by Ihor Dynka
+ */
+
 package idyntc.collections;
 
 /**
@@ -8,9 +12,12 @@ public class Students {
     private String surname;
     private String group;
 
-    //TODO that's not a javadoc
-    /*
-    constructor, that initialized the parameters of new students
+    /**
+     * constructor, that initialized the parameters of new students
+     *
+     * @param name    -  students name
+     * @param surname - student surname
+     * @param group   - student group
      */
     public Students(String name, String surname, String group) {
         this.name = name;
@@ -48,59 +55,16 @@ public class Students {
     /**
      * method that helps to output more correctly
      *
-     * @return correct srtring
+     * @return correct string
      */
     @Override
     public String toString() {
-        //TODO what's sb?
-        final StringBuilder sb = new StringBuilder("Students{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", surname='").append(surname).append('\'');
-        sb.append(", group='").append(group).append('\'');
-        sb.append('}');
-        return sb.toString();
+        final StringBuilder stringBuilder = new StringBuilder("Students{");
+        stringBuilder.append("name='").append(name).append('\'');
+        stringBuilder.append(", surname='").append(surname).append('\'');
+        stringBuilder.append(", group='").append(group).append('\'');
+        stringBuilder.append('}');
+        return stringBuilder.toString();
     }
 
-    /**
-     * method equals more exactly
-     *
-     * @param o some object
-     * @return true or false
-     */
-    @Override
-    //TODO what's o?
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof Students)) {
-            return false;
-        }
-
-        Students students = (Students) o;
-
-        if (!group.equals(students.group)) {
-            return false;
-        }
-        if (!name.equals(students.name)) {
-            return false;
-        }
-        if (!surname.equals(students.surname)) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * generate hashCode more exactly
-     *
-     * @return hash code of object
-     */
-    @Override
-    public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + surname.hashCode();
-        result = 31 * result + group.hashCode();
-        return result;
-    }
 }

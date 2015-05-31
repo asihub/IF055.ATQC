@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-
 /**
  * reads Employees from CSV file and sets their in arrayList
  */
@@ -25,11 +24,9 @@ public class CSVFileReader {
 
     public void readFromFile(List<Employee> employeeList, String file, String data) {
 
-
         BufferedReader bufferedReader = null;
         String line = "";
         final String SPLIT_BY = ",";
-
 
         try {
 

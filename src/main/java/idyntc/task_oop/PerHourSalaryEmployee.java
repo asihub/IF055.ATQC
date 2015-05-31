@@ -16,16 +16,16 @@ public class PerHourSalaryEmployee extends Employee {
     private double salary;
 
 
-    public PerHourSalaryEmployee(int id, String name, String surname,double salary) {
+    public PerHourSalaryEmployee(int id, String name, String surname, double salary) {
         super(id, name, surname);
         this.salary = salary;
     }
 
     /**
-         * this method calculates the salary of per hour salary employees and rounds it
-         *
-         * @return salary for these employees
-         */
+     * this method calculates the salary of per hour salary employees and rounds it
+     *
+     * @return salary for these employees
+     */
     @Override
     public double getSalary() {
         //TODO what if the method never get's called? the FixedSalaryEmployee object will be invalid

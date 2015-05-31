@@ -34,7 +34,6 @@ public abstract class Employee {
         return surname;
     }
 
-
     public abstract double getSalary();
 
     /**
