@@ -1,3 +1,7 @@
+/*
+* Copyright (C) 2015 CollectionsTask Project by Ihor Dynka
+ */
+
 package idyntc.collections;
 
 /**
@@ -51,11 +55,10 @@ public class Students {
     /**
      * method that helps to output more correctly
      *
-     * @return correct srtring
+     * @return correct string
      */
     @Override
     public String toString() {
-        //TODO what's sb?
         final StringBuilder stringBuilder = new StringBuilder("Students{");
         stringBuilder.append("name='").append(name).append('\'');
         stringBuilder.append(", surname='").append(surname).append('\'');
@@ -63,19 +66,5 @@ public class Students {
         stringBuilder.append('}');
         return stringBuilder.toString();
     }
-
-    /**
-     * method equals more exactly
-     *
-     * @param o some object
-     * @return true or false
-     */
-
-
-    /**
-     * generate hashCode more exactly
-     *
-     * @return hash code of object
-     */
 
 }

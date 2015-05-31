@@ -4,14 +4,12 @@
 
 package idyntc.task_oop;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * sets PerHourSalary Employee and FixedSalary Employee in arrayList and write their in console
  */
-//TODO move out csv files to /src/main/resources
 public class Task1 {
     public static void main(String[] args) {
 

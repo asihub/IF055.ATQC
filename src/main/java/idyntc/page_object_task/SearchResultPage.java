@@ -1,31 +1,35 @@
+/*
+* Copyright (C) 2015 PageObjectTask Project by Ihor Dynka
+ */
+
 package idyntc.page_object_task;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import static idyntc.page_object_task.Locators.*;
+import static idyntc.page_object_task.Locators.IMAGES_TAB;
 
 /**
  * Created by Ihor-Dynka on 28.05.2015.
  */
-public class ResultPage extends PageObjectPage{
 
-    public ResultPage(WebDriver driver) {
+/**
+ * result page after searching something
+ */
+public class SearchResultPage extends PageObjectPage {
+
+    public SearchResultPage(WebDriver driver) {
         super(driver);
     }
 
-    public WebElement getFirstLink() {
-        return driver.findElement(FUNNY_PICTURE_LINK_LOCATOR);
-    }
-
+    /**
+     * clicks on tab "Images" for getting all searching images
+     *
+     * @return new page of images
+     */
     public ImagesPage clickImagesTab() {
-        driver.findElement(GOOGLE_IMAGES_LOCATOR).click();
+        driver.findElement(IMAGES_TAB).click();
         return new ImagesPage(driver);
     }
-    //TODO make method versatile, use locator as a parameter
-    public void changeElementsColor(WebElement element, String color) {
-       ((JavascriptExecutor) driver).executeScript("arguments[0].style.color=" + color, element);
 
-    }
+
 }

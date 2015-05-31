@@ -1,3 +1,7 @@
+/*
+* Copyright (C) 2015 RegExpTask Project by Ihor Dynka
+ */
+
 package idyntc.regexp;
 
 import java.util.ArrayList;
@@ -5,9 +9,16 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * extracts all numbers from any text
+ */
 public class NumberExtractor {
     private static final String NUMBER_PATTERN = "\\d*\\.?\\d+";
 
+    /**
+     * extracts all numbers from any text and adds it in arrayList
+     * @param text
+     */
     public void numberExtract(String text) {
         List<String> numbersList = new ArrayList<>();
 

@@ -1,3 +1,7 @@
+/*
+* Copyright (C) 2015 RegExpTask Project by Ihor Dynka
+ */
+
 package idyntc.regexp;
 
 import java.util.ArrayList;
@@ -35,7 +39,7 @@ public class PhoneValidator {
         phoneNumbersList.add(4, "123 456 7899");
         phoneNumbersList.add(5, "1234567899");
 
-        for (int i = 0; i < phoneNumbersList.size() ; i++) {
+        for (int i = 0; i < phoneNumbersList.size(); i++) {
             System.out.println(phoneValidate(phoneNumbersList.get(i), PHONE_NUMBER_PATTERN));
         }
     }
