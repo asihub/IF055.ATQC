@@ -37,19 +37,19 @@ public class TestGoogle extends TestRunner {
         Assert.assertTrue(driver.findElement(GOOGLE_MAIN_LOGO).isDisplayed());
 
         homePage.hideElement(driver.findElement(GOOGLE_MAIN_LOGO));
-        Assert.assertTrue(driver.findElement(GOOGLE_MAIN_LOGO).isDisplayed());
+        Assert.assertFalse(driver.findElement(GOOGLE_MAIN_LOGO).isDisplayed());
 
         searchResultPage = homePage.searchFor("funny kitten picture");
-
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
                 .getText()
+                .toLowerCase()
                 .contains("funny kitten picture"), "Search text is in the first link");
 
-        searchResultPage.changeElementColor(driver.findElement(FIRST_RESULT_LINK), "'rgb(33, 555, 77)'");
+        searchResultPage.changeElementColor(driver.findElement(FIRST_RESULT_LINK), "'rgb(33, 55, 77)'");
 
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
                 .getAttribute("style")
-                .equals("color: rgb(33, 555, 77)"));
+                .equals("color: rgb(33, 55, 77);"));
     }
 
 }

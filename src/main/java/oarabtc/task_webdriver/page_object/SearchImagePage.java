@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.IOException;
 
 import static oarabtc.task_webdriver.Locators.GOOGLE_LOGO;
-import static oarabtc.task_webdriver.Locators.GOOGLE_MAIN_LOGO;
 
 public class SearchImagePage extends PageObjectPage {
     public SearchImagePage(WebDriver driver) {
