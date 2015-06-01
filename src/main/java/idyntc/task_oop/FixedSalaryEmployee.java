@@ -14,7 +14,8 @@ public class FixedSalaryEmployee extends Employee {
 
     public FixedSalaryEmployee(int id, String name, String surname,double fixedSalary) {
         super(id, name, surname);
-        this.fixedSalary = getSalary();
+        this.fixedSalary = fixedSalary;
+        this.fixedSalry = getSalary();
     }
 
     /**
