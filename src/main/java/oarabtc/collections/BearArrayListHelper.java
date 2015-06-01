@@ -1,45 +1,39 @@
+package oarabtc.collections;
+
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO refactor
 public class BearArrayListHelper {
 
-    public static void print() {
-        System.out.println("_________  Bear ArrayList _________");
-    }
+    static List<Bear> bears = new ArrayList<Bear>();
 
-    public static void createArrayListOfBears() {
-        print();
-        List<Bear> bears = new ArrayList<Bear>();
+    public static void createBearList() {
+
         bears.add(new Bear("Johnny", 5));
         bears.add(new Bear("Mark", 2));
         bears.add(new Bear("Teddy", 8));
         bears.add(new Bear("Patric", 6));
+    }
+
+    public static void printBearList() {
+        System.out.println("_________  Bear ArrayList _________");
 
         for (Bear bear : bears) {
-            printBearList(bear);
+            System.out.println("Here are our bears: " + bear);
         }
     }
 
-    private static void printBearList(Bear bear) {
+    public static void changeBearList() {
 
-        System.out.println("Here are our bears: " + bear);
-    }
-    //TODO rename to changeBearsList()
-    public static void setChangeOfBears() {
-
-        List<Bear> bears = new ArrayList<Bear>();
         bears.add(new Bear("Arthur", 12));
         bears.add(new Bear("Frank", 4));
         bears.set(1, new Bear("Clare", bears.get(1).getSize()));
-
-        for (Bear changedBear : bears) {
-            printChangeBearList(changedBear);
-        }
     }
 
-    private static void printChangeBearList(Bear changedBear) {
+    public static void printChangedBearList() {
 
-        System.out.println("Here are our and new bears: " + changedBear);
+        for (Bear changedBear : bears) {
+            System.out.println("Here are our and new bears: " + changedBear);
+        }
     }
 }

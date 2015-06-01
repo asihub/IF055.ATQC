@@ -1,6 +1,7 @@
+package oarabtc.regexp;
+
 import java.util.ArrayList;
 import java.util.regex.*;
-
 
 public class PhoneNumCheck {
 
@@ -26,8 +27,8 @@ public class PhoneNumCheck {
     }
 
     public static boolean phoneNumberCheck(String phoneNumber) {
-        Pattern numPattern = Pattern.compile("((\\(\\d{3}\\))|(\\d{3}))[\\s|.|-]?\\d{3}[\\s|.|-]?\\d{4}");
-        Matcher numMatcher = numPattern.matcher(phoneNumber);
-        return numMatcher.matches();
+        Pattern numberPattern = Pattern.compile("((\\(\\d{3}\\))|(\\d{3}))[\\s|.|-]?\\d{3}[\\s|.|-]?\\d{4}");
+        Matcher numberMatcher = numberPattern.matcher(phoneNumber);
+        return numberMatcher.matches();
     }
 }

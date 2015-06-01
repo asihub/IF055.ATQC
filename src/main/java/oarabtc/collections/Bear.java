@@ -1,4 +1,5 @@
-//TODO this whole packare fails to compile, please fix
+package oarabtc.collections;
+
 public class Bear {
     private String name;
     private int size;

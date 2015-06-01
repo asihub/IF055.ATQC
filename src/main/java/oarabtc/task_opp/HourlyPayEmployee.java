@@ -1,3 +1,5 @@
+package oarabtc.task_opp;
+
 public class HourlyPayEmployee extends Employees {
 
     private double hourlyPay;
