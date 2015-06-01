@@ -1,3 +1,6 @@
+package oarabtc.task_opp;
+
+
 public class Task1 {
 
     public static void main(String[] args) {

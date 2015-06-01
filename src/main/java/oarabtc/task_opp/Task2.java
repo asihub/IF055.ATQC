@@ -1,3 +1,5 @@
+package oarabtc.task_opp;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -21,20 +23,18 @@ public class Task2 {
         fixedPayEmployee.add(new FixedPayEmployee(9, "Farder", "Coram", 1200));
 
         Collections.sort(fixedPayEmployee,
-                Comparator.comparing((Employees e1) -> e1.payCalc())
-                        .thenComparing(e1 -> e1.getSurname())
+                Comparator.comparing((Employees employees) -> employees.payCalc())
+                        .thenComparing(employees -> employees.getSurname())
         );
 
         System.out.println("___ Sorted fixed pay employee list ____");
-
         FixedPayEmployee.printEmployeeList(fixedPayEmployee);
 
         System.out.println("\n___ 5 first fixed pay employee list ____");
+        FixedPayEmployee.printFirstFromListEmployee(fixedPayEmployee, 5);
 
-        FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 0, 5);
         System.out.println("\n___ 3 last fixed pay employee list ____");
-
-        FixedPayEmployee.printRangeFromListEmployee(fixedPayEmployee, 7, 10);
+        FixedPayEmployee.printLastFromListEmployee(fixedPayEmployee, 10, 3);
 
 
         List<Employees> hourlyPayEmployee = new ArrayList<Employees>();
@@ -51,20 +51,17 @@ public class Task2 {
         hourlyPayEmployee.add(new HourlyPayEmployee(9, "Gungan", "Binks", 6.8));
 
         Collections.sort(hourlyPayEmployee,
-                Comparator.comparing((Employees e1) -> e1.payCalc())
-                        .thenComparing(e1 -> e1.getSurname())
+                Comparator.comparing((Employees employees) -> employees.payCalc())
+                        .thenComparing(employees -> employees.getSurname())
         );
 
         System.out.println("\n___ Sorted hour pay employee list ____");
-
         HourlyPayEmployee.printEmployeeList(hourlyPayEmployee);
 
         System.out.println("\n___ 5 first hour pay employee list ____");
-
-        HourlyPayEmployee.printRangeFromListEmployee(hourlyPayEmployee, 0, 5);
+        HourlyPayEmployee.printFirstFromListEmployee(hourlyPayEmployee, 5);
 
         System.out.println("\n___ 3 last hour pay employee list ____");
-
-        HourlyPayEmployee.printRangeFromListEmployee(hourlyPayEmployee, 7, 10);
+        HourlyPayEmployee.printLastFromListEmployee(hourlyPayEmployee, 10, 3);
     }
 }

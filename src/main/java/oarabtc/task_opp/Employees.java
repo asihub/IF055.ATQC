@@ -1,3 +1,5 @@
+package oarabtc.task_opp;
+
 import java.util.List;
 
 public abstract class Employees {
@@ -37,11 +39,28 @@ public abstract class Employees {
 
     }
 
-    //TODO what's k?
-    public static void printRangeFromListEmployee(List<Employees> PayEmployee, int id, int k) {
-        // k - is list parameters
-        int i = id;
-        for (i = id; i < k; i++) {
+    /**
+     * Prints out the first n elements from a list.
+     *
+     * @param parameter number of print elements
+     */
+
+    public static void printFirstFromListEmployee(List<Employees> PayEmployee, int parameter) {
+
+        for (int firstId = 0; firstId < parameter; firstId++) {
+            System.out.println(PayEmployee.get(firstId).getName());
+        }
+    }
+
+    /**
+     * Prints out the last n elements from a list.
+     *
+     * @param quantity   number of all elements in list
+     * @param parameter number of print elements
+     */
+
+    public static void printLastFromListEmployee(List<Employees> PayEmployee, int quantity, int parameter) {
+        for (int i = (quantity - parameter); i < quantity; i++) {
             System.out.println(PayEmployee.get(i).getName());
         }
     }

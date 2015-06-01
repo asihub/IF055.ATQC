@@ -1,14 +1,20 @@
+/*
+* Copyright (C) 2015 PageObjectTask Project by Ihor Dynka
+ */
+
 package idyntc.page_object_task;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
-import static idyntc.webdriver_task.Locators.*;
+import static idyntc.page_object_task.Locators.GOOGLE_SEARCH;
 
 /**
  * Created by Ihor-Dynka on 28.05.2015.
+ */
+
+/**
+ * searches in Google home page and open search result page,
+ * hides google logo
  */
 public class HomePage extends PageObjectPage {
 
@@ -16,17 +22,26 @@ public class HomePage extends PageObjectPage {
         super(driver);
     }
 
-    public ResultPage search(String someText){
-        driver.findElement(By.name(GOOGLE_SEARCH_LOCATOR)).sendKeys(someText);
-        return new ResultPage(driver);
+    /**
+     * searches something
+     *
+     * @param searchTerm - some information which you'd like to find
+     * @return page with searching result
+     */
+    public SearchResultPage doSearch(String searchTerm) {
+        driver.findElement(GOOGLE_SEARCH).sendKeys(searchTerm);
+
+        return new SearchResultPage(driver);
     }
 
-    public WebElement getGoogleLogo() {
-        return driver.findElement(By.cssSelector(GOOGLE_LOGO_LOCATOR));
-    }
-
-    public void hideLogo() {
-        ((JavascriptExecutor) driver).executeScript(HIDE_GOOGLE_LOGO_SCRIPT);
+    /**
+     * hides web elements from page
+     *
+     * @param element
+     */
+    public void hideElement(WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'",
+                element);
     }
 
 

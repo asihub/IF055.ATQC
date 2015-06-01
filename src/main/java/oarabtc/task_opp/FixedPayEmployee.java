@@ -1,3 +1,5 @@
+package oarabtc.task_opp;
+
 public class FixedPayEmployee extends Employees {
 
     private double fixedPay;

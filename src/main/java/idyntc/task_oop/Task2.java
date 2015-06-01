@@ -4,7 +4,6 @@
 
 package idyntc.task_oop;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +17,7 @@ import java.util.List;
  */
 public class Task2 {
     public static void main(String[] args) {
-        String filePath = "src\\main\\java\\idyntc\\task_oop\\";
+        String filePath = "src\\main\\resources\\";
         String perHourSalaryFile = filePath + "inputData\\perHourSalaryInput.csv";
         String fixedSalaryFile = filePath + "inputData\\fixedSalaryInput.csv";
 
@@ -31,22 +30,20 @@ public class Task2 {
         csvFileReader.readFromFile(perHourSalaryEmployeeList, perHourSalaryFile, "perHourSalary");
 
         perHourSalaryEmployeeList.sort(new EmployeesComparator());
-       
+
         csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 9), filePath + "outputData/perHourSalaryOutput.csv");
-        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 5), filePath + "outputData/5NameOfPerHourSalaryOutput.csv");
-        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(7, 10), filePath + "outputData/Last3IDofPerHourSalaryOutput.csv");
-        
+        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(0, 4), filePath + "outputData/5NameOfPerHourSalaryOutput.csv");
+        csvFileWriter.writeFile(perHourSalaryEmployeeList.subList(7, 9), filePath + "outputData/Last3IDofPerHourSalaryOutput.csv");
+
         csvFileReader.readFromFile(fixedSalaryEmployeeList, fixedSalaryFile, "fixedSalary");
 
         fixedSalaryEmployeeList.sort(new EmployeesComparator());
 
         csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 9), filePath + "outputData/fixedSalaryOutput.csv");
 
-        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 5), filePath + "outputData/5NameOfFixedSalaryOutput.csv");
+        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(0, 4), filePath + "outputData/5NameOfFixedSalaryOutput.csv");
 
-        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(7, 10), filePath + "outputData/Last3IDofFixedSalaryOutput.csv");
-
-
+        csvFileWriter.writeFile(fixedSalaryEmployeeList.subList(7, 9), filePath + "outputData/Last3IDofFixedSalaryOutput.csv");
     }
 
 }
