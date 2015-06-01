@@ -3,8 +3,8 @@ package oarabtc.task_webdriver;
 import oarabtc.task_webdriver.page_object.HomePage;
 import oarabtc.task_webdriver.page_object.SearchImagePage;
 import oarabtc.task_webdriver.page_object.SearchResultPage;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
