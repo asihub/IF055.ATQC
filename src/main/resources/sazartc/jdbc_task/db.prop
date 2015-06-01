@@ -1,0 +1,3 @@
+db_host=jdbc:mysql://localhost/oms
+db_user=oms
+db_pass=1qaz2wsx
