@@ -18,7 +18,7 @@ public class SearchedPicturesPage extends PageObjectBase {
     public SearchedPicturesPage(WebDriver driver) {
         super(driver);
         pictures = driver.findElements(By.xpath(locators.getProperty("PICTURES")));
-        headerLogo = driver.findElement(By.id(locators.getProperty("HEADER_LOGO")));
+        headerLogo = driver.findElement(By.xpath(locators.getProperty("HEADER_LOGO")));
     }
 
     public int getPicturesCount() {

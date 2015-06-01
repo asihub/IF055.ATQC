@@ -1,5 +1,5 @@
 # Google Home Page
-HOMEPAGE_LOGO=logo
+HOMEPAGE_LOGO=hplogo
 SEARCH_INPUT=q
 
 # Google Search Results Page
@@ -8,4 +8,4 @@ PICTURE_BUTTON=//*[@id='hdtb-msb']/div[2]/a
 
 # Google Searched Pictures Page
 PICTURES=//div[@class='rg_di rg_el']//img
-HEADER_LOGO=logo
+HEADER_LOGO=.//*[@id='logocont']/a
