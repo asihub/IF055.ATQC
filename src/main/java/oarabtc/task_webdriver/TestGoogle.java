@@ -3,10 +3,12 @@ package oarabtc.task_webdriver;
 import oarabtc.task_webdriver.page_object.HomePage;
 import oarabtc.task_webdriver.page_object.SearchImagePage;
 import oarabtc.task_webdriver.page_object.SearchResultPage;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.List;
 
 import static oarabtc.task_webdriver.Locators.*;
 
@@ -28,9 +30,15 @@ public class TestGoogle extends TestRunner {
                 .getText()
                 .contains("funny picture"), "Search text is in the first link");
 
-        final SearchImagePage searchImagePage = searchResultPage.clickImageButton();
+        SearchImagePage searchImagePage = searchResultPage.clickImageButton();
 
-        Assert.assertTrue(driver.findElements(IMAGES_LINKS).size() >= 5);
+
+        List<WebElement> listOfImages = searchImagePage.getListOfElements(IMAGES_LINKS);
+        listOfImages
+                .stream()
+                .limit(5)
+                .forEach(element -> Assert.assertTrue(element.isDisplayed()));
+
         searchImagePage.takeScreenshot();
 
         homePage = searchImagePage.clickGoogleLogo();
