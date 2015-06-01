@@ -16,7 +16,7 @@ public class PerHourSalaryEmployee extends Employee {
     private double perHourSalary;
 
 
-    public PerHourSalaryEmployee(int id, String name, String surname) {
+    public PerHourSalaryEmployee(int id, String name, String surname,double perHourSalary) {
         super(id, name, surname);
         this.perHourSalary = getSalary();
     }

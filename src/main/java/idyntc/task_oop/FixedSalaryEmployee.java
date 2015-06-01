@@ -12,7 +12,7 @@ public class FixedSalaryEmployee extends Employee {
 
     private double fixedSalary;
 
-    public FixedSalaryEmployee(int id, String name, String surname) {
+    public FixedSalaryEmployee(int id, String name, String surname,double fixedSalary) {
         super(id, name, surname);
         this.fixedSalary = getSalary();
     }
