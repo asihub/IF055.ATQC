@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
  * contains all locators
  */
 public final class Locators {
-
+    //TODO GOOGLE_SEARCH_FIELD
     public static final By GOOGLE_SEARCH = By.name("q");
     public static final By FUNNY_PICTURE_FIRST_LINK = By.cssSelector(".r>a");
     public static final By IMAGES_TAB = By.xpath(".//*[@id='hdtb-msb']//a");

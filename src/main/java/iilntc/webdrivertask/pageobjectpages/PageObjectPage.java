@@ -15,6 +15,7 @@ import static iilntc.webdrivertask.shortcutspackage.Shortcuts.FILE_PLACE;
 public class PageObjectPage {
 
     protected WebDriver driver;
+    //TODO rename
     protected JavascriptExecutor js;
 
     public PageObjectPage(WebDriver driver) {
@@ -34,7 +35,7 @@ public class PageObjectPage {
     public Boolean verifyIsElementDisplayed(By by) {
         return driver.findElement(by).isDisplayed();
     }
-
+    //TODO make versatile
     public void takeScreenshot() throws IOException {
         FileUtils.copyFile(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.FILE), new File(FILE_PLACE));

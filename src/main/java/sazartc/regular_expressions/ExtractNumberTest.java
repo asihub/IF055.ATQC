@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 public class ExtractNumberTest {
     public static void main(String[] args) {
+        //TODO rename
         final String SENTENCIES_WITH_NUMBERS_FILENAME =
                 "src\\main\\resources\\sazartc\\regular_expressions\\\\sentenciesWithNumbers.csv";
         final String NUMBER_PATTERN = "\\d+\\.?\\d*";

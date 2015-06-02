@@ -12,7 +12,7 @@ public class HourlyWageEmployee extends Employee {
         this.numberOfWorkHours = numberOfWorkhours;
         this.monthlyWage = getMonthlyWage();
     }
-
+    //TODO not used
     public double getNumberOfWorkdays() {
         return numberOfWorkdays;
     }

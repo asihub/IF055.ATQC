@@ -19,6 +19,7 @@ public class PerHourSalaryEmployee extends Employee {
     public PerHourSalaryEmployee(int id, String name, String surname,double hourlyRate) {
         super(id, name, surname);
         this.perHourSalary = hourlyRate;
+        //TODO not used
         hourlyRate = getSalary();
     }
 

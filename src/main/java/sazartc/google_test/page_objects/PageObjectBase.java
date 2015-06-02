@@ -22,6 +22,7 @@ public abstract class PageObjectBase {
                     .getClassLoader()
                     .getResourceAsStream(LOCATORS_FILE_NAME));
         } catch (IOException ioe) {
+            //TODO rename
             ioe.printStackTrace();
         }
     }

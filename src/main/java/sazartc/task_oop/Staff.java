@@ -14,7 +14,8 @@ import java.util.List;
 public class Staff {
     
     private List<Employee> employees = new ArrayList<>();
-    
+
+    //TODO remove
     public void addEmployee(Employee employee) {
         employees.add(employee);
     }
@@ -75,6 +76,7 @@ public class Staff {
     /**
      * Save employees' data to the file in root project directory 
      */
+    //TODO remove unused
     public void saveToFile(String fileName) throws IOException {
         FileWriter writer = null;
         try {

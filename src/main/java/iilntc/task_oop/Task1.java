@@ -4,6 +4,7 @@ public class Task1 {
     public static void main(String[] args) {
 
         int keyForIdGenerator = 1;
+        //TODO rename to workersArray;
         Worker coworker[] = new Worker[6];
 
         coworker[0] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "John", "Thompson", 50.00, 22, 9);

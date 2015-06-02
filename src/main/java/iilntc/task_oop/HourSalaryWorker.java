@@ -4,7 +4,7 @@ public class HourSalaryWorker extends Worker {
     private double HOURS = 8;
     private double AVERAGE_DAYS = 20.8;
     private double paymentPerHour;
-
+    //TODO code convention, remove unused
     public double getHOURS() {
         return HOURS;
     }

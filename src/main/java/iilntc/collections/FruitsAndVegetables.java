@@ -9,7 +9,7 @@ public class FruitsAndVegetables {
         this.code = code;
         this.name = name;
     }
-
+    //TODO remove unused
     protected void setCodeCode(int code) {
         this.code = code;
     }

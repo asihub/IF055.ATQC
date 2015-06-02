@@ -1,5 +1,6 @@
 package akorctc;
-
+//TODO fix package problem
+//TODO move out locators
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

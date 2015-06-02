@@ -13,7 +13,7 @@ public class SearchImagePage extends PageObjectPage {
     public SearchImagePage(WebDriver driver) {
         super(driver);
     }
-
+    //TODO make versatile
     public void takeScreenshot() throws IOException {
         FileUtils.copyFile(((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.FILE), new File("src//main//resources/screenshot.png"));
