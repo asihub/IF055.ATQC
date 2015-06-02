@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.lang.*;
 
-
+//TODO duplicate class
 public class TestGooglePage {
 
     static final String URL = "https://www.google.com/";
@@ -28,6 +28,8 @@ public class TestGooglePage {
 
     @Test
     //TODO code convention
+    //TODO move out locators
+
     public void TestPage() {
 
         // write in searh window

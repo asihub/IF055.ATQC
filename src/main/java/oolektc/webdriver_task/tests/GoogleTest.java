@@ -28,6 +28,7 @@ public class GoogleTest extends TestRunner {
                 "Link does not contain 'funny picture text'");
 
         final ImagesPage imagePage = searchResultPage.clickImagesTab();
+        //TODO that's awesome, but overcomplicated. Get the array size and verify it
         final List<WebElement> listOfImages = imagePage.getListOfElements(IMAGES_PAGE_IMAGE);
         listOfImages
                 .stream()

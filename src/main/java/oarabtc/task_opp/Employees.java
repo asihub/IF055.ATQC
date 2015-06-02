@@ -59,6 +59,7 @@ public abstract class Employees {
      * @param parameter number of print elements
      */
 
+    //TODO what's parameter?
     public static void printLastFromListEmployee(List<Employees> PayEmployee, int quantity, int parameter) {
         for (int i = (quantity - parameter); i < quantity; i++) {
             System.out.println(PayEmployee.get(i).getName());

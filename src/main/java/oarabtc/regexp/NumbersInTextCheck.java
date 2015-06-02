@@ -24,7 +24,7 @@ public class NumbersInTextCheck {
     }
 
     public static void main(String[] args) {
-
+        //TODO rename what's text1 and text2 ?
         String text1 = "2 Carrots (3.14 high) have fun 4ever times, even at 11 p.m.";
         String text2 = "Broccoli seriously men, don't have fun";
 

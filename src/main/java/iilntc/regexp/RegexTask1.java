@@ -29,7 +29,7 @@ public class RegexTask1 {
         }
 
     }
-
+    //TODO isPhoneNumberValid()
     public static boolean checkThePhone(String phoneNumberValue) {
         Pattern regexTemplate = Pattern.compile("(^(\\(?\\d{3}\\)?)((\\.\\d{3}\\.)|(\\-\\d{3}\\-)|(\\s\\d{3}\\s))\\d{4})|\\d{10}");
         Matcher inputtedPhoneNumberExample = regexTemplate.matcher(phoneNumberValue);

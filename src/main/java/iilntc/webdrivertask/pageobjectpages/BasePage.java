@@ -13,7 +13,7 @@ public class BasePage extends PageObjectPage {
     public BasePage(WebDriver driver) {
         super(driver);
     }
-
+    //TODO rename to represent action - clickBackLink()
     public HomePage backToGoogleHomePage() {
         driver.findElement(BACK_LINK).click();
         return new HomePage(driver);

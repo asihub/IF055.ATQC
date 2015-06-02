@@ -21,6 +21,7 @@ public abstract class PageObjectBase {
         try {
             locators.load(new FileInputStream(LOCATORS_FILE_NAME));
         } catch (IOException ioe) {
+            //TODO rename
             ioe.printStackTrace();
         }
     }

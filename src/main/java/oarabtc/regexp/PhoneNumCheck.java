@@ -25,7 +25,7 @@ public class PhoneNumCheck {
         phoneNumbers.forEach
                 (phoneNum -> System.out.println("Number: " + phoneNum + " - is " + phoneNumberCheck(phoneNum)));
     }
-
+    //TODO rename isPhoneNumberValid()
     public static boolean phoneNumberCheck(String phoneNumber) {
         Pattern numberPattern = Pattern.compile("((\\(\\d{3}\\))|(\\d{3}))[\\s|.|-]?\\d{3}[\\s|.|-]?\\d{4}");
         Matcher numberMatcher = numberPattern.matcher(phoneNumber);

@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 /**
  * Created by true on 30.05.2015.
  */
+//TODO rename, move out
 public class Shortcuts {
     public static final By GOOGLE_SEARCH_FIELD = By.id("lst-ib");
     public static final By FIRST_LINK = By.xpath("//li[1]/div[@class='rc']/h3/a");

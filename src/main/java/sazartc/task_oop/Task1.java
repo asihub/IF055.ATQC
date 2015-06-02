@@ -1,6 +1,7 @@
 package sazartc.task_oop;
 
 @Deprecated
+//TODO remove
 public class Task1 {
 
 	public static void main(String[] args) {

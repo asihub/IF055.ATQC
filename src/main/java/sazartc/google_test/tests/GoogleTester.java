@@ -20,6 +20,7 @@ import java.util.concurrent.TimeUnit;
  * Google Search testing class
  */
 @Deprecated
+//TODO remove
 public class GoogleTester {
 
     private WebDriver driver;

@@ -14,12 +14,12 @@ import org.openqa.selenium.By;
  * contains all locators
  */
 public final class Locators {
-
+    //TODO GOOGLE_SEARCH_FIELD
     public static final By GOOGLE_SEARCH = By.name("q");
     public static final By FUNNY_PICTURE_FIRST_LINK = By.cssSelector(".r>a");
-    public static final By IMAGES_TAB = By.xpath(".//*[@id='hdtb-msb']/div[2]/a");
+    public static final By IMAGES_TAB = By.xpath(".//*[@id='hdtb-msb']//a");
     public static final By SEARCH_RESULT_IMAGES = By.cssSelector(".rg_i");
     public static final By GOOGLE_LOGO = By.cssSelector("#hplogo");
-    public static final By SMALL_GOOGLE_LOGO = By.cssSelector("#logo");
+    public static final By SMALL_GOOGLE_LOGO = By.cssSelector("#logocont>a>img");
 
 }

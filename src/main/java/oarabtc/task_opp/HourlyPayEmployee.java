@@ -29,7 +29,7 @@ public class HourlyPayEmployee extends Employees {
     }
 
     public double hourPay;
-
+    //TODO what's payCalc? pay the calculator?
     public double payCalc() {
         return hourPay = (PAY_DAYS * PAY_HOUR * hourlyPay);
     }

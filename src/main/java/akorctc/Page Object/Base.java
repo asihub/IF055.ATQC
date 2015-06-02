@@ -16,6 +16,7 @@ public abstract class Base {
     public Base( WebDriver driver) {
         this.driver = driver;
     }
+    //TODO make versatile, use file name as parameter
     public void makeScreenshot (){
         File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {

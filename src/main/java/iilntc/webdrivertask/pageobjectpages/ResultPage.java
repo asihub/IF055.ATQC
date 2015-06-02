@@ -17,7 +17,7 @@ public class ResultPage extends BasePage {
     public String getFirstLinkText() {
         return driver.findElement(FIRST_LINK).getText().toLowerCase();
     }
-
+    //TODO rename to represent actions - clickImageButton();
     public PicturesPage getPicturesPage() {
         driver.findElement(IMAGES_BUTTON).click();
         return new PicturesPage(driver);

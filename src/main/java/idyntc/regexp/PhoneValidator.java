@@ -22,7 +22,7 @@ public class PhoneValidator {
      * @param PHONE_NUMBER_PATTERN - regular expressions for validate phone number
      * @return true or false
      */
-
+    //TODO isPhoneValid()
     public static boolean phoneValidate(final String phoneNumbers, final String PHONE_NUMBER_PATTERN) {
         Pattern pattern = Pattern.compile(PHONE_NUMBER_PATTERN);
         Matcher matcher = pattern.matcher(phoneNumbers);

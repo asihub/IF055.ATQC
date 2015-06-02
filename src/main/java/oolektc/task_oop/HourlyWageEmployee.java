@@ -13,30 +13,6 @@ public class HourlyWageEmployee extends Employee {
         this.monthlyWage = getMonthlyWage();
     }
 
-    public double getNumberOfWorkdays() {
-        return numberOfWorkdays;
-    }
-
-    public void setNumberOfWorkdays(double numberOfWorkdays) {
-        this.numberOfWorkdays = numberOfWorkdays;
-    }
-
-    public double getNumberOfWorkHours() {
-        return numberOfWorkHours;
-    }
-
-    public void setNumberOfWorkHours(double numberOfWorkHours) {
-        this.numberOfWorkHours = numberOfWorkHours;
-    }
-
-    public double getHourlyWage() {
-        return hourlyWage;
-    }
-
-    public void setHourlyWage(double hourlyWage) {
-        this.hourlyWage = hourlyWage;
-    }
-
     @Override
     public double getMonthlyWage() {
         return numberOfWorkdays * numberOfWorkHours * hourlyWage;

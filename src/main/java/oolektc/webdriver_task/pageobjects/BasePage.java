@@ -21,8 +21,8 @@ public class BasePage {
 
     public final void takeScreenshot(String fileName) {
         try {
-            final File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File("src//main//resources/" + fileName));
+            final File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshotFile, new File("src//main//resources/" + fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }

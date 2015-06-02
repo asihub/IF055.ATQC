@@ -15,7 +15,7 @@ public class GoogleHomePage extends PageObjectBase {
         logo = driver.findElement(By.id(locators.getProperty("HOMEPAGE_LOGO")));
         searchInput = driver.findElement(By.name(locators.getProperty("SEARCH_INPUT")));
     }
-
+    //TODO rename
     public void setLogoUnvisible() {
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.visibility='hidden'", logo);
     }
