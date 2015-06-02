@@ -42,7 +42,7 @@ public class GoogleSearchTest extends GoogleTestsRunner {
 
         // Hide logo at home page
         googleHomePage = searchedPicturesPage.clickHeaderLogo();
-        googleHomePage.setLogoUnvisible();
+        googleHomePage.setLogoNotVisible();
         Assert.assertFalse(googleHomePage.isLogoDisplayed());
 
         // Search and check results

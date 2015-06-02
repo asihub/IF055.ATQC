@@ -15,11 +15,6 @@ public class Staff {
     
     private List<Employee> employees = new ArrayList<>();
 
-    //TODO remove
-    public void addEmployee(Employee employee) {
-        employees.add(employee);
-    }
-
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
@@ -71,27 +66,6 @@ public class Staff {
 
     public void sort() {
         Collections.sort(this.employees);
-    }
-
-    /**
-     * Save employees' data to the file in root project directory 
-     */
-    //TODO remove unused
-    public void saveToFile(String fileName) throws IOException {
-        FileWriter writer = null;
-        try {
-            writer = new FileWriter(fileName, false);
-            for (Employee employee : employees) {
-                writer.write(String.format("%s,,,", employee.id));
-                writer.write(String.format("%s,,,", employee.surname));
-                writer.write(String.format("%s,,,", employee.name));
-                writer.write(String.format("%f\n", employee.salaryBase));
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } finally {
-            if (writer != null) writer.close();
-        }
     }
 
     /**

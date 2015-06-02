@@ -8,13 +8,12 @@ import java.util.regex.Pattern;
 
 public class ExtractNumberTest {
     public static void main(String[] args) {
-        //TODO rename
-        final String SENTENCIES_WITH_NUMBERS_FILENAME =
+        final String TESTED_STRINGS_FILENAME =
                 "src\\main\\resources\\sazartc\\regular_expressions\\\\sentenciesWithNumbers.csv";
         final String NUMBER_PATTERN = "\\d+\\.?\\d*";
         Pattern pattern = Pattern.compile(NUMBER_PATTERN);
 
-        List<String> sentenciesWithNumbers = CsvReader.INSTANCE.readFromCsv(SENTENCIES_WITH_NUMBERS_FILENAME);
+        List<String> sentenciesWithNumbers = CsvReader.INSTANCE.readFromCsv(TESTED_STRINGS_FILENAME);
 
         for (String sentencyWithNumbers: sentenciesWithNumbers) {
             Matcher matcher = pattern.matcher(sentencyWithNumbers);

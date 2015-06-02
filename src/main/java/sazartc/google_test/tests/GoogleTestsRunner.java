@@ -27,8 +27,7 @@ public abstract class GoogleTestsRunner {
     @AfterTest
     public void tearDown() throws Exception {
         log.info("<--- Tests finished ---");
-        //TODO practically, your tests are not working
-        //driver.quit();
+        driver.quit();
     }
 }
 
