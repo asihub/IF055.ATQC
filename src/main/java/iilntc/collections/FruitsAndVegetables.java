@@ -9,17 +9,9 @@ public class FruitsAndVegetables {
         this.code = code;
         this.name = name;
     }
-    //TODO remove unused
-    protected void setCodeCode(int code) {
-        this.code = code;
-    }
 
     protected void setName(String name) {
         this.name = name;
-    }
-
-    protected int getCode() {
-        return this.code;
     }
 
     protected String getName() {

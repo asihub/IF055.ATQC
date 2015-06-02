@@ -2,7 +2,7 @@ package iilntc.webdrivertask.pageobjectpages;
 
 import org.openqa.selenium.WebDriver;
 
-import static iilntc.webdrivertask.shortcutspackage.Shortcuts.GOOGLE_SEARCH_FIELD;
+import static iilntc.webdrivertask.locators_and_scripts.Locators.GOOGLE_SEARCH_FIELD;
 
 /**
  * Created by true on 28.05.2015.

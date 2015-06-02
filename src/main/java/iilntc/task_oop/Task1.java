@@ -3,19 +3,19 @@ package iilntc.task_oop;
 public class Task1 {
     public static void main(String[] args) {
 
-        int keyForIdGenerator = 1;
-        //TODO rename to workersArray;
-        Worker coworker[] = new Worker[6];
+        int keyForIdGeneration = 1;
 
-        coworker[0] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "John", "Thompson", 50.00, 22, 9);
-        coworker[1] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Sarah", "Loich", 60.00);
-        coworker[2] = new HourSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Tomas", "Gordon", 61.00);
+        Worker workersArray[] = new Worker[6];
 
-        coworker[3] = new FixedSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Garry", "Writer", 3900.00);
-        coworker[4] = new FixedSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Mimi", "Lo", 5000.00);
-        coworker[5] = new FixedSalaryWorker(100000 + 100 * (keyForIdGenerator++), "Moro", "Moon", 9000.00);
+        workersArray[0] = new HourSalaryWorker(keyForIdGeneration++, "John", "Thompson", 50.00, 22, 9);
+        workersArray[1] = new HourSalaryWorker(keyForIdGeneration++, "Sarah", "Loich", 60.00);
+        workersArray[2] = new HourSalaryWorker(keyForIdGeneration++, "Tomas", "Gordon", 61.00);
 
-        for (Worker co_worker : coworker) System.out.println(co_worker);
+        workersArray[3] = new FixedSalaryWorker(keyForIdGeneration++, "Garry", "Writer", 3900.00);
+        workersArray[4] = new FixedSalaryWorker(keyForIdGeneration++, "Mimi", "Lo", 5000.00);
+        workersArray[5] = new FixedSalaryWorker(keyForIdGeneration++, "Moro", "Moon", 9000.00);
+
+        for (Worker co_worker : workersArray) System.out.println(co_worker);
 
     }
 

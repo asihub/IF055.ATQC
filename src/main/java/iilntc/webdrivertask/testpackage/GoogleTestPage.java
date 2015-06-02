@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static iilntc.webdrivertask.shortcutspackage.Shortcuts.*;
+import static iilntc.webdrivertask.locators_and_scripts.Locators.*;
+import static iilntc.webdrivertask.locators_and_scripts.Scripts.*;
 
 /**
  * Created by true on 28.05.2015.
@@ -24,11 +25,11 @@ public class GoogleTestPage extends TestRunner {
         ResultPage resultPage = googleHomePage.search("funny picture");
         Assert.assertTrue(resultPage.getFirstLinkText().contains("funny picture"));
 
-        PicturesPage picturesPage = resultPage.getPicturesPage();
+        PicturesPage picturesPage = resultPage.clickImageButton();
         Assert.assertTrue(picturesPage.getQuantityOfPictures() >= 5);
-        picturesPage.takeScreenshot();
+        picturesPage.takeScreenshot("screenshot.png");
 
-        googleHomePage = picturesPage.backToGoogleHomePage();
+        googleHomePage = picturesPage.clickBackLink();
         Assert.assertTrue(googleHomePage.verifyIsElementDisplayed(GOOGLE_LOGO));
 
         googleHomePage.executeScript(HIDE_GOOGLE_LOGO);

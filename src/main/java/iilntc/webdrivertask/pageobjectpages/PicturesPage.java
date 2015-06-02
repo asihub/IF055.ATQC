@@ -2,7 +2,7 @@ package iilntc.webdrivertask.pageobjectpages;
 
 import org.openqa.selenium.WebDriver;
 
-import static iilntc.webdrivertask.shortcutspackage.Shortcuts.IMAGES_LINKS;
+import static iilntc.webdrivertask.locators_and_scripts.Locators.IMAGES_LINKS;
 
 /**
  * Created by true on 28.05.2015.

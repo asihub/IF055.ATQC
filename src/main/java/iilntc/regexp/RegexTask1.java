@@ -25,15 +25,16 @@ public class RegexTask1 {
 
         for (Map.Entry<Integer, String> phoneNumber : myPhoneBook.entrySet()) {
             System.out.println(phoneNumber.getKey() + " number - " + phoneNumber.getValue() + " - "
-                    + checkThePhone(phoneNumber.getValue()) + " number.");
+                    + isPhoneNumberValid(phoneNumber.getValue()) + " number.");
         }
 
     }
-    //TODO isPhoneNumberValid()
-    public static boolean checkThePhone(String phoneNumberValue) {
-        Pattern regexTemplate = Pattern.compile("(^(\\(?\\d{3}\\)?)((\\.\\d{3}\\.)|(\\-\\d{3}\\-)|(\\s\\d{3}\\s))\\d{4})|\\d{10}");
-        Matcher inputtedPhoneNumberExample = regexTemplate.matcher(phoneNumberValue);
-        return inputtedPhoneNumberExample.matches();
+
+    public static boolean isPhoneNumberValid(String phoneNumberValue) {
+        Pattern pattern = Pattern
+                .compile("(^(\\(?\\d{3}\\)?)((\\.\\d{3}\\.)|(\\-\\d{3}\\-)|(\\s\\d{3}\\s))\\d{4})|\\d{10}");
+        Matcher matcher = pattern.matcher(phoneNumberValue);
+        return matcher.matches();
     }
 
 }
