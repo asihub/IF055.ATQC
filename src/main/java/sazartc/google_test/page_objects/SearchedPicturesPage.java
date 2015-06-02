@@ -26,8 +26,8 @@ public class SearchedPicturesPage extends PageObjectBase {
     }
 
     public void doScreenShot(String screenShotFileName) throws IOException {
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File(screenShotFileName));
+        File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenShotFile, new File(screenShotFileName));
     }
 
     public GoogleHomePage clickHeaderLogo() {
