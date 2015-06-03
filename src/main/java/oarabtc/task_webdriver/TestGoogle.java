@@ -3,12 +3,10 @@ package oarabtc.task_webdriver;
 import oarabtc.task_webdriver.page_object.HomePage;
 import oarabtc.task_webdriver.page_object.SearchImagePage;
 import oarabtc.task_webdriver.page_object.SearchResultPage;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.List;
 
 import static oarabtc.task_webdriver.Locators.*;
 
@@ -28,17 +26,12 @@ public class TestGoogle extends TestRunner {
 
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
                 .getText()
-                .contains("funny picture"));
+                .toLowerCase()
+                .contains("funny picture"), "Search text is in the first link");
 
-        SearchImagePage searchImagePage = searchResultPage.clickImageButton();
+        final SearchImagePage searchImagePage = searchResultPage.clickImageButton();
 
-
-        List<WebElement> listOfImages = searchImagePage.getListOfElements(IMAGES_LINKS);
-        listOfImages
-                .stream()
-                .limit(5)
-                .forEach(imageElement -> Assert.assertTrue(imageElement.isDisplayed()));
-
+        Assert.assertTrue(driver.findElements(IMAGES_LINKS).size() >= 5);
         searchImagePage.takeScreenshot();
 
         homePage = searchImagePage.clickGoogleLogo();
@@ -59,4 +52,5 @@ public class TestGoogle extends TestRunner {
                 .getAttribute("style")
                 .equals("color: rgb(33, 55, 77);"));
     }
+
 }

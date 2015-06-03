@@ -1,13 +1,8 @@
 package oarabtc.task_webdriver.page_object;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
-import static oarabtc.task_webdriver.Locators.*;
+import static oarabtc.task_webdriver.Locators.GOOGLE_LOGO;
 
 public class SearchImagePage extends PageObjectPage {
     public SearchImagePage(WebDriver driver) {
@@ -17,9 +12,5 @@ public class SearchImagePage extends PageObjectPage {
     public HomePage clickGoogleLogo() {
         driver.findElement(GOOGLE_LOGO).click();
         return new HomePage(driver);
-    }
-
-    public final List<WebElement> getListOfElements(By element) {
-        return driver.findElements(element);
     }
 }
