@@ -26,16 +26,16 @@ public abstract class Employees {
         this.surname = surname;
     }
 
-    public abstract double payCalc();
+    public abstract double getMonthlyPay();
 
     @Override
     public String toString() {
-        return "Employee: " + getName() + " " + getSurname() + " - " + payCalc() + " $";
+        return "Employee: " + getName() + " " + getSurname() + " - " + getMonthlyPay() + " $";
     }
 
     public static void printEmployeeList(List<Employees> PayEmployee) {
         PayEmployee.forEach(Employees -> System.out.println(
-                "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.payCalc() + " $"));
+                "(id " + Employees.getId() + ") " + Employees.getName() + " - " + Employees.getMonthlyPay() + " $"));
 
     }
 
@@ -56,10 +56,8 @@ public abstract class Employees {
      * Prints out the last n elements from a list.
      *
      * @param quantity   number of all elements in list
-     * @param parameter number of print elements
+     * @param parameter  number of print elements
      */
-
-    //TODO what's parameter?
     public static void printLastFromListEmployee(List<Employees> PayEmployee, int quantity, int parameter) {
         for (int i = (quantity - parameter); i < quantity; i++) {
             System.out.println(PayEmployee.get(i).getName());

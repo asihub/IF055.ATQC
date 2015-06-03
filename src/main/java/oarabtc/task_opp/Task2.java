@@ -23,7 +23,7 @@ public class Task2 {
         fixedPayEmployee.add(new FixedPayEmployee(9, "Farder", "Coram", 1200));
 
         Collections.sort(fixedPayEmployee,
-                Comparator.comparing((Employees employees) -> employees.payCalc())
+                Comparator.comparing((Employees employees) -> employees.getMonthlyPay())
                         .thenComparing(employees -> employees.getSurname())
         );
 
@@ -51,7 +51,7 @@ public class Task2 {
         hourlyPayEmployee.add(new HourlyPayEmployee(9, "Gungan", "Binks", 6.8));
 
         Collections.sort(hourlyPayEmployee,
-                Comparator.comparing((Employees employees) -> employees.payCalc())
+                Comparator.comparing((Employees employees) -> employees.getMonthlyPay())
                         .thenComparing(employees -> employees.getSurname())
         );
 

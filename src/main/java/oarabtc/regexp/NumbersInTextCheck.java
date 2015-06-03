@@ -23,12 +23,12 @@ public class NumbersInTextCheck {
         }
     }
 
-    public static void main(String[] args) {
-        //TODO rename what's text1 and text2 ?
-        String text1 = "2 Carrots (3.14 high) have fun 4ever times, even at 11 p.m.";
-        String text2 = "Broccoli seriously men, don't have fun";
+    final static String TEXT_WITH_NUMBERS = "2 Carrots (3.14 high) have fun 4ever times, even at 11 p.m.";
+    final static String TEXT_WITHOUT_NUMBERS = "Broccoli seriously men, don't have fun";
 
-        System.out.println("Numbers of text #1: " + verifyTextNumbers(text1));
-        System.out.println("Numbers of text #2: " + verifyTextNumbers(text2));
+    public static void main(String[] args) {
+
+        System.out.println("Numbers of text #1: " + verifyTextNumbers(TEXT_WITH_NUMBERS));
+        System.out.println("Numbers of text #2: " + verifyTextNumbers(TEXT_WITHOUT_NUMBERS));
     }
 }

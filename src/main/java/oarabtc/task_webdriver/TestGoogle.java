@@ -28,7 +28,7 @@ public class TestGoogle extends TestRunner {
 
         Assert.assertTrue(driver.findElement(FIRST_RESULT_LINK)
                 .getText()
-                .contains("funny picture"), "Search text is in the first link");
+                .contains("funny picture"));
 
         SearchImagePage searchImagePage = searchResultPage.clickImageButton();
 
@@ -37,7 +37,7 @@ public class TestGoogle extends TestRunner {
         listOfImages
                 .stream()
                 .limit(5)
-                .forEach(element -> Assert.assertTrue(element.isDisplayed()));
+                .forEach(imageElement -> Assert.assertTrue(imageElement.isDisplayed()));
 
         searchImagePage.takeScreenshot();
 
@@ -59,5 +59,4 @@ public class TestGoogle extends TestRunner {
                 .getAttribute("style")
                 .equals("color: rgb(33, 55, 77);"));
     }
-
 }

@@ -9,7 +9,7 @@ public class FixedPayEmployee extends Employees {
         this.fixedPay = fixedPay;
     }
 
-    public double payCalc() {
+    public double getMonthlyPay() {
         return fixedPay;
     }
 }
